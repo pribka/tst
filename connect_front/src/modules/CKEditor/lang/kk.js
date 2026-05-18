@@ -1,0 +1,22 @@
+export default {
+    'Bold': 'Қалың',
+    'Italic': 'Көлбеу',
+    'Strikethrough': 'Сызылған',
+    'Underline': 'Асты сызылған',
+    'Subscript': 'Төменгі индекс',
+    'Superscript': 'Жоғарғы индекс',
+    'Heading': 'Тақырып',
+    'Link': 'Сілтеме',
+    'Image': 'Сурет',
+    'Insert image': 'Суретті қосу',
+    'Upload': 'Жүктеу',
+    'Table': 'Кесте',
+    'Block quote': 'Дәйексөз',
+    'Media': 'Медиа',
+    'Insert table': 'Кесте қосу',
+    'Align left': 'Солға туралау',
+    'Align center': 'Ортасына туралау',
+    'Align right': 'Оңға туралау',
+    'Code Block': 'Код блогы',
+    'Select all': 'Барлығын таңдау'
+}

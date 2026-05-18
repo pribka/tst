@@ -1,0 +1,34 @@
+:root{
+    --borderColor: #f1f1f1;
+    --bgColor9: #f7f7f7;
+}
+.task_wrapper{
+    height: 100%;
+    overflow: hidden;
+}
+.cascade_menu{
+    &.ant-menu-horizontal{
+        line-height: 34px;
+    }
+}
+.task_padding_wrapper{
+    padding: 20px 30px;
+    @media (max-width: 900px) {
+        padding: 15px;
+    }
+}
+.task_body_wrapper{
+    height: calc(100% - 36px);
+    overflow-y: auto;
+}
+.task_wrapper{
+    .cascade_menu{
+        padding-left: 30px;
+    }
+}
+.ant-table-row{
+    background: #f7f7f7;
+}
+.ant-table-row-level-0{
+    background: transparent;
+}

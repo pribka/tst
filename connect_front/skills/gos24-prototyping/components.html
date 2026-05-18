@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Components reference — Gos24.Connect prototyping</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+<link rel="stylesheet" href="./tokens.css">
+<style>
+    body { padding: 24px; }
+    .demo { background:#fff; border:1px solid var(--borderColor); border-radius:var(--borderRadius); padding:20px; margin-bottom:24px; }
+    .demo h3 { margin: 0 0 12px; font-size: 14px; font-weight: 600; color: var(--text); }
+    .demo .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:12px; }
+    .demo .row:last-child { margin-bottom: 0; }
+    .demo + .demo { margin-top: 0; }
+    .codehint { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size:11px; color:var(--gray); background:#f5f6fa; padding:2px 6px; border-radius:4px; }
+</style>
+</head>
+<body>
+
+<h1 class="page_title" style="font-size:22px; margin-bottom:16px;">Gos24.Connect — components reference</h1>
+<p style="color: var(--gray); margin-bottom: 24px;">Copy-paste recipes. The class names match what's used in <code class="codehint">tokens.css</code>.</p>
+
+<!-- BUTTONS -->
+<div class="demo">
+    <h3>Buttons</h3>
+    <div class="row">
+        <button class="btn primary">Сохранить</button>
+        <button class="btn default">Отмена</button>
+        <button class="btn flat">Действие</button>
+        <button class="btn flat_primary">Открыть</button>
+        <button class="btn flat_danger">Удалить</button>
+        <button class="btn orange_flat">Назначить</button>
+        <button class="btn green">Утвердить</button>
+        <button class="btn success">Готово</button>
+        <button class="btn link">Подробнее</button>
+    </div>
+    <div class="row">
+        <button class="btn primary"><i class="fi fi-rr-plus"></i> Создать</button>
+        <button class="btn default"><i class="fi fi-rr-filter"></i> Фильтр</button>
+        <button class="btn flat_primary"><i class="fi fi-rr-arrow-right"></i> Перейти</button>
+        <button class="btn ui icon"><i class="fi fi-rr-settings"></i></button>
+        <button class="btn ui icon"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+        <button class="btn ui_ghost icon"><i class="fi fi-rr-share"></i></button>
+        <button class="btn ui_ghost icon"><i class="fi fi-rr-pencil"></i></button>
+    </div>
+    <div class="row">
+        <button class="btn primary sm">SM primary</button>
+        <button class="btn flat sm">SM flat</button>
+        <button class="btn ui icon sm"><i class="fi fi-rr-cross-small"></i></button>
+        <button class="btn primary lg">LG primary</button>
+        <button class="btn primary" disabled>Disabled</button>
+    </div>
+</div>
+
+<!-- CHIPS / TABS -->
+<div class="demo">
+    <h3>Filter chips</h3>
+    <div class="row">
+        <button class="chip active">Все</button>
+        <button class="chip">Открытые <span class="count">12</span></button>
+        <button class="chip">В работе <span class="count">3</span></button>
+        <button class="chip">Просрочено <span class="count">1</span></button>
+        <button class="chip">Завершено</button>
+    </div>
+
+    <h3 style="margin-top:16px">Tabs (orange ink bar)</h3>
+    <div class="tabs">
+        <div class="tab active">Основной</div>
+        <div class="tab">Виджеты</div>
+        <div class="tab">Empty</div>
+        <div class="tab">Мой день</div>
+    </div>
+</div>
+
+<!-- LABELS / STATUSES -->
+<div class="demo">
+    <h3>Labels (status pills)</h3>
+    <div class="row">
+        <span class="label primary">В работе</span>
+        <span class="label success">Завершено</span>
+        <span class="label warning">На согласовании</span>
+        <span class="label danger">Просрочено</span>
+        <span class="label neutral">Черновик</span>
+    </div>
+    <div class="row">
+        <span class="label success"><span class="dot green"></span>Активно</span>
+        <span class="label danger"><span class="dot red"></span>Закрыто</span>
+        <span class="label warning"><span class="dot orange"></span>В ожидании</span>
+    </div>
+</div>
+
+<!-- AVATARS -->
+<div class="demo">
+    <h3>Avatars</h3>
+    <div class="row">
+        <span class="avatar sm">ИП</span>
+        <span class="avatar">ЕК</span>
+        <span class="avatar lg">АС</span>
+        <span class="avatar xl" style="background:linear-gradient(135deg,#7B61FF,#FF61B5);color:#fff">МС</span>
+        <div class="avatar_group">
+            <span class="avatar">A</span>
+            <span class="avatar">B</span>
+            <span class="avatar">C</span>
+            <span class="avatar" style="background:#3E3E4F;color:#fff">+5</span>
+        </div>
+        <div class="user_row">
+            <span class="avatar sm">ИП</span>
+            <div>
+                <div class="name">Иван Петров</div>
+                <div class="text-xs text-gray">Аналитик</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- INPUTS -->
+<div class="demo" style="max-width:560px">
+    <h3>Form fields</h3>
+    <div class="field required">
+        <label class="label_text">Название задачи</label>
+        <input class="input" placeholder="Введите название" />
+    </div>
+    <div class="field">
+        <label class="label_text">Описание</label>
+        <textarea class="textarea" placeholder="Добавьте описание"></textarea>
+    </div>
+    <div class="form_grid">
+        <div class="field">
+            <label class="label_text">Дата начала</label>
+            <div class="input_with_icon">
+                <span class="lead_icon"><i class="fi fi-rr-calendar"></i></span>
+                <input class="input" placeholder="ДД.ММ.ГГГГ" />
+            </div>
+        </div>
+        <div class="field">
+            <label class="label_text">Дата окончания</label>
+            <div class="input_with_icon">
+                <span class="lead_icon"><i class="fi fi-rr-calendar"></i></span>
+                <input class="input" placeholder="ДД.ММ.ГГГГ" />
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label_text">Приоритет</label>
+        <select class="select">
+            <option>Обычный</option>
+            <option>Высокий</option>
+            <option>Срочный</option>
+        </select>
+    </div>
+    <div class="field">
+        <label class="check">
+            <input type="checkbox" checked /> Уведомлять об изменениях
+        </label>
+    </div>
+    <div class="field">
+        <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+        <span style="margin-left:8px">Автозапуск</span>
+    </div>
+</div>
+
+<!-- TABLE -->
+<div class="demo">
+    <h3>Universal table</h3>
+    <div class="universal_table">
+        <table>
+            <thead>
+                <tr>
+                    <th class="num">#</th>
+                    <th>Название</th>
+                    <th>Проект</th>
+                    <th>Ответственный</th>
+                    <th>Дата начала</th>
+                    <th>Статус</th>
+                    <th class="actions_cell"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="num">1</td>
+                    <td>Подготовить макет онбординга</td>
+                    <td>Проект А</td>
+                    <td><div class="user_row"><span class="avatar sm">ИП</span><span class="name">Иван Петров</span></div></td>
+                    <td>15.04.2026</td>
+                    <td><span class="label primary">В работе</span></td>
+                    <td class="actions_cell"><button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></td>
+                </tr>
+                <tr>
+                    <td class="num">2</td>
+                    <td>Согласовать ТЗ с заказчиком</td>
+                    <td>Проект Б</td>
+                    <td><div class="user_row"><span class="avatar sm">ЕК</span><span class="name">Елена Кравцова</span></div></td>
+                    <td>16.04.2026</td>
+                    <td><span class="label warning">На согласовании</span></td>
+                    <td class="actions_cell"><button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></td>
+                </tr>
+                <tr class="selected">
+                    <td class="num">3</td>
+                    <td>Выпустить релиз 3.7.0</td>
+                    <td>Проект А</td>
+                    <td><div class="user_row"><span class="avatar sm">АС</span><span class="name">Алексей Сидоров</span></div></td>
+                    <td>20.04.2026</td>
+                    <td><span class="label success">Завершено</span></td>
+                    <td class="actions_cell"><button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pager">
+            <button class="pager_btn"><i class="fi fi-rr-angle-left"></i></button>
+            <button class="pager_btn active">1</button>
+            <button class="pager_btn">2</button>
+            <button class="pager_btn">3</button>
+            <button class="pager_btn"><i class="fi fi-rr-angle-right"></i></button>
+        </div>
+    </div>
+</div>
+
+<!-- WIDGET CARDS GRID -->
+<div class="demo">
+    <h3>Dashboard widget cards</h3>
+    <div style="display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:16px;">
+        <div class="widget_card">
+            <div class="widget_head">
+                <div class="widget_title">Мои задачи</div>
+                <button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <div style="display:flex; justify-content:space-between"><span>Открытые</span><strong>12</strong></div>
+                <div style="display:flex; justify-content:space-between"><span>Просроченные</span><strong style="color:var(--cRed)">2</strong></div>
+                <div style="display:flex; justify-content:space-between"><span>На сегодня</span><strong>5</strong></div>
+            </div>
+        </div>
+        <div class="widget_card">
+            <div class="widget_head">
+                <div class="widget_title">Заметки</div>
+                <button class="btn ui_ghost icon sm"><i class="fi fi-rr-pencil"></i></button>
+            </div>
+            <div class="text-gray">Здесь хранятся ваши быстрые заметки.</div>
+        </div>
+        <div class="widget_card">
+            <div class="widget_head">
+                <div class="widget_title">Лента новостей</div>
+                <button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <div>
+                    <div class="text-xs text-gray">06 апр. 2026 г.</div>
+                    <div style="font-weight:600">Запуск нового модуля OKR</div>
+                    <button class="btn link" style="padding:0">Открыть <i class="fi fi-rr-arrow-right"></i></button>
+                </div>
+                <div>
+                    <div class="text-xs text-gray">01 апр. 2026 г.</div>
+                    <div style="font-weight:600">Обновление 3.6.8</div>
+                    <button class="btn link" style="padding:0">Открыть <i class="fi fi-rr-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- KANBAN -->
+<div class="demo" style="padding:0">
+    <h3 style="padding:20px 20px 0">Kanban board</h3>
+    <div class="board">
+        <div class="board_col">
+            <div class="col_head"><div class="col_title">Новые <span class="text-gray">(2)</span></div><button class="btn ui_ghost icon sm"><i class="fi fi-rr-plus"></i></button></div>
+            <div class="board_card">
+                <div class="card_title">Подготовить макет онбординга</div>
+                <div class="meta"><span class="label primary">Проект А</span><span class="avatar sm">ИП</span></div>
+            </div>
+            <div class="board_card">
+                <div class="card_title">Связаться с поставщиком</div>
+                <div class="meta"><span class="label neutral">Проект Б</span><span class="avatar sm">ЕК</span></div>
+            </div>
+        </div>
+        <div class="board_col">
+            <div class="col_head"><div class="col_title">В работе <span class="text-gray">(1)</span></div><button class="btn ui_ghost icon sm"><i class="fi fi-rr-plus"></i></button></div>
+            <div class="board_card">
+                <div class="card_title">Релиз 3.7.0</div>
+                <div class="meta"><span class="label warning">Срочно</span><span class="avatar sm">АС</span></div>
+            </div>
+        </div>
+        <div class="board_col">
+            <div class="col_head"><div class="col_title">Готово <span class="text-gray">(3)</span></div><button class="btn ui_ghost icon sm"><i class="fi fi-rr-plus"></i></button></div>
+            <div class="board_card"><div class="card_title">Аудит безопасности</div><div class="meta"><span class="label success">Завершено</span><span class="avatar sm">МК</span></div></div>
+            <div class="board_card"><div class="card_title">Перенос FAQ в вики</div><div class="meta"><span class="label success">Завершено</span><span class="avatar sm">ИП</span></div></div>
+        </div>
+    </div>
+</div>
+
+<!-- ALERTS -->
+<div class="demo">
+    <h3>Alerts</h3>
+    <div class="alert info" style="margin-bottom:8px"><i class="fi fi-rr-info"></i><div><strong>Информация.</strong> Это нейтральное сообщение.</div></div>
+    <div class="alert success" style="margin-bottom:8px"><i class="fi fi-rr-check"></i><div><strong>Готово.</strong> Изменения сохранены.</div></div>
+    <div class="alert warning" style="margin-bottom:8px"><i class="fi fi-rr-triangle-warning"></i><div><strong>Внимание.</strong> Дата окончания меньше даты начала.</div></div>
+    <div class="alert danger"><i class="fi fi-rr-cross-circle"></i><div><strong>Ошибка.</strong> Не удалось сохранить запись.</div></div>
+</div>
+
+<!-- DRAWER (preview, not full overlay) -->
+<div class="demo">
+    <h3>Drawer (right side, 720px)</h3>
+    <div style="border:1px dashed var(--borderColor); padding:0; display:flex; justify-content:flex-end; height:480px; background:rgba(0,0,0,0.05); border-radius:var(--borderRadius); overflow:hidden">
+        <div class="drawer" style="height:100%; width:560px; box-shadow:none; border-left:1px solid var(--borderColor)">
+            <div class="drawer_header">
+                <div class="title">Задача #123 · Подготовить макет</div>
+                <div class="actions">
+                    <button class="btn ui icon"><i class="fi fi-rr-share"></i></button>
+                    <button class="btn ui icon"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+                    <button class="btn ui icon"><i class="fi fi-rr-cross-small"></i></button>
+                </div>
+            </div>
+            <div class="drawer_body">
+                <div class="row" style="display:flex;gap:8px;margin-bottom:12px"><span class="label primary">В работе</span><span class="label warning">Срочно</span></div>
+                <p style="margin-bottom:16px;color:var(--text)">Нужно подготовить высокоточный макет процесса онбординга для нового тенанта BKZ. Учесть все шаги от регистрации до первой задачи.</p>
+                <div class="form_grid">
+                    <div class="field">
+                        <label class="label_text">Ответственный</label>
+                        <div class="user_row"><span class="avatar sm">ИП</span><span class="name">Иван Петров</span></div>
+                    </div>
+                    <div class="field">
+                        <label class="label_text">Постановщик</label>
+                        <div class="user_row"><span class="avatar sm">ЕК</span><span class="name">Елена Кравцова</span></div>
+                    </div>
+                    <div class="field">
+                        <label class="label_text">Срок</label>
+                        <div>20.04.2026</div>
+                    </div>
+                    <div class="field">
+                        <label class="label_text">Проект</label>
+                        <div>Проект А</div>
+                    </div>
+                </div>
+            </div>
+            <div class="drawer_footer">
+                <button class="btn primary">Сохранить</button>
+                <button class="btn default">Отмена</button>
+                <div class="right">
+                    <button class="btn flat_danger">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL (preview) -->
+<div class="demo">
+    <h3>Modal</h3>
+    <div style="border:1px dashed var(--borderColor); padding:0; display:flex; justify-content:center; align-items:center; min-height:380px; background:rgba(0,0,0,0.04); border-radius:var(--borderRadius)">
+        <div class="modal md" style="position:relative">
+            <div class="modal_header">
+                <div class="title">Создать задачу</div>
+                <span class="close"><i class="fi fi-rr-cross-small"></i></span>
+            </div>
+            <div class="modal_body">
+                <div class="field required">
+                    <label class="label_text">Название</label>
+                    <input class="input" placeholder="Введите название" />
+                </div>
+                <div class="form_grid">
+                    <div class="field">
+                        <label class="label_text">Проект</label>
+                        <select class="select"><option>Проект А</option></select>
+                    </div>
+                    <div class="field">
+                        <label class="label_text">Срок</label>
+                        <div class="input_with_icon"><span class="lead_icon"><i class="fi fi-rr-calendar"></i></span><input class="input" placeholder="ДД.ММ.ГГГГ" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal_footer">
+                <button class="btn primary">Создать</button>
+                <button class="btn default">Отмена</button>
+                <div class="right">
+                    <span class="text-gray text-sm">Дополнительно</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DROPDOWN -->
+<div class="demo">
+    <h3>Dropdown menu</h3>
+    <div style="display:inline-block">
+        <div class="dropdown" style="width:240px">
+            <div class="item"><i class="fi fi-rr-pencil"></i> Редактировать</div>
+            <div class="item"><i class="fi fi-rr-copy"></i> Дублировать</div>
+            <div class="item"><i class="fi fi-rr-share"></i> Поделиться</div>
+            <div class="divider"></div>
+            <div class="item danger"><i class="fi fi-rr-trash"></i> Удалить</div>
+        </div>
+    </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="demo">
+    <h3>Breadcrumbs</h3>
+    <div class="breadcrumbs">
+        <a href="#">Проекты</a>
+        <span class="sep">/</span>
+        <a href="#">Проект А</a>
+        <span class="sep">/</span>
+        <span class="current">Задача #123</span>
+    </div>
+</div>
+
+<!-- EMPTY STATE -->
+<div class="demo">
+    <h3>Empty state</h3>
+    <div class="empty">
+        <div class="glyph"><i class="fi fi-rr-inbox"></i></div>
+        <div class="empty_title">Нет данных</div>
+        <div class="empty_text">Создайте первую задачу, чтобы начать работу.</div>
+        <button class="btn primary mt-3"><i class="fi fi-rr-plus"></i> Создать задачу</button>
+    </div>
+</div>
+
+</body>
+</html>

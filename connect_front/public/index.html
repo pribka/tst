@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <link rel="icon" href="<%= BASE_URL %><%= process.env.VUE_APP_CODE_NAME ? `img/${process.env.VUE_APP_CODE_NAME}/icons/icon.svg` : 'img/icons/icon.svg' %>">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#f7f9fc">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>loader.css">
+    <meta name="msapplication-config" content="<%= BASE_URL %><%= process.env.VUE_APP_CODE_NAME ? `img/${process.env.VUE_APP_CODE_NAME}/icons/browserconfig.xml` : 'img/icons/browserconfig.xml' %>" />
+    <link rel="manifest" href="<%= BASE_URL %>manifests/manifest-<%= process.env.VUE_APP_CODE_NAME || 'default' %>.json">
+    <link rel="preconnect" href="https://tile.jawg.io">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link rel="preload" as="image" href="<%= require(`@/assets/svg/${process.env.VUE_APP_CODE_NAME || 'default'}.svg`) %>" fetchpriority="high">
+    <title><%= process.env.VUE_APP_NAME || 'Gos24.Connect' %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+
+    <div id="app">
+        <div class="splash_screen" style="display: flex; flex-direction: column; align-items: center; position: relative; height: 99vh;">
+          <div style="align-items: center;display: flex;flex: 1;max-width: 220px;">
+            <img
+              width="100%"
+              height="100%"
+              src="<%= require(`@/assets/svg/${process.env.VUE_APP_CODE_NAME || 'default'}.svg`) %>"
+              alt="">
+          </div>
+          <div style="font-family: Arial, Helvetica, sans-serif;color:#888888;font-weight:400;font-size:14px;height:60px;display:flex;align-items:center;justify-content:center;line-height:14px;--safe-area-inset-bottom: env(safe-area-inset-bottom);padding-bottom: calc(var(--safe-area-inset-bottom));">
+            v<%= process.env.VUE_APP_VERSION %>
+          </div>
+        </div>
+    </div>
+    <!--<link rel="stylesheet" type="text/css" href="/api/v1/app_info/custom_style/">-->
+  </body>
+</html>

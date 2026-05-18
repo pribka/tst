@@ -1,0 +1,66 @@
+body{
+    overflow: hidden;
+    min-width: 1100px;
+}
+.cascade_wrapper,
+.layout,
+#app {
+    height: 100%;
+}
+.ant-btn{
+    &.ant-btn-lg{
+        height: 36px;
+        font-size: 14px;
+        padding: 0 20px;
+    }
+}
+.ant-tabs-tab-arrow-show{
+    span{
+        margin-top: -5px;
+    }
+}
+.notify_popover{
+    .ant-notification-notice-close{
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        background: rgba(18,18,18,0.8);
+        box-shadow: 0 0 0 1px #282828;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -8px;
+        right: -8px;
+        opacity: 0;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    .ant-notification-close-x{
+        color: rgba(255, 255, 255, 0.85);
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        opacity: 0.8;
+        display: flex;
+        &:hover{
+            opacity: 1;
+        }
+        i{
+            font-size: 9px;
+        }
+    }
+    &:hover{
+        .ant-notification-notice-close{
+            opacity: 1;
+        }
+    }
+}
+.ant-modal-root{
+    &:not(.ant-modal-confirm){
+        .ant-modal{
+            @media (max-height: 760px) {
+                top: 20px;
+            }
+        }
+    }
+}

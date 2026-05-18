@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Карточка задачи в drawer (прототип)</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+<link rel="stylesheet" href="../tokens.css">
+</head>
+<body>
+<div class="layout">
+
+    <aside class="sidebar">
+        <div class="logo_block"><div class="logo_text">Gos24.kz</div></div>
+        <nav class="menu_list">
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-grid"></i></span>Рабочий стол</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-folder"></i></span>Проекты</div>
+            <div class="menu_item active"><span class="icon"><i class="fi fi-rr-list"></i></span>Задачи</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-comment"></i></span>Чат</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-calendar"></i></span>Календарь</div>
+        </nav>
+    </aside>
+
+    <div class="main_wrapper" style="position:relative">
+        <header class="topbar">
+            <button class="btn ui icon"><i class="fi fi-rr-plus"></i></button>
+            <div class="spacer"></div>
+            <div class="ai_card">
+                <div class="avatar"></div>
+                <div class="who">AI-помощник<div class="small">Ваш AI ассистент</div></div>
+            </div>
+            <div class="pill"><i class="fi fi-rr-calendar"></i><span>Пн, 27.04.2026</span></div>
+            <button class="btn ui icon"><i class="fi fi-rr-bell"></i></button>
+            <div class="avatar lg" style="background:linear-gradient(135deg,#7B61FF,#FF61B5);color:#fff">ИП</div>
+        </header>
+
+        <div class="page_header">
+            <div class="title_group"><h1 class="page_title">Задачи</h1></div>
+        </div>
+
+        <main class="page_body" style="opacity:0.4">
+            <div class="universal_table">
+                <table>
+                    <thead><tr><th>#</th><th>Название</th><th>Ответственный</th><th>Статус</th></tr></thead>
+                    <tbody>
+                        <tr><td>14253</td><td>Подготовить макет онбординга BKZ</td><td>Иван Петров</td><td><span class="label primary">В работе</span></td></tr>
+                        <tr><td>14254</td><td>Согласовать ТЗ</td><td>Мария Соколова</td><td><span class="label warning">На согласовании</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- DRAWER overlay -->
+        <div class="drawer_mask">
+            <div class="drawer">
+                <div class="drawer_header">
+                    <div style="min-width:0;flex:1">
+                        <div class="text-xs text-gray" style="display:flex;gap:6px;align-items:center">
+                            <i class="fi fi-rr-folder"></i>Запуск тенанта BKZ · #14253
+                        </div>
+                        <div class="title truncate">Подготовить макет онбординга BKZ</div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn ui icon" title="Поделиться"><i class="fi fi-rr-share"></i></button>
+                        <button class="btn ui icon" title="Ещё"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+                        <button class="btn ui icon" title="Закрыть"><i class="fi fi-rr-cross-small"></i></button>
+                    </div>
+                </div>
+
+                <div class="drawer_body">
+                    <div class="row" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px">
+                        <span class="label primary">В работе</span>
+                        <span class="label warning">Срочно</span>
+                        <span class="label neutral">UI / UX</span>
+                    </div>
+
+                    <div class="form_grid">
+                        <div class="field">
+                            <label class="label_text">Ответственный</label>
+                            <div class="user_row"><span class="avatar sm">ИП</span><span class="name">Иван Петров</span></div>
+                        </div>
+                        <div class="field">
+                            <label class="label_text">Постановщик</label>
+                            <div class="user_row"><span class="avatar sm">ЕК</span><span class="name">Елена Кравцова</span></div>
+                        </div>
+                        <div class="field">
+                            <label class="label_text">Дата начала</label>
+                            <div>15.04.2026</div>
+                        </div>
+                        <div class="field">
+                            <label class="label_text">Срок</label>
+                            <div style="display:flex;gap:8px;align-items:center">20.04.2026 <span class="label danger" style="font-size:11px">3 дня</span></div>
+                        </div>
+                        <div class="field full">
+                            <label class="label_text">Проект</label>
+                            <div style="display:flex;gap:8px;align-items:center"><i class="fi fi-rr-folder" style="color:var(--blue)"></i>Запуск тенанта BKZ</div>
+                        </div>
+                        <div class="field full">
+                            <label class="label_text">Описание</label>
+                            <div class="card flat" style="background:var(--bg2);padding:12px;font-size:13px">
+                                Нужно подготовить высокоточный макет процесса онбординга для нового тенанта BKZ. Учесть все шаги от регистрации до первой задачи.
+                                Дизайн должен соответствовать UI-системе Gos24.Connect — Open Sans, primary <code style="background:var(--lBg);padding:2px 6px;border-radius:4px">#4777FF</code>, 8px радиус.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabs" style="margin-top:8px">
+                        <div class="tab active">Чек-лист</div>
+                        <div class="tab">Файлы <span class="text-gray">(3)</span></div>
+                        <div class="tab">Подзадачи <span class="text-gray">(2)</span></div>
+                        <div class="tab">Активность</div>
+                    </div>
+
+                    <div style="padding-top:12px">
+                        <label class="check"><input type="checkbox" checked /><span>Собрать пользовательские флоу</span></label><br/>
+                        <label class="check"><input type="checkbox" checked /><span>Сделать low-fi wireframe</span></label><br/>
+                        <label class="check"><input type="checkbox" /><span>Согласовать с заказчиком</span></label><br/>
+                        <label class="check"><input type="checkbox" /><span>Оформить в Figma</span></label><br/>
+                        <label class="check"><input type="checkbox" /><span>Передать в разработку</span></label>
+                        <button class="btn link" style="padding:4px 0;display:block;margin-top:8px"><i class="fi fi-rr-plus"></i> Добавить пункт</button>
+                    </div>
+
+                    <div class="card flat" style="background:var(--bg2);padding:12px;margin-top:16px">
+                        <div class="text-sm" style="font-weight:600;margin-bottom:8px">Комментарии</div>
+                        <div style="display:flex;gap:10px;margin-bottom:10px">
+                            <span class="avatar sm">ЕК</span>
+                            <div>
+                                <div class="text-xs text-gray">Елена Кравцова · 12 мин назад</div>
+                                <div class="text-sm">Можем прокинуть дату до 22.04?</div>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:10px;align-items:center;margin-top:8px">
+                            <span class="avatar sm">ИП</span>
+                            <input class="input" placeholder="Написать комментарий…" />
+                            <button class="btn ui icon"><i class="fi fi-rr-paperclip"></i></button>
+                            <button class="btn primary sm"><i class="fi fi-rr-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="drawer_footer">
+                    <button class="btn primary"><i class="fi fi-rr-check"></i> Сохранить</button>
+                    <button class="btn default">Отмена</button>
+                    <div class="right">
+                        <button class="btn flat_danger"><i class="fi fi-rr-trash"></i> Удалить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

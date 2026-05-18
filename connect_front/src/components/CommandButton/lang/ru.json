@@ -1,0 +1,15 @@
+{
+    "cmd_btn": {
+        "ask_question_to_tech_support": "Задать вопрос в тех. поддержку",
+        "create_appeal": "Создать обращение",
+        "cancel": "Отмена",
+        "dealer_name": "Наименование дилера",
+        "issue_description": "Описание проблемы",
+        "your_phone": "Ваш телефон",
+        "field_require": "Обязательно для заполнения",
+        "error": "Ошибка",
+        "fill_all_fields": "Заполните все поля",
+        "invalid_phone_number": "Некорректный номер телефона",
+        "successful_opening_issue": "Ваша заявка отправлена техподдежрке"
+    }           
+}

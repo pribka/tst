@@ -1,0 +1,1 @@
+## Клонировать сопутствующие компоненты из группы https://gitlab.buhni.kz/bkz/frontend/appcomponents

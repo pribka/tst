@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Задачи — Gos24.Connect (прототип)</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+<link rel="stylesheet" href="../tokens.css">
+</head>
+<body>
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo_block"><div class="logo_text">Gos24.kz</div></div>
+        <nav class="menu_list">
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-grid"></i></span>Рабочий стол</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-clock"></i></span>Пульс дня</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-users"></i></span>Встречи</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-folder"></i></span>Проекты</div>
+            <div class="menu_item active"><span class="icon"><i class="fi fi-rr-list"></i></span>Задачи</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-comment"></i></span>Чат<span class="badge">1</span></div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-calendar"></i></span>Календарь</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-stats"></i></span>Отчеты</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-document"></i></span>Мои файлы</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-flag"></i></span>Спринты</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-handshake"></i></span>Сделки / контракты</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-bullseye-arrow"></i></span>OKR</div>
+        </nav>
+    </aside>
+
+    <div class="main_wrapper">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <button class="btn ui icon" title="Создать"><i class="fi fi-rr-plus"></i></button>
+            <div class="spacer"></div>
+            <div class="pill"><i class="fi fi-rr-clock"></i><span>00:00</span></div>
+            <div class="ai_card">
+                <div class="avatar"></div>
+                <div class="who">AI-помощник<div class="small">Ваш AI ассистент</div></div>
+            </div>
+            <div class="pill"><i class="fi fi-rr-calendar"></i><span>Пн, 27.04.2026</span></div>
+            <div class="pill">RU <i class="fi fi-rr-angle-down" style="font-size:10px"></i></div>
+            <button class="btn ui icon" style="position:relative">
+                <i class="fi fi-rr-bell"></i>
+                <span style="position:absolute;top:-2px;right:-2px;background:var(--cRed);color:#fff;font-size:10px;min-width:16px;height:16px;line-height:16px;border-radius:8px;padding:0 4px">1</span>
+            </button>
+            <button class="btn primary"><i class="fi fi-rr-play"></i> Мой день</button>
+            <div class="avatar lg" style="background:linear-gradient(135deg,#7B61FF,#FF61B5);color:#fff">ИП</div>
+        </header>
+
+        <!-- PAGE HEADER -->
+        <div class="page_header">
+            <div class="title_group">
+                <h1 class="page_title">Задачи</h1>
+                <div class="search_inline">
+                    <i class="fi fi-rr-search"></i>
+                    <input type="text" placeholder="Поиск" />
+                </div>
+            </div>
+            <div class="actions">
+                <button class="btn primary"><i class="fi fi-rr-plus"></i> Добавить задачу</button>
+                <button class="btn ui icon"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+                <button class="btn ui icon"><i class="fi fi-rr-chart-pie"></i></button>
+                <button class="btn ui icon"><i class="fi fi-rr-settings"></i></button>
+            </div>
+        </div>
+
+        <!-- FILTER ROW -->
+        <div class="filter_row">
+            <button class="chip active">Список</button>
+            <button class="chip">Канбан</button>
+            <button class="chip">Делаю <span class="count">3</span></button>
+            <button class="chip">Поручил <span class="count">2</span></button>
+            <button class="chip">Наблюдаю <span class="count">5</span></button>
+            <button class="chip">Участвую <span class="count">1</span></button>
+            <button class="chip">Просрочено <span class="count">1</span></button>
+            <span style="margin-left:auto" class="text-gray text-sm">Найдено: 12</span>
+        </div>
+
+        <main class="page_body">
+            <div class="universal_table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="num">#</th>
+                            <th>Название</th>
+                            <th>Проект</th>
+                            <th>Организация</th>
+                            <th>Ответственный</th>
+                            <th>Постановщик</th>
+                            <th>Дата начала</th>
+                            <th>Блокеры</th>
+                            <th>Статус</th>
+                            <th class="actions_cell"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="num">14253</td>
+                            <td>Подготовить макет онбординга BKZ</td>
+                            <td>Запуск тенанта BKZ</td>
+                            <td>ООО Пример</td>
+                            <td><div class="user_row"><span class="avatar sm">ИП</span><span class="name">Иван Петров</span></div></td>
+                            <td><div class="user_row"><span class="avatar sm">ЕК</span><span class="name">Елена Кравцова</span></div></td>
+                            <td>15.04.2026</td>
+                            <td>—</td>
+                            <td><span class="label primary">В работе</span></td>
+                            <td class="actions_cell"><button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="num">14254</td>
+                            <td>Согласовать ТЗ с заказчиком</td>
+                            <td>Запуск тенанта BKZ</td>
+                            <td>ООО Пример</td>
+                            <td><div class="user_row"><span class="avatar sm">МС</span><span class="name">Мария Соколова</span></div></td>
+                            <td><div class="user_row"><span class="avatar sm">ЕК</span><span class="name">Елена Кравцова</span></div></td>
+                            <td>16.04.2026</td>
+                            <td>1 блокер</td>
+                            <td><span class="label warning">На согласовании</span></td>
+                            <td class="actions_cell"><button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="num">14255</td>
+                            <td>Выпустить релиз 3.7.0</td>
+                            <td>Платформа</td>
+                            <td>Gos24</td>
+                            <td><div class="user_row"><span class="avatar sm">АС</span><span class="name">Алексей Сидоров</span></div></td>
+                            <td><div class="user_row"><span class="avatar sm">ИП</span><span class="name">Иван Петров</span></div></td>
+                            <td>20.04.2026</td>
+                            <td>—</td>
+                            <td><span class="label success">Завершено</span></td>
+                            <td class="actions_cell"><button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="num">14256</td>
+                            <td>Подключить новый MCP-сервер</td>
+                            <td>AI-помощник</td>
+                            <td>Gos24</td>
+                            <td><div class="user_row"><span class="avatar sm">МК</span><span class="name">Михаил Климов</span></div></td>
+                            <td><div class="user_row"><span class="avatar sm">ИП</span><span class="name">Иван Петров</span></div></td>
+                            <td>10.04.2026</td>
+                            <td>—</td>
+                            <td><span class="label danger">Просрочено</span></td>
+                            <td class="actions_cell"><button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="num">14257</td>
+                            <td>Описать API экспорта отчетов</td>
+                            <td>Документация</td>
+                            <td>Gos24</td>
+                            <td><div class="user_row"><span class="avatar sm">ОР</span><span class="name">Ольга Романова</span></div></td>
+                            <td><div class="user_row"><span class="avatar sm">МК</span><span class="name">Михаил Климов</span></div></td>
+                            <td>22.04.2026</td>
+                            <td>—</td>
+                            <td><span class="label neutral">Черновик</span></td>
+                            <td class="actions_cell"><button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pager">
+                    <span class="text-gray text-sm" style="margin-right:auto">Строк на странице: <select class="select" style="width:auto;display:inline-block;height:28px;padding:0 8px"><option>15</option><option>30</option><option>50</option></select></span>
+                    <button class="pager_btn"><i class="fi fi-rr-angle-left"></i></button>
+                    <button class="pager_btn active">1</button>
+                    <button class="pager_btn">2</button>
+                    <button class="pager_btn">3</button>
+                    <button class="pager_btn"><i class="fi fi-rr-angle-right"></i></button>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</div>
+</body>
+</html>

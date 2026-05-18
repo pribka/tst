@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прототип — Gos24.Connect</title>
+
+    <!-- Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Flaticon UIcons (regular rounded) — same icon set the project uses -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+
+    <style>
+        /* >>> PASTE THE CONTENTS OF tokens.css HERE WHEN PRODUCING A FINAL PROTOTYPE <<<
+           For local preview while editing this template you can keep the link below: */
+    </style>
+    <link rel="stylesheet" href="./tokens.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- ============================================================
+         SIDEBAR
+    ============================================================ -->
+    <aside class="sidebar">
+        <div class="logo_block">
+            <div class="logo_text">Gos24.kz</div>
+        </div>
+        <nav class="menu_list">
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-grid"></i></span>
+                <span>Рабочий стол</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-clock"></i></span>
+                <span>Пульс дня</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-users"></i></span>
+                <span>Встречи</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-folder"></i></span>
+                <span>Проекты</span>
+            </div>
+            <div class="menu_item active">
+                <span class="icon"><i class="fi fi-rr-list"></i></span>
+                <span>Задачи</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-comment"></i></span>
+                <span>Чат</span>
+                <span class="badge">1</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-calendar"></i></span>
+                <span>Календарь</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-stats"></i></span>
+                <span>Отчеты</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-document"></i></span>
+                <span>Мои файлы</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-flag"></i></span>
+                <span>Спринты</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-check"></i></span>
+                <span>Заявки и согласования</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-book"></i></span>
+                <span>Справочники</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-shield-check"></i></span>
+                <span>Модерация</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-bookmark"></i></span>
+                <span>Вики компании</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-handshake"></i></span>
+                <span>Сделки / контракты</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-bullseye-arrow"></i></span>
+                <span>OKR</span>
+            </div>
+            <div class="menu_item">
+                <span class="icon"><i class="fi fi-rr-headset"></i></span>
+                <span>Обращения</span>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- ============================================================
+         MAIN CONTENT
+    ============================================================ -->
+    <div class="main_wrapper">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+            <button class="btn ui icon" title="Создать"><i class="fi fi-rr-plus"></i></button>
+
+            <div class="spacer"></div>
+
+            <div class="pill" title="Учёт времени">
+                <i class="fi fi-rr-clock"></i>
+                <span>00:00</span>
+            </div>
+            <div class="ai_card">
+                <div class="avatar"></div>
+                <div class="who">
+                    AI-помощник
+                    <div class="small">Ваш AI ассистент</div>
+                </div>
+            </div>
+            <div class="pill"><i class="fi fi-rr-calendar"></i><span>Пн, 27.04.2026</span></div>
+            <button class="btn ui icon" title="Помощь"><i class="fi fi-rr-interrogation"></i></button>
+            <div class="pill" title="Язык">RU <i class="fi fi-rr-angle-down" style="font-size:10px"></i></div>
+            <button class="btn ui icon" title="Уведомления" style="position:relative">
+                <i class="fi fi-rr-bell"></i>
+                <span class="badge" style="position:absolute;top:-2px;right:-2px;background:var(--cRed);color:#fff;font-size:10px;min-width:16px;height:16px;line-height:16px;border-radius:8px;padding:0 4px">1</span>
+            </button>
+            <button class="btn primary"><i class="fi fi-rr-play"></i> Мой день</button>
+            <div class="avatar lg" style="background:linear-gradient(135deg,#7B61FF,#FF61B5)">ИП</div>
+        </header>
+
+        <!-- PAGE HEADER (replace title/actions for each prototype) -->
+        <div class="page_header">
+            <div class="title_group">
+                <h1 class="page_title">Заголовок страницы</h1>
+                <div class="search_inline">
+                    <i class="fi fi-rr-search"></i>
+                    <input type="text" placeholder="Поиск">
+                </div>
+            </div>
+            <div class="actions">
+                <button class="btn primary"><i class="fi fi-rr-plus"></i> Добавить</button>
+                <button class="btn ui icon" title="Ещё"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+                <button class="btn ui icon" title="Графики"><i class="fi fi-rr-chart-pie"></i></button>
+                <button class="btn ui icon" title="Настройки"><i class="fi fi-rr-settings"></i></button>
+            </div>
+        </div>
+
+        <!-- FILTER ROW (optional — remove if not a list page) -->
+        <div class="filter_row">
+            <button class="chip active">Список</button>
+            <button class="chip">Канбан</button>
+            <button class="chip">Делаю <span class="count">0</span></button>
+            <button class="chip">Поручил <span class="count">0</span></button>
+            <button class="chip">Наблюдаю <span class="count">0</span></button>
+            <button class="chip">Участвую <span class="count">0</span></button>
+            <button class="chip">Просрочено <span class="count">0</span></button>
+        </div>
+
+        <!-- ============================================================
+             >>> REPLACE THIS WITH THE ACTUAL PROTOTYPE CONTENT <<<
+        ============================================================ -->
+        <main class="page_body">
+
+            <!-- DEFAULT EMPTY STATE — overwrite this -->
+            <div class="empty">
+                <div class="glyph"><i class="fi fi-rr-inbox"></i></div>
+                <div class="empty_title">Нет данных</div>
+                <div class="empty_text">Здесь будет содержимое прототипа</div>
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+</body>
+</html>

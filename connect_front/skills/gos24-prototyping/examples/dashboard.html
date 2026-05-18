@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Рабочий стол — Gos24.Connect (прототип)</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+<link rel="stylesheet" href="../tokens.css">
+</head>
+<body>
+<div class="layout">
+
+    <aside class="sidebar">
+        <div class="logo_block"><div class="logo_text">Gos24.kz</div></div>
+        <nav class="menu_list">
+            <div class="menu_item active"><span class="icon"><i class="fi fi-rr-grid"></i></span>Рабочий стол</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-clock"></i></span>Пульс дня</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-users"></i></span>Встречи</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-folder"></i></span>Проекты</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-list"></i></span>Задачи</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-comment"></i></span>Чат<span class="badge">1</span></div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-calendar"></i></span>Календарь</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-stats"></i></span>Отчеты</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-document"></i></span>Мои файлы</div>
+            <div class="menu_item"><span class="icon"><i class="fi fi-rr-flag"></i></span>Спринты</div>
+        </nav>
+    </aside>
+
+    <div class="main_wrapper">
+        <header class="topbar">
+            <button class="btn ui icon"><i class="fi fi-rr-plus"></i></button>
+            <div class="spacer"></div>
+            <div class="pill"><i class="fi fi-rr-clock"></i><span>00:00</span></div>
+            <div class="ai_card">
+                <div class="avatar"></div>
+                <div class="who">AI-помощник<div class="small">Ваш AI ассистент</div></div>
+            </div>
+            <div class="pill"><i class="fi fi-rr-calendar"></i><span>Пн, 27.04.2026</span></div>
+            <div class="pill">RU <i class="fi fi-rr-angle-down" style="font-size:10px"></i></div>
+            <button class="btn ui icon"><i class="fi fi-rr-bell"></i></button>
+            <button class="btn primary"><i class="fi fi-rr-play"></i> Мой день</button>
+            <div class="avatar lg" style="background:linear-gradient(135deg,#7B61FF,#FF61B5);color:#fff">ИП</div>
+        </header>
+
+        <div class="page_header">
+            <div class="title_group">
+                <h1 class="page_title">Рабочий стол</h1>
+            </div>
+            <div class="actions">
+                <button class="btn primary"><i class="fi fi-rr-plus"></i> Добавить виджет</button>
+                <button class="btn ui icon"><i class="fi fi-rr-interrogation"></i></button>
+            </div>
+        </div>
+
+        <div class="filter_row" style="border-bottom:1px solid var(--borderColor);padding-bottom:0">
+            <div class="tabs" style="border-bottom:0;padding:0">
+                <div class="tab active">Основной рабочий стол</div>
+                <div class="tab">Виджеты</div>
+                <div class="tab">Empty</div>
+                <div class="tab">Мой день</div>
+                <div class="tab"><i class="fi fi-rr-plus"></i></div>
+            </div>
+        </div>
+
+        <main class="page_body" style="background:var(--mBg)">
+            <div style="display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:16px">
+
+                <!-- Welcome card spans 1 col -->
+                <div class="widget_card">
+                    <div class="widget_head">
+                        <div class="widget_title">Добро пожаловать в Gos24.Connect</div>
+                        <button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+                    </div>
+                    <p class="text-sm text-gray" style="margin-bottom:12px">Коннект — это система для совместной работы: здесь вы управляете задачами, проектами, спринтами и целями в одном пространстве.</p>
+                    <div class="card flat" style="background:var(--bg2);padding:12px;margin-bottom:8px">
+                        <h3 class="card_title" style="margin-bottom:6px">Задачи</h3>
+                        <div class="text-sm text-gray" style="margin-bottom:10px">Место для ваших рабочих дел.</div>
+                        <button class="btn flat_primary sm">Создать задачу</button>
+                    </div>
+                    <div class="card flat" style="background:var(--bg2);padding:12px;margin-bottom:8px">
+                        <h3 class="card_title" style="margin-bottom:6px">Проекты</h3>
+                        <div class="text-sm text-gray" style="margin-bottom:10px">Объединение задач в единое направление.</div>
+                        <button class="btn flat_primary sm">Создать проект</button>
+                    </div>
+                    <div class="card flat" style="background:var(--bg2);padding:12px">
+                        <h3 class="card_title" style="margin-bottom:6px">Спринты</h3>
+                        <div class="text-sm text-gray" style="margin-bottom:10px">Короткие итерации для гибкого планирования.</div>
+                        <button class="btn flat_primary sm">Создать спринт</button>
+                    </div>
+                </div>
+
+                <!-- Demo CTA + notes -->
+                <div style="display:flex;flex-direction:column;gap:16px">
+                    <div class="widget_card" style="background:linear-gradient(135deg,#FFF5E0,#FFE7D6)">
+                        <div class="widget_head">
+                            <div class="widget_title">Запланируйте бесплатную демо-консультацию</div>
+                            <button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+                        </div>
+                        <p class="text-sm" style="margin-bottom:12px">Специалисты проведут демонстрацию функционала и объяснят, как платформа поможет вашей организации повысить эффективность.</p>
+                        <button class="btn orange_flat">Запросить демонстрацию</button>
+                    </div>
+
+                    <div class="widget_card" style="min-height:240px">
+                        <div class="widget_head">
+                            <div class="widget_title">Заметки</div>
+                            <div class="actions" style="display:flex;gap:4px">
+                                <button class="btn ui_ghost icon sm"><i class="fi fi-rr-pencil"></i></button>
+                                <button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray">Здесь хранятся ваши быстрые заметки.</div>
+                    </div>
+                </div>
+
+                <!-- News feed -->
+                <div class="widget_card">
+                    <div class="widget_head">
+                        <div class="widget_title">Лента новостей</div>
+                        <button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+                    </div>
+                    <button class="btn flat_primary sm" style="align-self:flex-start;margin-bottom:12px">Добавить новость</button>
+
+                    <div style="display:flex;flex-direction:column;gap:14px">
+                        <div>
+                            <div class="text-xs text-gray" style="display:flex;align-items:center;gap:6px"><i class="fi fi-rr-calendar"></i>06 апр. 2026 г.</div>
+                            <div style="font-weight:600;margin:4px 0">Запуск нового модуля OKR</div>
+                            <div class="text-sm text-gray">Компания внедряет систему целей и ключевых результатов.</div>
+                            <button class="btn link" style="padding:4px 0">Открыть <i class="fi fi-rr-arrow-right"></i></button>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray" style="display:flex;align-items:center;gap:6px"><i class="fi fi-rr-calendar"></i>01 апр. 2026 г.</div>
+                            <div style="font-weight:600;margin:4px 0">Обновление платформы 3.6.8</div>
+                            <div class="text-sm text-gray">Улучшения в чате, AI-помощнике и календаре.</div>
+                            <button class="btn link" style="padding:4px 0">Открыть <i class="fi fi-rr-arrow-right"></i></button>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray" style="display:flex;align-items:center;gap:6px"><i class="fi fi-rr-calendar"></i>31 мар. 2026 г.</div>
+                            <div style="font-weight:600;margin:4px 0">Новая роль: модератор</div>
+                            <div class="text-sm text-gray">Управляйте контентом и публикациями централизованно.</div>
+                            <button class="btn link" style="padding:4px 0">Открыть <i class="fi fi-rr-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats card -->
+                <div class="widget_card">
+                    <div class="widget_head">
+                        <div class="widget_title">Мои задачи</div>
+                        <button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+                    </div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                        <div class="card flat" style="background:#F0F7EA;padding:12px;text-align:center">
+                            <div style="font-size:22px;font-weight:700;color:var(--cGreen)">12</div>
+                            <div class="text-sm">Открытые</div>
+                        </div>
+                        <div class="card flat" style="background:#FFEDED;padding:12px;text-align:center">
+                            <div style="font-size:22px;font-weight:700;color:var(--cRed)">2</div>
+                            <div class="text-sm">Просрочено</div>
+                        </div>
+                        <div class="card flat" style="background:#FEF8EB;padding:12px;text-align:center">
+                            <div style="font-size:22px;font-weight:700;color:var(--cOrange)">5</div>
+                            <div class="text-sm">На сегодня</div>
+                        </div>
+                        <div class="card flat" style="background:#E8EDFA;padding:12px;text-align:center">
+                            <div style="font-size:22px;font-weight:700;color:var(--cBlue)">3</div>
+                            <div class="text-sm">В работе</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team activity -->
+                <div class="widget_card">
+                    <div class="widget_head">
+                        <div class="widget_title">Активность команды</div>
+                        <button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:10px">
+                        <div style="display:flex;gap:10px;align-items:flex-start">
+                            <span class="avatar sm">ЕК</span>
+                            <div class="text-sm"><strong>Елена</strong> завершила задачу «Согласовать макет» <div class="text-xs text-gray">5 мин назад</div></div>
+                        </div>
+                        <div style="display:flex;gap:10px;align-items:flex-start">
+                            <span class="avatar sm">АС</span>
+                            <div class="text-sm"><strong>Алексей</strong> создал проект «Платформа Q3» <div class="text-xs text-gray">28 мин назад</div></div>
+                        </div>
+                        <div style="display:flex;gap:10px;align-items:flex-start">
+                            <span class="avatar sm">МК</span>
+                            <div class="text-sm"><strong>Михаил</strong> запросил согласование релиза <div class="text-xs text-gray">1 ч назад</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar week glance -->
+                <div class="widget_card">
+                    <div class="widget_head">
+                        <div class="widget_title">Календарь · Сегодня</div>
+                        <button class="btn ui_ghost icon sm"><i class="fi fi-rr-menu-dots-vertical"></i></button>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:8px">
+                        <div style="display:flex;gap:10px;padding:8px 10px;background:#E8EDFA;border-radius:8px">
+                            <div style="font-weight:600;width:60px">10:00</div>
+                            <div class="text-sm">Стендап команды<div class="text-xs text-gray">15 мин · Zoom</div></div>
+                        </div>
+                        <div style="display:flex;gap:10px;padding:8px 10px;background:#FEF8EB;border-radius:8px">
+                            <div style="font-weight:600;width:60px">12:30</div>
+                            <div class="text-sm">Демо для BKZ<div class="text-xs text-gray">1 ч · переговорная 2</div></div>
+                        </div>
+                        <div style="display:flex;gap:10px;padding:8px 10px;background:#F0F1F6;border-radius:8px">
+                            <div style="font-weight:600;width:60px">16:00</div>
+                            <div class="text-sm">1:1 с Иваном<div class="text-xs text-gray">30 мин</div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>

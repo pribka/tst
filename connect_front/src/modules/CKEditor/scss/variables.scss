@@ -1,0 +1,119 @@
+@mixin ckeditorStyle {
+    --ck-color-mention-background: transparent;
+    --ck-color-mention-text: var(--primaryColor);
+    &.ck-editor__editable{
+        line-height: 1.5;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5{
+        font-weight: bold;
+        &:not(:last-child){
+            margin-bottom: 15px;
+        }
+    }
+    h1{
+        font-size: 22px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    iframe,
+    figure,
+    blockquote,
+    pre,
+    p{
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+    }
+    figure{
+        &.media{
+            width: 250px;
+            @media (min-width: 576px) {
+                width: 300px;
+            }
+        }
+    }
+    blockquote{
+        border-left: 2px solid var(--primaryColor);
+        padding: 5px 15px;
+    }
+    ul{
+        padding-left: 13px;
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+        li{
+            list-style: disc;
+        }
+    }
+    ol{
+        counter-reset: item;
+        margin-left: 0;
+        padding-left: 0;
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+        li{
+            &::before {
+                display: inline-block;
+                content: counter(item) ". ";
+                counter-increment: item;
+                margin-right: 5px;
+            }
+        }
+    }
+    .ck-placeholder{
+        color: #888888;
+    }
+    .table-scroll{
+        overflow: auto;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+    }
+    table {
+        border: 1px solid var(--borderColor);
+        table-layout: fixed;
+        width: max(100%, max-content);
+        box-sizing: border-box;
+        border-radius: 8px;
+        display: table;
+        border-collapse: collapse;
+        max-width: none;
+        min-width: 800px;
+        position: static !important;
+        background: #fff;
+    }
+
+    table thead th {
+        border-bottom: 2px solid var(--borderColor);
+        background: var(--tableHeaderBg, transparent);
+    }
+
+    table tr:not(:last-child) td {
+        border-bottom: 1px solid var(--borderColor);
+    }
+
+    table td,
+    table th {
+        box-sizing: border-box;
+        width: auto!important;
+        max-width: 500px;
+        padding: 5px;
+    }
+    figure{
+        &.table{
+            display: block!important;
+        }
+    }
+    img{
+        max-height: 400px;
+        @media (min-width: 992px) {
+            max-height: 600px;
+        }
+    }
+}
