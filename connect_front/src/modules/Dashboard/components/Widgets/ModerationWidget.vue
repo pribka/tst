@@ -1,0 +1,161 @@
+<template>
+    <WidgetWrapper 
+        :widget="widget" 
+        :class="isMobile && 'mobile_widget'">
+        <div class="scroller_block">
+            <a-empty 
+                v-if="empty" 
+                :description="$t('no_data')" />
+            <Card v-for="item in list.results" :key="item.id" :item="item" />
+            <infinite-loading 
+                v-if="loadingRun"
+                ref="infiniteLoading"
+                @infinite="getList"
+                :identifier="infiniteId"
+                :distance="1">
+                <div 
+                    slot="spinner"
+                    class="flex items-center justify-center inf_spinner">
+                    <a-spin size="small" />
+                </div>
+                <div slot="no-more"></div>
+                <div slot="no-results"></div>
+            </infinite-loading>
+            <template v-else>
+                <div v-if="loading" class="flex items-center justify-center">
+                    <a-spin size="small" />
+                </div>
+            </template>
+        </div>
+    </WidgetWrapper>
+</template>
+
+<script>
+import eventBus from '@/utils/eventBus'
+import { errorHandler } from '@/utils/index.js'
+export default {
+    props: {
+        widget: {
+            type: Object,
+            required: true
+        }
+    },
+    components: {
+        Card: () => import('@apps/Moderation/components/Card.vue'),
+        WidgetWrapper: () => import('../WidgetWrapper.vue'),
+        InfiniteLoading: () => import('vue-infinite-loading')
+    },
+    computed: {
+        isMobile() {
+            return this.$store.state.isMobile
+        }
+    },
+    data() {
+        return {
+            infiniteId: new Date(),
+            loading: false,
+            page: 0,
+            loadingRun: true,
+            empty: false,
+            model: 'catalogs.ContractorProfileRequestModel',
+            list: {
+                results: [],
+                next: true,
+                count: 0
+            }
+        }
+    },
+    methods: {
+        resetList() {
+            this.$nextTick(() => {
+                this.page = 0
+                this.empty = false
+                this.list = {
+                    results: [],
+                    next: true,
+                    count: 0
+                }
+                this.$refs.infiniteLoading.stateChanger.reset()
+            })
+        },
+        async getList($state) {
+            if(!this.loading && this.list.next) {
+                try {
+                    this.loadingRun = false
+                    this.loading = true
+                    this.page += 1
+                    const { data } = await this.$http.get('/catalogs/profile_requests/', {
+                        params: {
+                            page: this.page,
+                            page_size: 15,
+                            page_name: this.widget.page_name || this.widget.id
+                        }
+                    })
+
+                    if(data) {
+                        this.list.count = data.count
+                        this.list.next = data.next
+                    }
+
+                    if(data?.results?.length)
+                        this.list.results = this.list.results.concat(data.results)
+
+                    if(this.page === 1 && !this.list.results.length) {
+                        this.empty = true
+                    }
+                        
+                    if(this.list.next)
+                        $state.loaded()
+                    else
+                        $state.complete()
+
+                    setTimeout(() => {
+                        this.$nextTick(() => {
+                            this.loadingRun = true
+                        })
+                    }, 200)
+                } catch(error) {
+                    $state.complete()
+                    errorHandler({error})
+                } finally {
+                    this.loading = false
+                }
+            } else {
+                $state.complete()
+            }
+        }
+    },
+    mounted() {
+        eventBus.$on(`update_filter_${this.model}_${this.widget.page_name || this.widget.id}`, () => {
+            this.resetList()
+        })
+        eventBus.$on('update_moderation_list', () => {
+            this.resetList()
+        })
+    },
+    beforeDestroy() {
+        eventBus.$off(`update_filter_${this.model}_${this.widget.page_name || this.widget.id}`)
+        eventBus.$off('update_moderation_list')
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+.scroller_block{
+    overflow-y: auto;
+    height: 100%;
+    &::v-deep{
+        .card{
+            background: #f7f9fc;
+            &:not(:last-child){
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+.mobile_widget{
+    .scroller_block{
+        height: 350px;
+    }
+}
+</style>

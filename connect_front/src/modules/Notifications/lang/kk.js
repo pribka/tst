@@ -1,0 +1,33 @@
+export default {
+    "noty": {
+        "readAll": "Барлығын оқу",
+        "readAllMentions": "Атап өтулерді оқу",
+        "telegramNotifications": "Telegram арқылы хабарландырулар",
+        "emptyList": "Тізім бос",
+        "unread": "Оқылмаған",
+        "readGroup": "Топты оқу",
+        "read": "Оқылды",
+        "notificationList": "Хабарландырулар",
+        "mentionNotificationTitle": "Сізді пікірде атап өтті",
+        "defaultTitle": "Ақпарат",
+        "setting": "Баптаулар",
+        "tabNotifications": "Барлығы",
+        "tabMentions": "Атап өтулер",
+        "categoryFilter": "Хабарлама санаттары",
+        "categoryOrderSettings": "Санаттар тәртібі",
+        "changeCategorySortSettings": "Сұрыптау баптауларын өзгерту",
+        "resetCategoryFilter": "Қалпына келтіру",
+        "soundSettings": "Дыбыс",
+        "soundNotifications": "Дыбыстық хабарландырулар",
+        "browserPushNotifications": "Браузер push-хабарландырулары",
+        "browserPushIosHint": "iPhone-де push тек орнатылған PWA ішінде жұмыс істейді. Сайтты Басты экранға қосып, оны қолданба ретінде ашыңыз.",
+        "browserPushPwaHint": "PWA-қолданбасымен хабарландырулар браузер ашық болмаса да тұрақты түрде келеді.",
+        "browserPushTooltip": "Маңызды жаңартуларды өткізіп алмау үшін push-хабарландыруларды қосыңыз.",
+        "sendToTgAlways": "Telegram-ға әрқашан қайталау",
+        "grouping": "Топтастыру",
+        "more": "Тағы",
+        "notifications": "хабарландыру",
+        "hideNotifications": "Хабарландыруларды бүктеу",
+        "fileOrImage": "Файл немесе сурет"
+    }
+}
