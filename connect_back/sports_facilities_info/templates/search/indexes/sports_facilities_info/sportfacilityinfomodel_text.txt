@@ -1,0 +1,1 @@
+{{ object.name }} {{object.owner_bin}} {{ object.owner_name }} {{object.location.full_name}}

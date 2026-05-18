@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .button-url {
+            display: inline-block;
+            background: #2D90FF;
+            color: #fff !important;
+            padding: 12px 18px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Добро пожаловать в {{ company_name }}!</h2>
+    
+    <p>Здравствуйте, {{ director_name }}!</p>
+    
+    <p>Вы получили доступ к демо-версии <strong>{{ company_name }}</strong>. В течение <strong>30 дней</strong> у вас есть возможность протестировать все ключевые функции:</p>
+    
+    <ul>
+        <li><strong>Задачи и проекты</strong> — контроль, сроки, статусы.</li>
+        <li><strong>SCRUM и OKR</strong> — цели, результаты и спринты в одном месте.</li>
+        <li><strong>Коммуникации</strong> — чат, комментарии, совместная работа.</li>
+        <li><strong>Хелпдеск</strong> — заявки и обращения в удобном формате.</li>
+    </ul>
+
+    <p style="padding:30px 0;" class="text-center">
+        <a href="https://connect.gos24.kz" class="button-url">Начать работу</a>
+    </p>
+    
+    <p>Наша команда готова помочь вам: просто напишите в чат или на почту.</p>
+    
+    <p><strong>Желаем продуктивного тестирования!</strong></p>
+    
+    <br>
+    <p>С уважением,<br>
+    Команда <strong>{{ company_name }}</strong></p>
+</body>
+</html>

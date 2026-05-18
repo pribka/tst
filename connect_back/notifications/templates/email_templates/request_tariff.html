@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h2>Здравствуйте!</h2>
+    <p>Поступила новая заявка на подключение тарифа:</p>
+    <p><strong>Организация:</strong> {{ organization|default:"не указана" }}</p>
+    <p><strong>Контактное лицо:</strong> {{ name }}</p>
+    <p><strong>E-mail:</strong> {{ email }}</p>
+    <p><strong>Телефон:</strong> {{ phone|default:"не указан" }}</p>
+    <p>Пожалуйста, свяжитесь с клиентом для уточнения деталей и дальнейшей работы.</p>
+</body>
+</html>

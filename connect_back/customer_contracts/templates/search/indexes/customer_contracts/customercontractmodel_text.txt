@@ -1,0 +1,5 @@
+{{ object.number }}
+{% if object.customer_card %}{{ object.customer_card.name }} {{ object.customer_card.full_name }} {{ object.customer_card.inn }}{% endif %}
+{% if object.organization %}{{ object.organization.name }} {{ object.organization.full_name }}{% endif %}
+{% if object.status %}{{ object.status.name }} {{ object.status.code }}{% endif %}
+{% if object.legal_entity %}{{ object.legal_entity.name }}{% endif %}

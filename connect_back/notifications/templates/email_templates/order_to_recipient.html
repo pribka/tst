@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<img src="{{ logo }}" style="padding-right: 5px;max-width: 200px;">
+<br>
+<h2>Благодарим Вас за обращение ! </h2>
+<h2>Заказ №{{ order_counter }} успешно оформлен.</h2>
+<h3>Вы можете скачать счет и отслеживать его исполнение в личном кабинете.</h3>
+<a href="{{ frontend_url }}">Личный кабинет </a>
+
+{#<p>Заказчик {{ order_user_name }}</p>#}
+{#<p>Менеджер {{ contractor_name }}</p>#}
+<table>
+    <tr>
+        <th>№</th>
+        <th>Артикул</th>
+        <th>Товар</th>
+        <th>Количество</th>
+        <th>Цена</th>
+        <th>Сумма без скидки</th>
+        <th>Скидка</th>
+        <th>Ставка НДС</th>
+        <th>Сумма НДС</th>
+        <th>Сумма</th>
+    </tr>
+    {% for goods in goods_in_order %}
+        <tr>
+            <td>{{ goods.number }}</td>
+            <td>{{ goods.goods__article_number }}</td>
+            <td>{{ goods.goods__name }}</td>
+            <td>{{ goods.quantity }}</td>
+            <td>{{ goods.price }}</td>
+            <td>{{ goods.amount_no_discount }}</td>
+            <td>{{ goods.discount }}</td>
+            <td>{{ goods.nds }}</td>
+            <td>{{ goods.nds_amount }}</td>
+            <td>{{ goods.amount }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+<br>
+<strong>Итог: {{ total_count }} позиций на сумму {{ total_summ }} рублей</strong>
+</body>
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+</html>

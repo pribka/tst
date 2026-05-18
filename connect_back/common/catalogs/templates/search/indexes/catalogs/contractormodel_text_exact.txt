@@ -1,0 +1,5 @@
+{{object.name_ru}}
+{{object.name_kk}}
+{{object.full_name_ru}}
+{{object.full_name_kk}}
+{{object.member_inn}}

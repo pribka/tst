@@ -1,0 +1,11 @@
+{{object.name}}
+{{object.full_name}}
+{{object.pone}}
+{{object.email}}
+{{object.director_full_name}}
+{{object.contractor.phone}}
+{{object.contractor.only_digits_phone}}
+{{object.contractor.email}}
+{{object.contractor.delivery_addresses_str}}
+{{object.contractor.contact_person_name}}
+{{object.inn}}

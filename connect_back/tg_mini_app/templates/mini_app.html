@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Добавим немного CSS, чтобы ошибка была заметна */
+        #error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 15px;
+            /* Скрываем элемент, пока нет ошибки */
+            display: none;
+        }
+    </style>
+    <title>Авторизация Telegram...</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body onload="submitTelegramData()">
+    <h1>Пожалуйста, подождите, идет авторизация...</h1>
+    <div id="error-message"></div>
+
+    <div id="error-message"></div>
+    <!-- Скрытая форма для отправки данных на бэкенд -->
+    <form id="telegram_login_form" action="/api/v1/tg_mini_app/main" method="POST" style="display: none;">
+        <input type="hidden" name="init_data" id="init_data_input">
+        <!-- Это поле будет заполнено динамически из GET-параметра -->
+        <input type="hidden" name="redirect_to" id="redirect_to_input">
+    </form>
+
+    <script>
+        // Вспомогательная функция для отображения ошибки
+        function displayError(message) {
+            const errorDiv = document.getElementById('error-message');
+            if (errorDiv) {
+                // Записываем текст ошибки
+                errorDiv.textContent = message;
+                // Делаем элемент видимым
+                errorDiv.style.display = 'block';
+            }
+        }
+        function submitTelegramData() {
+            // Убеждаемся, что SDK готово
+            Telegram.WebApp.ready();
+
+            // 1. Получаем строку с данными инициализации Telegram
+            const initData = Telegram.WebApp.initData;
+
+            // 2. Получаем значение параметра 'redirect_to' из текущего URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const redirectToUrl = urlParams.get('redirect_to') || ''; // Если параметра нет, редиректим на главную
+            if (initData) {
+                // 3. Заполняем скрытые поля формы
+                document.getElementById('init_data_input').value = initData;
+                document.getElementById('redirect_to_input').value = redirectToUrl;
+
+                // 4. Автоматически отправляем форму на бэкенд
+                document.getElementById('telegram_login_form').submit();
+            } else {
+                displayError("Не удалось получить данные пользователя Telegram. Попробуйте открыть из приложения Telegram.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

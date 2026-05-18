@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0e1d94"],{"7bd7":function(Y,M,n){"use strict";n.r(M),n.d(M,"formatsInMoments",(function(){return D}));var D=["DD-MM-YYYY HH:mm","DD-MM-YYYY ","YYYY-MM-DD HH:mm","YYYY-MM-DD","DD.MM.YYYY HH:mm","DD.MM.YYYY"]}}]);

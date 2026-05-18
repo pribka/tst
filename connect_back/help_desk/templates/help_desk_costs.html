@@ -1,0 +1,233 @@
+{% load static %}
+{% load formset_tags %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Материалы обращения №{{ parent.number }}</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    {{ formset.media.css }}
+
+    <style>
+
+    :root {
+        --body-bg: #fff;
+        --body-color: #333;
+        --card-bg: #f8f9fa;
+        --border-color: #dee2e6;
+        --alert-info-bg: #d9edf7;
+        --alert-info-color: #31708f;
+        --deleted-bg: #f8d7da;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --body-bg: #121212;
+            --body-color: #fff;
+            --card-bg: #1e1e1e;
+            --border-color: #444;
+            --alert-info-bg: #1a2a3a;
+            --alert-info-color: #79aec8;
+            --deleted-bg: #4a1f1f;
+        }
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: var(--body-bg);
+        color: var(--body-color);
+    }
+    input:focus,
+    select:focus,
+    textarea:focus,
+    .select2-container--default .select2-selection--single:focus {
+        background-color: var(--body-bg) !important;
+        color: var(--body-color) !important;
+
+    }
+    .p-3.bg-light {
+        background-color: var(--card-bg) !important;
+        color: var(--body-color);
+    }
+    .row.border-bottom {
+        border-color: var(--border-color) !important;
+    }
+    .alert-info {
+        background-color: var(--alert-info-bg);
+        color: var(--alert-info-color);
+        border-color: var(--alert-info-bg);
+    }
+
+    .btn-primary { background-color: #79aec8; border-color: #79aec8; }
+    .btn-primary:hover { background-color: #6096b3; border-color: #6096b3; }
+    .btn-success { background-color: #417690; border-color: #417690; }
+    .btn-success:hover { background-color: #325a6e; border-color: #325a6e; }
+    .btn-danger { background-color: #ba2121; border-color: #ba2121; }
+
+    .existing-form-row[data-formset-form-deleted] {
+        text-decoration: line-through;
+        background-color: var(--deleted-bg);
+        opacity: 0.9;
+    }
+
+    .new-form-row[data-formset-form-deleted] {
+        display: none !important;
+    }
+
+    .field-group label { display: block; margin-bottom: .25rem; }
+    .field-group { margin-bottom: 1rem; }
+    input[type="checkbox"] { width: 1.5em; height: 1.5em; vertical-align: middle; }
+    .field-group label.ml-2 { margin-top: .25em; font-size: 1.1rem; }
+    .form-control {
+        background-color: var(--body-bg);
+        color: var(--body-color);
+        border: 1px solid var(--border-color);
+    }
+
+    .select2-container--default .select2-selection--single {
+        background-color: var(--body-bg) !important;
+        color: var(--body-color) !important;
+
+    }
+    .select2-container--default .select2-selection .select2-selection__rendered {
+        color: var(--body-color) !important;
+        padding-left: 0 !important;
+    }
+
+
+    .select2-container--default .select2-selection--single {
+        height: 3.5rem !important;
+        padding: 0.5rem 1rem !important;
+        font-size: 1.25rem !important;
+        line-height: 1.5 !important;
+        background-color: var(--body-bg) !important;
+        color: var(--body-color) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 0.3rem !important;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 100% !important;
+        top: 0 !important;
+    }
+
+    .select2-container--default .select2-search--dropdown .select2-search__field {
+        background-color: var(--body-bg) !important;
+        color: var(--body-color) !important;
+        border-color: var(--border-color) !important;
+
+    }
+
+    </style>
+    {{ formset.media.css }}
+</head>
+<body>
+
+<div class="container mt-4">
+
+    <div class="alert alert-info">
+        {% if request.user.full_name %}
+            Пользователь **{{ request.user.full_name }}**
+        {% else %}
+            Здравствуйте, Пользователь!
+        {% endif %}
+    </div>
+
+    <!-- Блок сообщений messages  -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+    <!-- КОНЕЦ БЛОКА СООБЩЕНИЙ -->
+
+    <h4 class="mb-3">Материалы обращения №{{ parent.number }}</h4>
+
+    <div id="formset" data-formset-prefix="{{ formset.prefix }}" class="p-3 bg-light rounded shadow-sm">
+        <form method="post">
+            {% csrf_token %}
+            {{ formset.management_form }}
+            <div data-formset-body>
+                {% for form in formset %}
+                    <div data-formset-form class="existing-form-row row border-bottom py-2">
+                        {{ form.id }}{{ form.basemodel_ptr }}
+                        <div class="field-group col-12 col-md-5">
+                            <label>{{ form.goods.label_tag }}</label>
+                            {{ form.goods|add_class:"form-control form-control-lg" }}
+                        </div>
+                        <div class="field-group col-12 col-md-3">
+                            <label>{{ form.quantity.label_tag }}</label>
+                            {{ form.quantity|add_class:"form-control form-control-lg" }}
+                        </div>
+                        <div class="field-group col-12 col-md-2 d-flex align-items-center">
+                            {{ form.DELETE }}
+                            <label class="ml-2 mb-0">Удалить?</label>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+
+        <script type="form-template" data-formset-empty-form>
+            {% escapescript %}
+                <div data-formset-form class="new-form-row row border-bottom py-2">
+                    {{ formset.empty_form.id }}
+                    <div class="field-group col-12 col-md-5">
+                        <label>{{ formset.empty_form.goods.label_tag }}</label>
+                        {{ formset.empty_form.goods|add_class:"form-control form-control-lg"}}
+                    </div>
+                    <div class="field-group col-12 col-md-3">
+                        <label>{{ formset.empty_form.quantity.label_tag }}</label>
+                        {{ formset.empty_form.quantity|add_class:"form-control form-control-lg" }}
+                    </div>
+                    <div class="field-group col-12 col-md-2">
+                        <span hidden>{{ formset.empty_form.DELETE }}</span>
+                        <button type="button" data-formset-delete-button class="btn btn-sm btn-danger mt-4">Удалить</button>
+                    </div>
+                </div>
+            {% endescapescript %}
+        </script>
+
+        <input type="button" value="Добавить материал" data-formset-add class="btn btn-primary mt-3">
+
+        <p class="mt-4">
+            <input type="submit" value="Сохранить все изменения" class="btn btn-success">
+        </p>
+    </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="{% static 'js/jquery.formset.js' %}"></script>
+{{ formset.media.js }}
+<script>
+    $(document).ready(function() {
+        const initializeAutocomplete = (context) => {
+            window.django.jQuery(context).find('select[data-autocomplete-light-function]')
+                .each(function() {
+                    window.autocomplete.init(this);
+                    $(this).next('.select2-container').css('width', '100% !important',);
+                });
+        };
+        $("#formset").formset({
+            animateForms: false,
+            reorderMode: 'dom',
+            added: function(row) {
+                initializeAutocomplete(row);
+            }
+        });
+        initializeAutocomplete($("#formset"));
+    });
+</script>
+</body>
+</html>

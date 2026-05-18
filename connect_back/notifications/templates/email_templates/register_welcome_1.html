@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .button-url {
+            display: inline-block;
+            background: #2D90FF;
+            color: #fff !important;
+            padding: 12px 18px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <span style="display:none; font-size:1px; line-height:1px; max-height:1px; max-width:1px; opacity:0; overflow:hidden;">
+        Бастауға 1 қадам — жоба құру | 1 шаг до старта — создать проект
+    </span>
+    <h3>Сәлеметсіз бе, {{ user_full_name }}!</h3>
+    <p>{{ company_name }} жүйесіне қош келдіңіз! Жұмысты бастау және команданы шақыру үшін бірінші жобаңызды құрыңыз.</p>
+    <p style="padding:30px 0;" class="text-center">
+        <a href="{{ url }}/projects/list?create_project=true" class="button-url">Жоба құру</a>
+    </p>
+    <p>Егер батырма жұмыс істемесе, мына сілтемені қолданыңыз: <a href="{{ url }}/projects/list?create_project=true">{{ url }}/projects/list</a></p>
+    <p>Пайдалы ақпараттар:</p>
+    <ul>
+        <li><a href="{{ url }}?help=true&chapters=6e4771c2-929d-11ee-ac35-0242ac11000f">Қатысушыларды қалай шақыруға болады</a></li>
+        <li><a href="{{ url }}?help=true&chapters=fdb7c36c-92c4-11ee-b6a2-0242ac11000f">Күйлер мен мерзімдерді қалай теңшеуге болады</a></li>
+    </ul>
+    <p>Егер сұрақтарыңыз болса — осы хатқа жауап беріңіз.</p>
+    <p style="margin-bottom:100px">{{ company_name }} • {{ support_email}} командасы</p>
+
+    <h3>Здравствуйте, {{ user_full_name }}!</h3>
+    <p>Рады видеть вас в {{ company_name }}. Чтобы начать работу и пригласить команду, создайте первый проект.</p>
+    <p style="padding:30px 0;" class="text-center">
+        <a href="{{ url }}/projects/list?create_project=true" class="button-url">Создать проект</a>
+    </p>
+    <p>Если кнопка не работает, используйте ссылку: <a href="{{ url }}/projects/list?create_project=true">{{ url }}/projects/list</a></p>
+    <p>Полезная информация:</p>
+    <ul>
+        <li><a href="{{ url }}?help=true&chapters=6e4771c2-929d-11ee-ac35-0242ac11000f">Как пригласить участников</a></li>
+        <li><a href="{{ url }}?help=true&chapters=fdb7c36c-92c4-11ee-b6a2-0242ac11000f">Как настраивать статусы и сроки</a></li>
+    </ul>
+    <p>Если возникнут вопросы — просто ответьте на это письмо.</p>
+    <p>Команда {{ company_name }} • {{ support_email}} </p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{{object.member_inn}}
+{{object.name_ru}}
+{{object.name_kk}}
+{{object.full_name_ru}}
+{{object.full_name_kk}}
+{{object.phone}}
+{{object.only_digits_phone}}
+{{object.email}}
+{{object.contact_person_name}}

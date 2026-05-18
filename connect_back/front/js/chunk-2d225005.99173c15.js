@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d225005"],{e312:function(n){n.exports=JSON.parse('{"ru":"Русский","en":"Английский","kk":"Казахский"}')}}]);

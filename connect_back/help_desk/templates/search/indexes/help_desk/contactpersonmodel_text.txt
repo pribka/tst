@@ -1,0 +1,1 @@
+{{ object.name }} {{ object.user.full_name }} {{ object.comment }}

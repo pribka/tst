@@ -1,0 +1,353 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block extrahead %}
+    {{ block.super }}
+    {# только select2 и jQuery, без своих цветов #}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+          rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <style>
+        /* минимум стилей только для компоновки, без цветовой схемы */
+
+        .replace-refs-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .replace-refs-col {
+            flex: 1 1 320px;
+            min-width: 280px;
+        }
+
+        .replace-refs-col h2 {
+            margin-top: 0;
+        }
+
+        .replace-refs-form-row {
+            margin-bottom: 10px;
+        }
+
+        .replace-refs-form-row > label {
+            display: block;
+            margin-bottom: 3px;
+            font-weight: 600;
+        }
+
+        .select2-container {
+            max-width: 100%;
+        }
+
+        #hits-table {
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}Массовая замена ссылок{% endblock %}
+
+{% block content %}
+
+
+
+<form method="post" id="replace-refs-form">
+    {% csrf_token %}
+
+    <fieldset class="module aligned">
+        <div class="replace-refs-grid">
+
+            <div class="replace-refs-col">
+                <h2>Источник</h2>
+
+                <div class="replace-refs-form-row">
+                    {{ form.source_content_type.errors }}
+                    <label for="id_source_content_type">
+                        {{ form.source_content_type.label }}
+                    </label>
+                    {{ form.source_content_type }}
+                </div>
+
+                <div class="replace-refs-form-row">
+                    <label for="id_source_object_select">Источник: объект</label>
+                    <select id="id_source_object_select"
+                            class="js-object-autocomplete"
+                            data-placeholder="Выберите объект-источник"
+                            data-initial-label="{{ source_object_label|default_if_none:'' }}">
+                    </select>
+                    {{ form.source_object_id }}
+                </div>
+            </div>
+
+            <div class="replace-refs-col">
+                <h2>Приёмник</h2>
+
+                <div class="replace-refs-form-row">
+                    {{ form.target_content_type.errors }}
+                    <label for="id_target_content_type">
+                        {{ form.target_content_type.label }}
+                    </label>
+                    {{ form.target_content_type }}
+                </div>
+
+                <div class="replace-refs-form-row">
+                    <label for="id_target_object_select">Приёмник: объект</label>
+                    <select id="id_target_object_select"
+                            class="js-object-autocomplete"
+                            data-placeholder="Выберите объект-приёмник"
+                            data-initial-label="{{ target_object_label|default_if_none:'' }}">
+                    </select>
+                    {{ form.target_object_id }}
+                </div>
+            </div>
+
+        </div>
+    </fieldset>
+
+    <div class="submit-row">
+        <button type="submit" name="action" value="fill" class="default">
+            Заполнить
+        </button>
+        {% if hits %}
+            <button type="submit" name="action" value="replace">
+                Заменить выбранные
+            </button>
+        {% endif %}
+    </div>
+
+    {% if hits %}
+        <h2>Найденные ссылки</h2>
+        <p>Всего: {{ hits|length }}</p>
+
+        <p>
+            <label>
+                <input type="checkbox" id="select-all">
+                Выделить / снять все
+            </label>
+        </p>
+
+        <table class="listing" id="hits-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Модель</th>
+                    <th>ID</th>
+                    <th>Поле</th>
+                    <th>Объект</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for hit in hits %}
+                    <tr>
+                        <td>
+                            <input type="checkbox"
+                                   class="js-item-checkbox"
+                                   name="selected"
+                                   value="{{ hit.id }}">
+                        </td>
+                        <td>{{ hit.app_label }}.{{ hit.model_name }}</td>
+                        <td>{{ hit.pk }}</td>
+                        <td>{{ hit.field_verbose }} ({{ hit.field_name }})</td>
+                        <td>{{ hit.repr }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</form>
+
+<script>
+(function() {
+    var $ = window.jQuery;
+    const loadUrl = "{% url 'admin:replace_refs_load_objects' %}";
+
+    // --- Автокомплит объектов (источник / приёмник) ---
+
+    function initObjectAutocomplete(ctSelectId, selectId, hiddenInputId) {
+        const $ctSelect = $("#" + ctSelectId);
+        const $select = $("#" + selectId);
+        const hiddenInput = document.getElementById(hiddenInputId);
+
+        function getAjaxUrl() {
+            const ctId = $ctSelect.val();
+            if (!ctId) return null;
+            const params = new URLSearchParams({ ct_id: ctId });
+            return loadUrl + "?" + params.toString();
+        }
+
+        function reinitSelect2() {
+            const url = getAjaxUrl();
+
+            const prevValue = hiddenInput.value || "";
+            const prevLabel = $select.data("initial-label") || "";
+
+            if ($select.data("select2")) {
+                $select.off("select2:select");
+                $select.off("select2:clear");
+                $select.select2("destroy");
+            }
+            $select.empty();
+
+            if (!url) {
+                $select.prop("disabled", true);
+                return;
+            }
+
+            $select.prop("disabled", false);
+
+            $select.select2({
+                width: "100%",
+                ajax: {
+                    url: url,
+                    dataType: "json",
+                    delay: 250,
+                    data: function(params) {
+                        return {
+                            q: params.term || ""
+                        };
+                    },
+                    processResults: function(data) {
+                        // backend уже возвращает text = "Имя - UUID"
+                        return {
+                            results: data.results || []
+                        };
+                    },
+                    cache: true
+                },
+                allowClear: true,
+                placeholder: $select.data("placeholder") || ""
+            });
+
+            $select.on("select2:select", function(e) {
+                const data = e.params.data;
+                hiddenInput.value = data.id || "";
+                $select.data("initial-label", data.text || "");
+            });
+
+            $select.on("select2:clear", function() {
+                hiddenInput.value = "";
+                $select.data("initial-label", "");
+            });
+
+            if (prevValue) {
+                hiddenInput.value = prevValue;
+                const text = prevLabel || prevValue;
+                const opt = new Option(text, prevValue, true, true);
+                $select.append(opt).trigger("change");
+            }
+        }
+
+        $ctSelect.on("change", function() {
+            hiddenInput.value = "";
+            $select.data("initial-label", "");
+            reinitSelect2();
+        });
+
+        if ($ctSelect.val()) {
+            reinitSelect2();
+        } else {
+            $select.prop("disabled", true);
+        }
+    }
+
+    // --- Автокомплит ContentType'ов через select2 ---
+
+    function initContentTypeSelect2() {
+        var $sourceCt = $("#id_source_content_type");
+        var $targetCt = $("#id_target_content_type");
+
+        if ($sourceCt.length) {
+            $sourceCt.select2({
+                width: "100%",
+                placeholder: "Тип источника"
+            });
+        }
+
+        if ($targetCt.length) {
+            $targetCt.select2({
+                width: "100%",
+                placeholder: "Тип приёмника"
+            });
+        }
+
+        // если меняем тип источника — спрашиваем, копировать ли в приёмник
+        if ($sourceCt.length && $targetCt.length) {
+            $sourceCt.on("change", function() {
+                var newVal = $sourceCt.val();
+                var targetVal = $targetCt.val();
+
+                if (newVal && newVal !== targetVal) {
+                    var ok = window.confirm(
+                        "Скопировать этот тип в поле «Тип приёмника» и перестроить список объектов?"
+                    );
+                    if (ok) {
+                        $targetCt.val(newVal).trigger("change");
+                    }
+                }
+            });
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // ContentType -> select2
+        initContentTypeSelect2();
+
+        // объекты
+        initObjectAutocomplete(
+            "id_source_content_type",
+            "id_source_object_select",
+            "id_source_object_id"
+        );
+        initObjectAutocomplete(
+            "id_target_content_type",
+            "id_target_object_select",
+            "id_target_object_id"
+        );
+
+        // магический чекбокс "выделить всё / снять всё"
+        const selectAll = document.getElementById("select-all");
+        if (selectAll) {
+            selectAll.addEventListener("change", function() {
+                const checked = selectAll.checked;
+                document.querySelectorAll(".js-item-checkbox")
+                    .forEach(cb => cb.checked = checked);
+            });
+        }
+    });
+})();
+</script>
+<style>
+.select2-container .select2-dropdown {
+    background-color: #1e1e1e !important;
+    color: #e5e5e5 !important;
+    border-color: #333 !important;
+}
+.select2-container .select2-search__field {
+    background-color: #2b2b2b !important;
+    color: #e5e5e5 !important;
+    border: 1px solid #444 !important;
+}
+.select2-container .select2-results__option {
+    background-color: #1e1e1e !important;
+    color: #e5e5e5 !important;
+}
+.select2-container .select2-results__option--highlighted {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+.select2-container .select2-results__option--selected {
+    background-color: #292929 !important;
+}
+.select2-results {
+    background-color: #1e1e1e !important;
+}
+.select2-container--default .select2-selection--single{
+    border-color: #1c1c1c;
+}
+
+</style>
+{% endblock %}

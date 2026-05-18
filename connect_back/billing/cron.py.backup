@@ -1,0 +1,129 @@
+from django.utils import timezone
+from datetime import timedelta
+from django.db import transaction
+from django.db.models import Prefetch
+
+from notifications.models import EmailNotificationModel, EmailNotificationRecipientModel
+from notifications.utils import send_email
+from common.catalogs.models import ContractorProfileModel
+from .models import ContractorTariffModel, ContractorTariffNotificationLog
+
+
+def send_tariff_notifications(instance_count=100):
+    """Отправка уведомлений о статусе тарифов (пока только для демо-тарифа)."""
+    now = timezone.now()
+    notifications_sent = []
+    
+    # Запросы для каждого типа уведомления
+    demo_started_tariffs = _get_demo_started_tariffs(now, instance_count)
+    demo_ending_3days_tariffs = _get_demo_ending_3days_tariffs(now, instance_count)
+    demo_ended_tariffs = _get_demo_ended_tariffs(now, instance_count)
+    
+    # Отправляем уведомления о начале демо
+    for contractor_tariff in demo_started_tariffs:
+        if _send_notification(contractor_tariff, 'demo_started', 'demo_started', 'Добро пожаловать! Ваш демо-период уже активирован'):
+            notifications_sent.append(f'{contractor_tariff.contractor.name} - demo_started')
+    
+    # Отправляем уведомления за 3 дня до окончания
+    for contractor_tariff in demo_ending_3days_tariffs:
+        if _send_notification(contractor_tariff, 'demo_ending_3days', 'demo_ending_3days', 'До окончания демо осталось 3 дня'):
+            notifications_sent.append(f'{contractor_tariff.contractor.name} - demo_ending_3days')
+    
+    # Отправляем уведомления об окончании
+    for contractor_tariff in demo_ended_tariffs:
+        if _send_notification(contractor_tariff, 'demo_ended', 'demo_ended', 'Сегодня заканчивается ваш демо-период'):
+            notifications_sent.append(f'{contractor_tariff.contractor.name} - demo_ended')
+    
+    return notifications_sent
+
+
+def _get_demo_started_tariffs(now, limit):
+    """Тарифы, по которым сегодня началось демо"""
+    return ContractorTariffModel.objects.filter(
+        is_active=True,
+        tariff__code='demo',
+        date_start__date=now.date(),
+    ).exclude(
+        notification_logs__notification_type='demo_started'
+    ).select_related('tariff').prefetch_related(
+        Prefetch(
+            'contractor__contractor_profile',
+            queryset=ContractorProfileModel.objects.filter(director=True).select_related('user')
+        )
+    )[:limit]
+
+
+def _get_demo_ending_3days_tariffs(now, limit):
+    """Тарифы, по которым через 3 дня заканчивается демо"""
+    target_date = now.date() + timedelta(days=3)
+    return ContractorTariffModel.objects.filter(
+        is_active=True,
+        tariff__code='demo',
+        date_end__date=target_date,
+    ).exclude(
+        notification_logs__notification_type='demo_ending_3days'
+    ).select_related('tariff').prefetch_related(
+        Prefetch(
+            'contractor__contractor_profile',
+            queryset=ContractorProfileModel.objects.filter(director=True).select_related('user')
+        )
+    )[:limit]
+
+
+def _get_demo_ended_tariffs(now, limit):
+    """Тарифы, по которым сегодня заканчивается демо"""
+    return ContractorTariffModel.objects.filter(
+        is_active=True,
+        tariff__code='demo',
+        date_end__date=now.date(),
+    ).exclude(
+        notification_logs__notification_type='demo_ended'
+    ).select_related('tariff').prefetch_related(
+        Prefetch(
+            'contractor__contractor_profile',
+            queryset=ContractorProfileModel.objects.filter(director=True).select_related('user')
+        )
+    )[:limit]
+
+
+def _send_notification(contractor_tariff, notification_type, template, subject):
+    """Отправляет одно уведомление"""
+    try:
+        director_profile = contractor_tariff.contractor.contractor_profile.filter(director=True).first()
+        if not director_profile or not director_profile.user.user.email:
+            return False
+        director_email = director_profile.user.user.email
+    except:
+        return False
+    
+    with transaction.atomic():
+        # Создаем email уведомление
+        email_notification = EmailNotificationModel.objects.create(
+            template=template,
+            subject=subject,
+            context={
+                'director_name': director_profile.user.full_name,
+                'contractor_name': contractor_tariff.contractor.name,
+                'tariff_name': contractor_tariff.tariff.name,
+                'date_start': contractor_tariff.date_start.isoformat() if contractor_tariff.date_start else None,
+                'date_end': contractor_tariff.date_end.isoformat() if contractor_tariff.date_end else None,
+                'days_left': (contractor_tariff.date_end - timezone.now()).days if contractor_tariff.date_end > timezone.now() else 0,
+            }
+        )
+        
+        # Добавляем получателя
+        EmailNotificationRecipientModel.objects.create(
+            email_notification=email_notification,
+            recipient=director_email
+        )
+        
+        # Создаем лог
+        ContractorTariffNotificationLog.objects.create(
+            contractor_tariff=contractor_tariff,
+            notification_type=notification_type
+        )
+        
+        # Отправляем
+        send_email(email_notification.pk)
+        
+    return True

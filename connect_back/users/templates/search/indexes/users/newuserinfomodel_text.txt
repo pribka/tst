@@ -1,0 +1,2 @@
+{{ object.user.full_name }}
+{{ object.user.user.email }}

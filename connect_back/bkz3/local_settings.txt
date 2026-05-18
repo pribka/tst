@@ -1,0 +1,459 @@
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SECRET_KEY = ''
+
+DEBUG = True
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
+
+ALLOWED_HOSTS = ['bkz.centersoft.kz']
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_URL = '/static/'
+
+REDIS_HOST = '127.0.0.1'
+REDIS_PORT = '6379'
+
+CACHES = {
+    'default': {
+        "BACKEND": "django_redis.cache.RedisCache",
+        'LOCATION': 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/4',
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+CSRF_TRUSTED_ORIGINS = {
+    'local.bkz3.kz'
+}
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://local.bkz3.kz",
+]
+
+BACKEND_URL = 'http://local.bkz3.kz'
+
+FRONTEND_URL = 'http://local.bkz3.kz'
+
+SESSION_REDIS = {
+    'host': REDIS_HOST,
+    'port': REDIS_PORT,
+    'db': 10,
+    'prefix': 'session',
+    'socket_timeout': 1
+}
+SESSION_ENGINE = 'redis_sessions.session'
+SESSION_REDIS_PREFIX = 'session'
+
+
+BROKER_URL = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/4'
+BROKER_TRANSPORT_OPTIONS = {'visibility_timeout': 3600}
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'INCLUDE_SPELLING': True,
+        'URL': 'http://127.0.0.1:8983/solr/bkz3.centersoft.kz',
+        'HAYSTACK_DEFAULT_OPERATOR': 'OR',
+        'TIMEOUT': 60 * 5,
+    },
+}
+HAYSTACK_SIGNAL_PROCESSOR = 'common.djangoq_haystack.signal_processor.DjangoQSignalProcessor'
+
+
+IMPORT_DATA_TOKEN = '@@@PRIVATE_TOKEN@@@'
+
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 100000000000
+DATA_UPLOAD_MAX_MEMORY_SIZE = 100000000000
+
+# Токен УРВ:
+TOKEN_URV = '<some uid>'
+
+# категории в сайдбаре на фронте (см. common/front_routes):
+FRONT_CATEGORIES = {
+    'dashboard': (),
+    'communication': ('meetings', 'chat', 'tasks', 'groups', 'projects', 'business_processes',),
+    'crm': ('goods', 'orders',),
+}
+MOBILE_FRONT_CATEGORIES = {
+                              'tasks': {'show_footer_menu': True},
+                              'sprints': {'show_footer_menu': False},
+                              'chat': {'show_footer_menu': True},
+                              'meetings': {'show_footer_menu': True},
+                              'groups': {'show_footer_menu': True},
+                              'projects': {'show_footer_menu': False},
+}
+
+MOBILE_APP_FRONT_CATEGORIES = {
+    'tasks', 'logistic', 'chat', 'projects',
+}
+
+# Состав личного кабинета:
+PRIVATE_OFFICE = (
+    {
+        "name": "Персональная информация",
+        "path": "personal",
+        "icon": "fi-rr-id-badge",
+        "widget": "Personal"
+    },
+    {
+        "name": "Сменить пароль",
+        "path": "change-password",
+        "icon": "fi-rr-lock",
+        "widget": "Password"
+    },
+    {
+        "name": "Интерфейс",
+        "path": "interface",
+        "icon": "fi-rr-settings-sliders",
+        "widget": "Interface"
+    },
+    {
+        "name": "Список соглашений",
+        "path": "list-of-agreements",
+        "icon": "fi-rr-assept-document",
+        "widget": "Agreements"
+    },
+    {
+        "name": "Отчеты",
+        "path": "reports",
+        "icon": "dashboard",
+        "widget": "Reports"
+    },
+    {
+        "name": "Бонусы",
+        "path": "bonuses",
+        "icon": "gift",
+        "widget": "Bonus"
+    },
+    {
+        "name": "Счета/КП",
+        "path": "accounts",
+        "icon": "file-done",
+        "widget": "Accounts"
+    }
+)
+
+MOBILE_APP_PRIVATE_OFFICE = (
+    {
+        "icon": "fi-rr-id-badge",
+        "name": "Персональная информация",
+        "path": "personal",
+        "widget": "Personal",
+    }
+)
+
+GLOBAL_FRONT_SETTINGS = {
+    "locale": {
+        "default_lang": "ru",
+        "lang_list": [
+            'ru',
+            'en',
+            'kk',
+        ],
+        "fallback_lang": "en",
+        "injectTranslate": [
+            "vue2TaskComponent",
+            "Profiler",
+            "Upload",
+            "vue2GroupsAndProjectsComponent",
+            "vue2ChatComponent",
+        ]
+    },
+    "injectInit": [
+        "vue2GroupsAndProjectsComponent",
+        "vue2TaskComponent",
+        "vue2ChatComponent",
+        "vue2MeetingComponent",
+        "BusinessProcesses",
+        "Notifications",
+        "Dashboard",
+        "Products",
+        "Orders",
+        "Deals",
+        "vue2FlowchartsComponent",
+        "vue2Files",
+        "vue2CommentsComponent",
+
+
+    ],
+    "upload_config": {
+        "max_file_size": 10,
+    },
+    "widgets": {
+        "show": True,
+    },
+    "table_setting": {
+        "theme": "ag-theme-alpine",
+    },
+    "aside_setting": {
+        "active": True,
+        "theme": "FlatAside",
+        "grouping": True,
+        "width": 250,
+    },
+    "header_setting": {
+        "history": False,
+        "favorite": False,
+        "notification": True,
+        "settingNav": True,
+        "i18n": False,
+        "search": True,
+        "widgets": True,
+        "product_cart": True,
+        "logo": f"{BACKEND_URL}/media/new_lg.svg",
+        "logo_mini": f"{BACKEND_URL}/media/new_logo_mini_1.svg",
+        "favicon": f"{BACKEND_URL}/media/favicon.ico",
+    },
+    "footer_setting": {
+        "active": True,
+    },
+    "site_setting":{
+        "site_name": "BPMS",
+        "pwa": True,
+        "push_key": "",
+        "gant_key": "",
+        "ui_key":"",
+        "icon_16":f"{BACKEND_URL}/media/icon-16x16.png",
+        "icon_32":f"{BACKEND_URL}/media/icon-32x32.png",
+        "icon_96":f"{BACKEND_URL}/media/icon-96x96.png",
+        "icon_192":f"{BACKEND_URL}/media/icon-192x192.png",
+        "icon_512":f"{BACKEND_URL}/media/icon-512x512.png",
+        "icon_mask_192":f"{BACKEND_URL}/media/icon-mask-192x192.png",
+        "icon_mask_512":f"{BACKEND_URL}/media/icon-mask-512x512.png",
+    },
+    "order_setting":{
+        "cartDecimalCount": True, # Позволяет вводить дробные количества в корзине
+        "check_stock": True,
+        "cartMinusDelete": False,
+        "remnant_control": True,
+        "show_create_order_button": True,
+        "calculate_warehouse_tp": False,
+        "myPoints": True,
+    },
+    "front_page": "dashboard",
+    "sounds": {
+        "new_message": f"{BACKEND_URL}/media/new_message.mp3",
+        "new_notify": f"{BACKEND_URL}/media/new_notify.mp3",
+    },
+    "main_settings": {
+        "VUE_APP_SENTRY_DSN": "https://",
+        "VUE_APP_SENTRY_AUTH_TOKEN": "",
+        "VUE_APP_SENTRY_URL": "https://",
+        "VUE_APP_SENTRY_ORG": "",
+        "VUE_APP_SENTRY_PROJECT": "bpms",
+        "VUE_APP_TAGMANAGER_ID": "",
+    },
+    "files_setting": {
+        "available_views": [
+            {
+                "name": 'list',
+                "icon": 'fi-rr-list'
+            },
+            {
+                "name": 'grid',
+                "icon": 'fi-rr-apps'
+            }
+        ],
+        "default_view": "list",
+    },
+    "group_members_list": { # Дополнительные поля для отображения в списке
+                            # пользователей при выборе участников группы
+        "displayed_extra_data": ['company', 'job_title']
+    },
+    "product_setting": {
+        "product_default_list": "ProductCardInfoList", # Дефолтный список товаров
+        "product_history": False, #История недавних товаров
+    },
+        "old_cabinet_url": "https://oldkabinte.net",
+    "map": {
+        "tileToken": "<token>",
+        "tileUrl": "https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}{r}.png?access-token=<token>"
+    },
+    "theme": {
+        "main_color": "#1d65c0",
+        "aside_color": "eff2f5",
+        "blue": "1890ff",
+        "tableSize": "small",
+    },
+    'dashboard_settings': { # Что показать на главной странице
+        'items': ['team', 'completed_task', 'created_task', 'balances', 'news', 'goods', 'offer', 'userurls']
+    }
+
+}
+
+MOBILE_GLOBAL_FRONT_SETTINGS = {
+    "locale": {  # Язык
+        "default_lang": "ru",
+        "lang_list": [
+            'ru',
+            'en',
+            'kk',
+        ],
+        "fallback_lang": "en",
+        "injectTranslate": [
+            "vue2TaskComponent",
+            "Profiler",
+            "Upload",
+            "vue2GroupsAndProjectsComponent",
+            "vue2ChatComponent",
+        ]
+    },
+    "site_setting": {
+        "push_key": "",
+        "gant_key": "",
+    },
+    "injectInit": [
+        "vue2TaskComponent",
+        "Notifications",
+        "vue2GroupsAndProjectsComponent",
+        "vue2ChatComponent",
+        "vue2MeetingComponent",
+        "Products",
+        "Orders",
+        "Deals",
+        "vue2CommentsComponent",
+
+    ],
+    "upload_config": {  # Загрузка файлов
+        "max_file_size": 10,
+    },
+    "widgets": {  # Тут будут мелкие конфиги
+        "show": True,
+    },
+    "table_setting": {
+        "theme": "ag-theme-alpine",
+    },
+    "aside_setting": {
+        "active": True,
+        "theme": "FlatAside",
+        "grouping": True,
+        "width": 250,
+    },
+    "header_setting": {
+        "history": False,
+        "favorite": False,
+        "notification": True,
+        "settingNav": True,
+        "i18n": False,
+        "search": True,
+        "widgets": True,
+        "product_cart": True,
+        "logo": "https://gos24.kz/_nuxt/img/emblem3.2c26fe1.svg",
+        "logo_mini": f"{BACKEND_URL}/media/mini_logo.svg"
+    },
+    "footer_setting": {
+        "active": True,
+    },
+    "order_setting": {
+        "check_stock": False,
+        "cartMinusDelete": False,
+        "remnant_control": False,
+    },
+    "files_setting": {
+      "available_views": ["list", "grid"],
+      "default_view": "list",
+    },
+    "front_page": "dashboard",
+    "sounds": {
+        "new_message": f"{BACKEND_URL}/media/new_message.mp3",
+        "new_notify": f"{BACKEND_URL}/media/new_notify.mp3",
+    },
+    "map": {
+        "tileToken": "<token>",
+        "tileUrl": "https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}{r}.png?access-token=<token>"
+    },
+    "theme": {
+        "main_color": "#1d65c0",
+        "aside_color": "eff2f5",
+        "blue": "1890ff",
+        "tableSize": "small",
+    },
+}
+
+MOBILE_APP_GLOBAL_FRONT_SETTINGS = {
+    "injectModules": {
+        "notifications": True,
+    },
+    "injectComponents": [
+        "TaskDetail",
+    ],
+}
+
+# Валюта по умолчанию
+DEFAULT_CURRENCY_CODE = '643'
+
+IMPORT_1C_DATA_TOKEN = '@@@TOKEN@@@'
+
+
+TIME_ZONE = 'Asia/Almaty'  #'Europe/Moscow'
+
+
+EXPORT_1C_DATA_URL = ''
+EXPORT_1C_DATA_TOKEN = ''
+
+AXES_ENABLED = False
+
+# Контроль остатков товара при добавлении в корзину.
+LOCAL_REMNANT_CONTROL = True
+
+
+SOCKETIO_SYSTEM_CHANNEL = 'system'
+
+
+
+Q_CLUSTER = {
+    'retry': 180,
+    'timeout': 120,
+    'workers': 4,
+    'name': 'bkz',
+    'django_redis': 'default',
+}
+
+TG_BOT_TOKEN = ''
+TG_BOT_NAME = 'bpmsTest2Bot'
+
+GOODS_PRICE_BY_CATALOG = True #: Цена берется из цены котороая в в самом товаре (карточке)
+DEFAULT_PRICE_TYPE_CODE = None #: (None если использовать по типу цен из контракта,
+                                #:'default' если тцены отображаются из карточки по типам цен')
+                                #: зависит от GOODS_PRICE_BY_CATALOG
+
+DEALERS_EMAIL_NEWS_NOTIFICATION = True #: Включение/отключение рассылки диллерам
+                                       #: о выходе новостей на "Рабочем столе"
+                                       #: письма отправляются в момент публикации новости
+
+# Старые урлы:
+URLS = {
+    'frontend_url': FRONTEND_URL,
+    'tasks': f"{FRONTEND_URL}/ru/communication/Tasks/list",
+    'meetings': f"{FRONTEND_URL}/ru/communication/meetings",
+    'groups': f"{FRONTEND_URL}/ru/communication/Groups",
+    'projects': f"{FRONTEND_URL}/ru/communication/Projects",
+    'business_processes': f"{FRONTEND_URL}/ru/communication/BusinessProcesses",
+    'chat': f"{FRONTEND_URL}/ru/communication/chat",
+    'notifications': f"{FRONTEND_URL}/ru/notifications",
+    'dashboard': f"{FRONTEND_URL}/ru/dashboard",
+    'orders': f"{FRONTEND_URL}/ru/orders",
+    'my_bases': f"{FRONTEND_URL}/ru/tickets",
+    'team': f"{FRONTEND_URL}/ru/communication/team",
+    'consolidation': f"{FRONTEND_URL}/ru/consolidation",
+}
+
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+sentry_sdk.init(
+    dsn="https://<YOUR_SENTRY_DSN>",  # замени на свой DSN из Sentry
+    integrations=[DjangoIntegration()],
+    traces_sample_rate=1.0,  # процент запросов, для которых включен APM (0.0–1.0)
+    send_default_pii=True,   # отправлять персональные данные пользователей (например, user.id)
+)

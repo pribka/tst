@@ -1,0 +1,7 @@
+{{object.issue.number}}
+{{object.issue.summary}}
+{{object.issue.text}}
+{{object.author.full_name}}
+{{object.organization.name}}
+{{object.organization.full_name}}
+{{object.organization.member_inn}}

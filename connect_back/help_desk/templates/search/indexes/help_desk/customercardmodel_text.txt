@@ -1,0 +1,5 @@
+{{ object.inn }}
+{{ object.name }}
+{{ object.full_name }}
+{% for contact in object.contact_persons.all %}{{ contact.name }} {{ contact.email }} {{ contact.phone }} {% endfor %}
+{% for tag in object.object_tags.all %}{{ tag.name }} {% endfor %}

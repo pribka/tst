@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход в конференцию</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        setTimeout(() => location.reload(), 10*1000)
+    </script>
+    
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-weight: inherit;
+    }
+    a {
+        text-decoration: none;
+        color: var(--blue);
+        transition: color 0.2s ease;
+    }
+    a:hover {
+        color: var(--blue-hovered);
+    }
+    :root {
+        --bg-warning: #fffbe6;
+        --border-warning: #ffe58f;
+
+        --bg-danger: #fff1f0;
+        --border-danger: #ffa39e;
+
+        --blue: #1890ff;
+        --blue-hovered: #40a9ff;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+        font-weight: 400;
+        font-family: "Roboto", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+    .container {
+        max-width: 960px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    .container_small {
+        max-width: 500px;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .header {
+        padding-bottom: 1rem;
+        padding-top: 2.5rem;
+    }
+    .main {
+        padding: 1rem 0;
+        flex-grow: 1;
+    }
+    .footer {
+        padding-top: 1rem;
+        padding-bottom: 5.5rem;
+    }
+
+    .logo_wrapper {
+        height: 64px;
+    }
+    .logo_image {
+        height: 100%;
+    }
+    .text-xl {
+        font-size: 2rem;
+    }
+    .text-lg {
+        font-size: 1.2rem;
+    }
+
+    .alert {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 1rem 3rem;
+    }
+    .alert_warning {
+        background: var(--bg-warning);
+        border: 1px solid var(--border-warning);
+    }
+    .alert_danger {
+        background: var(--bg-danger);
+        border: 1px solid var(--border-danger);
+    }
+
+    .contacts_item + .contacts_item {
+        margin-top: 0.5rem;
+    }
+    .contacts_item_label {
+        font-weight: 500;
+    }
+    .form_title {
+        font-size: 1.7rem;
+        margin-bottom: 1.75rem;
+    }
+    .text_input {
+        height: 50px;
+        width: 100%;
+        padding: 0.75rem;
+
+        color: #505050;
+        border: 2px solid #e1e7ec;
+        border-radius: 0.5rem;
+
+        font-size: 1rem;
+
+        transition: all .3s;
+        outline: none;
+    }
+    .text_input:hover {
+        border-color: #3f83cc;
+    }
+    .text_input:focus {
+        border-color: #3f83cc;
+        box-shadow: 0 0 0 2px rgba(28,101,192,.2);
+    }
+
+    .submit_button {
+        height: 50px;
+        width: 100%;
+        background-color: #1c65c0;
+        border-color: #1c65c0;        
+        color: #fff;
+        padding: 0 1rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        outline: none;
+        border: 1px solid transparent;
+        transition: all .3s cubic-bezier(.645,.045,.355,1);
+    }
+    .submit_button:hover {
+        background-color: #3f83cc;
+        border-color: #3f83cc;
+    }
+    .submit_button:active {
+        background-color: #0f4999;
+        border-color: #0f4999;
+    }
+    .form_input_group {
+        margin-bottom: 1.25rem;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .mb-8 {
+        margin-bottom: 2rem;
+    }
+    .mb-4 {
+        margin-bottom: 1rem;
+    }
+    .mb-3 {
+        margin-bottom: 0.75rem;
+    }
+    .form_inputs {
+        display: flex;
+    }
+    .input_wrap {
+        display: block;
+    }
+    @media (max-width: 600px) {
+        .form_inputs {
+            display: block;
+        }
+        .input_wrap + .input_wrap {
+            margin-top: 1rem;
+        }
+        .container {
+            padding: 0 1rem;
+        }
+        .container_small {
+            max-width: 360px;
+        }
+    }
+    @media (min-width: 601px) {
+        .input_wrap + .input_wrap {
+            margin-left: 1rem;
+        }
+    }
+</style>
+<body>
+    <header class="header">
+        <div class="container">
+            {% if logo %}
+                <div class="logo_wrapper text-center">
+                    <img
+                        class="logo_image" 
+                        src="{{ logo }}" 
+                        alt="logo">
+                </div>
+            {% else %}
+                <div style="height: 120px;"></div>
+            {% endif %}
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            {% if meeting.name %}
+                <div class="text-center mb-8">
+                    <h1 class="text-xl mb-3">
+                        {{ meeting.name }}
+                    </h1>
+                    <p class="text-lg">
+                        {{ meeting.description }}
+                    </p>
+                </div>
+            {% endif %}
+               
+            <form
+                action="{{ url }}" 
+                method="get">
+                <input 
+                    type="hidden" 
+                    value="{{ csrf_token }}" 
+                    name="csrfmiddlewaretoken">
+                <div class="container_small">
+                    <button 
+                        class="submit_button" 
+                        type="submit">
+                        Запустить конференцию
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+    {% if meeting.name %}
+        <footer class="footer">
+            <div class="container">
+                <p class="contacts">
+                    <div class="contacts_item">
+                        <span class="contacts_item_label">Организатор:</span> 
+                        <span>{{ meeting.author }}</span>
+                    </div>
+                    {% if meeting.author.user.email %}
+                        <div class="contacts_item">
+                            <span class="contacts_item_label">E-mail организатора:</span> 
+                            <a href="mailto:{{ meeting.author.user.email }}">{{ meeting.author.user.email }}</a>
+                        </div>
+                    {% endif %}
+                </p>
+            </div>
+        </footer>
+    {% endif %}
+</body>
+
+</html>

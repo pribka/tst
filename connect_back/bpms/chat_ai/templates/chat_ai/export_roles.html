@@ -1,0 +1,47 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %}Выгрузить роли AI | {{ block.super }}{% endblock %}
+
+{% block content %}
+<h1>Выгрузить роли AI</h1>
+<p>Отметьте роли для выгрузки в JSON-файл. Файл можно загрузить на другом стенде через «Загрузить роли AI».</p>
+
+<form method="post" action="">
+  {% csrf_token %}
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th style="text-align: left; padding: 8px;">Выбрать</th>
+        <th style="text-align: left; padding: 8px;">Sort</th>
+        <th style="text-align: left; padding: 8px;">Код</th>
+        <th style="text-align: left; padding: 8px;">Название</th>
+        <th style="text-align: left; padding: 8px;">Провайдер</th>
+        <th style="text-align: left; padding: 8px;">Модель</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for role in roles %}
+      <tr>
+        <td style="padding: 8px;">
+          <input type="checkbox" name="role_ids" value="{{ role.pk }}" id="role_{{ role.pk }}">
+        </td>
+        <td style="padding: 8px;">{{ role.sort }}</td>
+        <td style="padding: 8px;"><label for="role_{{ role.pk }}">{{ role.code }}</label></td>
+        <td style="padding: 8px;">{{ role.name }}</td>
+        <td style="padding: 8px;">{{ role.provider|default:"—" }}</td>
+        <td style="padding: 8px;">{{ role.model_name }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="6" style="padding: 16px;">Нет ролей для выгрузки.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p style="margin-top: 16px;">
+    <button type="submit" class="button">Выгрузить выбранные роли</button>
+    <a href="{% url 'admin:chat_ai_aichatrolemodel_changelist' %}" style="margin-left: 12px;">Вернуться к списку ролей</a>
+  </p>
+</form>
+{% endblock %}

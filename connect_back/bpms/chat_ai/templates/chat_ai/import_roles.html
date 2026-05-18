@@ -1,0 +1,21 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %}Загрузить роли AI | {{ block.super }}{% endblock %}
+
+{% block content %}
+<h1>Загрузить роли AI</h1>
+<p>Выберите JSON-файл, полученный при выгрузке ролей. Существующие роли с совпадающим кодом будут обновлены, остальные — созданы. Поле <code>code</code> используется для сопоставления.</p>
+
+<form method="post" action="" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="form-row" style="margin-bottom: 16px;">
+    <label for="id_file">Файл JSON:</label>
+    <input type="file" name="file" id="id_file" accept=".json" required>
+  </div>
+  <p>
+    <button type="submit" class="button">Загрузить роли</button>
+    <a href="{% url 'admin:chat_ai_aichatrolemodel_changelist' %}" style="margin-left: 12px;">Вернуться к списку ролей</a>
+  </p>
+</form>
+{% endblock %}

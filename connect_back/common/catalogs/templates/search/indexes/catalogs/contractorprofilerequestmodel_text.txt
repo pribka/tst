@@ -1,0 +1,6 @@
+{{object.user.full_name}}
+{{object.user.pk}}
+{{object.organization.full_name}}
+{{object.organization.name}}
+{{object.organization_bin}}
+{{object.organization.pk}}

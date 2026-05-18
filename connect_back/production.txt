@@ -1,0 +1,31 @@
+[uwsgi]
+# -------------
+# Settings:
+# key = value
+# Comments >> #
+# -------------
+
+# директория приложения
+chdir = /home/app_path
+
+# Путь до виртуального окружения
+home = /home/venv_path
+
+# Путь до wsgi-файла
+module = app_name.wsgi:application
+
+# Путь до файла при изменении которого происходит перезагрузка:
+touch-reload = /home/app_path/reload
+
+harakiri = 120
+
+processes = 4
+
+thunder-lock = True
+
+# Путь до лог-файла:
+daemonize = /home/logfile.log
+
+master = True
+
+enable-threads = True

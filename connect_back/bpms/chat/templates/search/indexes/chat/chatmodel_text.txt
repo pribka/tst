@@ -1,0 +1,7 @@
+{% if object.is_public %}
+    {{ object.name }}
+{% else %}
+    {% for member in object.members.all  %}
+        {{ member.user.full_name }}
+    {% endfor %}
+{% endif %}

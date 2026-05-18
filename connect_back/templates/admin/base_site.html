@@ -1,0 +1,66 @@
+{% extends "admin/base.html" %}
+{% block extrahead %}
+<style>
+@media(prefers-color-scheme: dark) {
+    ::selection {
+        background-color:var(--body-fg);
+        color:var(--body-bg);
+    }
+    textarea, select, .vTextField, .vDateField, .vTimeField, .vIntegerField, .vUUIDField, .select2-selection__rendered,
+    .jsonview, input[type='number'] {
+        background-color: #1b1b1b !important;
+    }
+    .inline-group {
+        border: 1px solid var(--hairline-color) !important;
+    }
+    .inline-group div.add-row, .inline-group .tabular tr.add-row td {
+        background-color: var(--darkened-bg) !important;
+        border-bottom: none !important;
+    }
+    .inline-related h3 {
+        background-color: var(--darkened-bg) !important;
+        color: var(--body-quiet-color) !important;
+        border-bottom: none !important;
+    }
+    .inline-related fieldset {
+        background-color: var(--body-bg) !important;
+    }
+    .form-row {
+        border-bottom: none !important;
+    }
+    .submit-row {
+        background-color: var(--darkened-bg) !important;
+        border: none !important;
+    }
+    .inline-group .tabular > fieldset.module {
+        border-bottom: none !important;
+    }
+    .nested-inline-bottom-border {
+        border-bottom: 1px solid #444 !important;
+    }
+}
+</style>
+{% endblock %}
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
+{% endblock %}
+
+{% block userlinks %}
+    <a target="_blank" href="{% url 'rebuild-haystack-index' %}">rebuild haystack index / </a>
+    <a target="_blank" href="{% url 'rebuild-dsl-index' %}">rebuild DSL index / </a>
+    <a target="_blank" href="{% url 'delete-filters-store' %}">Delete FiltersStore / </a>
+    <a target="_blank" href="{% url 'clear-cache' %}">Очистить кэш / </a>
+    <a target="_blank" href="{% url 'clear-sessions' %}">Очистить сессии пользователей / </a>
+    <a target="_blank" href="{% url 'api_chat:clear-message-cache' %}">Очистить кэш сообщений</a>
+    <a target="_blank" href="{% url 'api_chat:recover_chat_rooms' %}">Восстановить комнаты в редисе / </a>
+    <a target="_blank" href="{% url 'update-server' %}">Обновить сервер (только для стенда) /</a>
+    <a target="_blank" href="/api/v1/reports/clear-meta-cache/">clear report meta cache /</a>
+    <a target="_blank" href="{% url 'clear-cache-by-prefix' %}?prefix=">clear cache by name /</a>
+    <a target="_blank" href="{% url 'estimates:rebuild-execution-time-registers' %}">Перепровести регистры трудозатрат /</a>
+    <a target="_blank" href="{% url 'task-klass-pause' %}">Пауза task_klass 10 мин (OLLAMA)</a>
+    <a href="{% url 'bpms-chat-ai:export-roles' %}">Выгрузить роли AI /</a>
+    <a href="{% url 'bpms-chat-ai:import-roles' %}">Загрузить роли AI /</a>
+    {{ block.super }}
+{% endblock userlinks %}

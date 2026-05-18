@@ -1,0 +1,5 @@
+{{object.name}}
+{{object.company_name}}
+{{object.phone}}
+{{object.email}}
+{{object.only_digits_phone}}

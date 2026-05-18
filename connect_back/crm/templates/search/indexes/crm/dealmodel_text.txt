@@ -1,0 +1,6 @@
+{{ object.name }}
+{{ object.description }}
+{% if object.stage %}{{ object.stage.name }}{% endif %}
+{% if object.customer_card %}{{ object.customer_card.name }} {{ object.customer_card.full_name }} {{ object.customer_card.inn }}{% endif %}
+{% if object.responsible and object.responsible.user %}{{ object.responsible.user.first_name }} {{ object.responsible.user.last_name }} {{ object.responsible.user.middle_name }}{% endif %}
+{% if object.source_ticket %}{{ object.source_ticket.name }} {{ object.source_ticket.number }}{% endif %}

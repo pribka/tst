@@ -1,0 +1,5 @@
+{{object.number_1c}}
+{{ object.comment }}
+{% for goods in object.tp_goodsorders.all  %}
+    {{goods.goods.article_number}} {{goods.goods.name}} {{goods.goods.description}}
+{% endfor %}

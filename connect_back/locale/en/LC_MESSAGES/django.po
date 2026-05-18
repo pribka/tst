@@ -1,0 +1,5712 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-16 16:02+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: analytics/models.py:19 analytics/models.py:86
+#, fuzzy
+#| msgid "Все объекты"
+msgid "Объект среза"
+msgstr "Барлық нысандар"
+
+#: analytics/models.py:22 bpms/day_summary/models.py:62
+#: bpms/processes/models.py:840 bpms/tasks/models.py:2408
+#: bpms/workload/models.py:254 common/models.py:1619 help_desk/models.py:2920
+msgid "Дата"
+msgstr ""
+
+#: analytics/models.py:26 analytics/models.py:112
+#, fuzzy
+#| msgid "Все объекты"
+msgid "Охват среза"
+msgstr "Барлық нысандар"
+
+#: analytics/models.py:27
+msgid "organization | project | workgroup | user | user_day_summary"
+msgstr ""
+
+#: analytics/models.py:31 common/estimates/models.py:55
+#: common/estimates/models.py:359
+msgid "Источник данных"
+msgstr ""
+
+#: analytics/models.py:32
+msgid "tasks | meetings | events | helpdesk | chats"
+msgstr ""
+
+#: analytics/models.py:38
+msgid "Дайджест"
+msgstr ""
+
+#: analytics/models.py:42
+msgid "Дайджест активности за день"
+msgstr ""
+
+#: analytics/models.py:43
+msgid "Дайджесты активности за день"
+msgstr ""
+
+#: analytics/models.py:92 bpms/chat/models.py:40 bpms/chat/models.py:159
+#: bpms/chat/models.py:350 bpms/chat_ai/models.py:168
+#: bpms/chat_ai/models.py:212
+msgid "Автор"
+msgstr ""
+
+#: analytics/models.py:96 bpms/chat/models.py:354
+msgid "Дата начала периода"
+msgstr ""
+
+#: analytics/models.py:101 bpms/chat/models.py:359
+msgid "Дата конца периода"
+msgstr ""
+
+#: analytics/models.py:106
+msgid "Источники"
+msgstr ""
+
+#: analytics/models.py:116
+msgid "organization | project | workgroup | user"
+msgstr ""
+
+#: analytics/models.py:119 bpms/chat/models.py:364
+msgid "Саммари"
+msgstr ""
+
+#: analytics/models.py:126 bpms/chat/models.py:371 bpms/meetings/models.py:238
+#: bpms/tasks/models.py:158
+msgid "В процессе"
+msgstr ""
+
+#: analytics/models.py:127 bpms/chat/models.py:372
+msgid "Готово"
+msgstr ""
+
+#: analytics/models.py:128 bpms/chat/models.py:373 bpms/meetings/models.py:240
+#: notifications/models.py:232
+msgid "Ошибка"
+msgstr ""
+
+#: analytics/models.py:132 bpms/chat/models.py:377
+#: bpms/day_summary/models.py:77 bpms/meetings/models.py:137
+#: bpms/meetings/models.py:380 bpms/personal_planes/models.py:16
+#: bpms/personal_planes/models.py:30 bpms/processes/models.py:72
+#: bpms/processes/models.py:180 bpms/processes/models.py:721
+#: bpms/processes/models.py:773 bpms/tasks/models.py:165
+#: bpms/tasks/models.py:455 bpms/tasks/models.py:697 bpms/tasks/models.py:2102
+#: consolidation/models.py:539 consolidation/models.py:816
+#: customer_contracts/models.py:33 help_desk/models.py:106
+#: help_desk/models.py:1495 invest_projects_info/models.py:405
+#: risk_assessment/models.py:352 sports_facilities_info/models.py:64
+#: sports_facilities_info/models.py:711
+msgid "Статус"
+msgstr ""
+
+#: analytics/models.py:140 bpms/chat/models.py:385
+msgid "Сообщение об ошибке"
+msgstr ""
+
+#: analytics/models.py:146 bpms/chat/models.py:391
+msgid "Дата начала формирования"
+msgstr ""
+
+#: analytics/models.py:151 bpms/chat/models.py:396
+msgid "Дата завершения формирования"
+msgstr ""
+
+#: analytics/models.py:157 analytics/models.py:158
+msgid "Саммари активности"
+msgstr ""
+
+#: bkz3/settings.py:240 users/models.py:402
+msgid "Russian"
+msgstr ""
+
+#: bkz3/settings.py:241 users/models.py:403
+msgid "Kazakh"
+msgstr ""
+
+#: bkz3/settings.py:242 users/models.py:404
+msgid "English"
+msgstr ""
+
+#: bpms/chat/models.py:32
+msgid "Просто uid"
+msgstr ""
+
+#: bpms/chat/models.py:48 bpms/chat_ai/models.py:174
+msgid "Время последнего сообщения"
+msgstr ""
+
+#: bpms/chat/models.py:54
+msgid "Групповой чат"
+msgstr ""
+
+#: bpms/chat/models.py:56
+msgid "Уид чата"
+msgstr ""
+
+#: bpms/chat/models.py:60
+msgid "Дилер"
+msgstr ""
+
+#: bpms/chat/models.py:68 bpms/day_summary/models.py:26 bpms/okr/models.py:45
+#: bpms/okr/models.py:74 bpms/processes/models.py:68
+#: bpms/processes/models.py:679 bpms/tasks/models.py:842
+#: bpms/tasks/models.py:1982 bpms/tasks/models.py:2006
+#: bpms/tasks/models.py:2024 consolidation/models.py:259
+#: consolidation/models.py:287 help_desk/models.py:571 help_desk/models.py:2806
+#: invest_projects_info/models.py:708 notes/models.py:21 notes/models.py:131
+#: risk_assessment/models.py:151 risk_assessment/models.py:338 sla/models.py:25
+#: sports_facilities_info/models.py:687 tags/models.py:136
+msgid "Цвет"
+msgstr ""
+
+#: bpms/chat/models.py:71
+msgid "Связанная конфа"
+msgstr ""
+
+#: bpms/chat/models.py:74
+msgid "Чат техподдержки"
+msgstr ""
+
+#: bpms/chat/models.py:155 bpms/chat_ai/models.py:208
+msgid "Чат"
+msgstr ""
+
+#: bpms/chat/models.py:165 bpms/chat_ai/models.py:217 help_desk/models.py:1083
+msgid "Ответ на сообщение"
+msgstr ""
+
+#: bpms/chat/models.py:172
+msgid "Пересылаемое сообщение"
+msgstr ""
+
+#: bpms/chat/models.py:176
+msgid "Пересланное сообщение"
+msgstr ""
+
+#: bpms/chat/models.py:181 bpms/chat/models.py:296 bpms/chat_ai/models.py:221
+msgid "Текст"
+msgstr ""
+
+#: bpms/chat/models.py:185
+msgid "Системное сообщение"
+msgstr ""
+
+#: bpms/chat/models.py:187
+msgid "Сообщение от ИИ"
+msgstr ""
+
+#: bpms/chat/models.py:189
+msgid "Текст сообщения был удален"
+msgstr ""
+
+#: bpms/chat/models.py:191
+msgid "Закреплено"
+msgstr ""
+
+#: bpms/chat/models.py:195
+msgid "Закрепил"
+msgstr ""
+
+#: bpms/chat/models.py:198
+msgid "Дата закрепления"
+msgstr ""
+
+#: bpms/chat/models.py:202
+msgid "Уид сообщения"
+msgstr ""
+
+#: bpms/chat/models.py:203 common/models.py:58
+msgid "Дата создания"
+msgstr ""
+
+#: bpms/chat/models.py:204 common/models.py:63
+msgid "Дата изменения"
+msgstr ""
+
+#: bpms/chat/models.py:205
+msgid "Изменено"
+msgstr ""
+
+#: bpms/chat/models.py:208
+msgid "Поделиться"
+msgstr ""
+
+#: bpms/chat/models.py:266 bpms/event_calendar/models.py:449
+#: bpms/meetings/models.py:74 bpms/workgroups/models.py:145
+#: bpms/workgroups/models.py:585
+msgid "Участник"
+msgstr ""
+
+#: bpms/chat/models.py:273
+msgid "Дата последнего прочитанного сообщения"
+msgstr ""
+
+#: bpms/chat/models.py:277
+msgid "Модератор группового чата"
+msgstr ""
+
+#: bpms/chat/models.py:280
+msgid "Уид участника"
+msgstr ""
+
+#: bpms/chat/models.py:283
+msgid "Закрепленный чат"
+msgstr ""
+
+#: bpms/chat/models.py:289 bpms/meetings/models.py:370 bpms/okr/models.py:1107
+#: bpms/tasks/models.py:150 bpms/tasks/models.py:618 bpms/tasks/models.py:3104
+#: bpms/workgroups/models.py:183 bpms/workgroups/models.py:785
+#: common/accounting_catalogs/models.py:222 common/catalogs/models.py:1606
+#: common/estimates/models.py:79 common/models.py:793 help_desk/models.py:1553
+#: help_desk/models.py:3150 reports/models.py:146
+#: sports_facilities_info/models.py:71
+msgid "Название"
+msgstr ""
+
+#: bpms/chat/models.py:303
+msgid "Публичные"
+msgstr ""
+
+#: bpms/chat/models.py:310
+msgid "Шаблон сообщения техподдержки"
+msgstr ""
+
+#: bpms/chat/models.py:311
+msgid "Шаблоны сообщений техподдержки"
+msgstr ""
+
+#: bpms/chat/models.py:409
+msgid "AI cаммари чата"
+msgstr ""
+
+#: bpms/chat/models.py:410
+msgid "AI cаммари чатов"
+msgstr ""
+
+#: bpms/chat/views.py:439
+msgid "Начался сеанс удаленного подключения"
+msgstr ""
+
+#: bpms/comments/models.py:17
+msgid "Читатели"
+msgstr ""
+
+#: bpms/comments/models.py:20
+msgid "Персональный"
+msgstr ""
+
+#: bpms/comments/models.py:21
+msgid "Изменен"
+msgstr ""
+
+#: bpms/comments/models.py:24 bpms/processes/models.py:864
+#: bpms/tasks/models.py:387 common/estimates/models.py:152
+#: common/models.py:1252 common/models.py:1466 common/models.py:1794
+#: help_desk/models.py:604 help_desk/models.py:1009 help_desk/models.py:3209
+#: invest_projects_info/models.py:105 invest_projects_info/models.py:251
+#: sports_facilities_info/models.py:915
+msgid "Комментарий"
+msgstr ""
+
+#: bpms/comments/models.py:25 notifications/models.py:219
+msgid "Комментарии"
+msgstr ""
+
+#: bpms/comments/serializers.py:181 bpms/comments/serializers.py:235
+#: bpms/comments/serializers.py:250
+msgid "Комментарий не может быть пустым"
+msgstr ""
+
+#: bpms/day_summary/fields.py:21 bpms/meetings/models.py:128
+#: bpms/processes/models.py:197 bpms/tasks/fields.py:336
+#: bpms/tasks/models.py:656 bpms/workgroups/models.py:272
+#: customer_contracts/models.py:162 invest_projects_info/models.py:232
+msgid "Проект"
+msgstr ""
+
+#: bpms/day_summary/fields.py:64 bpms/tasks/models.py:222
+#: bpms/tasks/models.py:667
+msgid "Команда"
+msgstr ""
+
+#: bpms/day_summary/fields.py:105 bpms/event_calendar/models.py:501
+#: bpms/okr/models.py:159 bpms/okr/models.py:241 bpms/okr/models.py:348
+#: bpms/personal_planes/models.py:203 bpms/processes/models.py:189
+#: bpms/tasks/fields.py:284 bpms/tasks/models.py:648 bpms/tasks/models.py:1616
+#: bpms/tasks/models.py:1629 bpms/workgroups/models.py:225
+#: bpms/workgroups/models.py:906 common/catalogs/models.py:487
+#: common/catalogs/models.py:1599 common/catalogs/models.py:2288
+#: common/models.py:1224 common/models.py:1242 common/models.py:2032
+#: common/serializers.py:387 common/serializers.py:405
+#: consolidation/models.py:529 consolidation/models.py:728
+#: consolidation/models.py:1352 consolidation/models.py:1431
+#: contractor_permissions/models.py:237 customer_contracts/models.py:41
+#: help_desk/models.py:814 help_desk/models.py:1323 help_desk/models.py:2696
+#: invest_projects_info/models.py:155 risk_assessment/models.py:359
+#: sla/models.py:34 sports_facilities_info/models.py:102 tags/models.py:103
+#: users/models.py:1360 wiki/models.py:30
+msgid "Организация"
+msgstr ""
+
+#: bpms/day_summary/models.py:30
+msgid "Статус итога дня"
+msgstr ""
+
+#: bpms/day_summary/models.py:31
+msgid "Статусы итогов дня"
+msgstr ""
+
+#: bpms/day_summary/models.py:41 bpms/tasks/models.py:2310
+#: common/catalogs/models.py:56
+msgid "Icon"
+msgstr ""
+
+#: bpms/day_summary/models.py:48 bpms/okr/models.py:52 bpms/okr/models.py:81
+#: bpms/tasks/models.py:2317 notes/models.py:127
+#: sports_facilities_info/models.py:694
+msgid "Код цвета"
+msgstr ""
+
+#: bpms/day_summary/models.py:53
+msgid "Категория итога дня"
+msgstr ""
+
+#: bpms/day_summary/models.py:54
+msgid "Категории итогов дня"
+msgstr ""
+
+#: bpms/day_summary/models.py:67
+msgid "Текст заметки"
+msgstr ""
+
+#: bpms/day_summary/models.py:87 help_desk/models.py:1475
+#: invest_projects_info/models.py:27 invest_projects_info/models.py:38
+#: invest_projects_info/models.py:216 notifications/models.py:239
+#: notifications/models.py:261 reports/models.py:47
+#: sports_facilities_info/models.py:850
+msgid "Категория"
+msgstr ""
+
+#: bpms/day_summary/models.py:94 bpms/meetings/models.py:416
+#: bpms/okr/models.py:406 bpms/tasks/models.py:736 help_desk/models.py:1535
+msgid "Наблюдатели"
+msgstr ""
+
+#: bpms/day_summary/models.py:98
+msgid "Итог сгенерирован ИИ"
+msgstr ""
+
+#: bpms/day_summary/models.py:106
+msgid "Итог дня"
+msgstr ""
+
+#: bpms/day_summary/models.py:107
+msgid "Итоги дня"
+msgstr ""
+
+#: bpms/day_summary/models.py:204
+msgid "Наблюдатель итогов дня"
+msgstr ""
+
+#: bpms/day_summary/models.py:205
+msgid "Наблюдатели итогов дня"
+msgstr ""
+
+#: bpms/event_calendar/models.py:445
+msgid "Иду"
+msgstr ""
+
+#: bpms/event_calendar/models.py:448
+msgid "Организатор"
+msgstr ""
+
+#: bpms/event_calendar/models.py:457 bpms/workgroups/models.py:97
+#: bpms/workgroups/models.py:606
+msgid "Роль участника рабочей группы"
+msgstr ""
+
+#: bpms/event_calendar/models.py:493 bpms/personal_planes/models.py:195
+msgid "Профиль хозяина"
+msgstr ""
+
+#: bpms/event_calendar/models.py:506
+msgid "Доступ организации к календарю"
+msgstr ""
+
+#: bpms/event_calendar/models.py:507
+msgid "Доступы организаций к календарю"
+msgstr ""
+
+#: bpms/event_calendar/models.py:519 bpms/personal_planes/models.py:221
+#: bpms/workload/models.py:262
+msgid "Профиль пользователя"
+msgstr ""
+
+#: bpms/event_calendar/models.py:527 bpms/personal_planes/models.py:229
+msgid "Пользователь, которому открывается доступ"
+msgstr ""
+
+#: bpms/event_calendar/models.py:531
+msgid "Доступ профиля к календарю"
+msgstr ""
+
+#: bpms/event_calendar/models.py:532
+msgid "Доступы профилей к календарю"
+msgstr ""
+
+#: bpms/event_calendar/serializers.py:212 notifications/models.py:225
+msgid "Событие"
+msgstr ""
+
+#: bpms/favorites/apps.py:8 bpms/favorites/models.py:29
+#: bpms/favorites/models.py:30
+msgid "Избранное"
+msgstr ""
+
+#: bpms/favorites/fields.py:15
+msgid "В избранном"
+msgstr ""
+
+#: bpms/favorites/models.py:17 bpms/processes/models.py:763
+#: bpms/reactions/models.py:50 bpms/tasks/models.py:2394
+#: bpms/tasks/models.py:2706 bpms/tasks/models.py:2788
+#: common/estimates/models.py:174 common/models.py:2333 help_desk/models.py:936
+#: help_desk/models.py:2894 notifications/models.py:600
+msgid "Пользователь"
+msgstr ""
+
+#: bpms/favorites/models.py:25 bpms/reactions/models.py:41
+#: bpms/workload/models.py:233 common/models.py:531 common/models.py:577
+#: common/models.py:2238 common/models.py:2325 notes/models.py:29
+#: sla/models.py:110 sla/models.py:133 sla/models.py:174 wiki/models.py:22
+#: wiki/models.py:113 wiki/models.py:148
+msgid "Связанный объект"
+msgstr ""
+
+#: bpms/meetings/models.py:26
+msgid "Сервер конференций"
+msgstr ""
+
+#: bpms/meetings/models.py:27
+msgid "Серверы конференций"
+msgstr ""
+
+#: bpms/meetings/models.py:43
+msgid "Мои собрания"
+msgstr ""
+
+#: bpms/meetings/models.py:101 bpms/tasks/models.py:157
+msgid "Новый"
+msgstr ""
+
+#: bpms/meetings/models.py:102 bpms/meetings/models.py:362
+msgid "Онлайн"
+msgstr ""
+
+#: bpms/meetings/models.py:103 bpms/meetings/models.py:363
+#: bpms/tasks/models.py:159 bpms/workgroups/models.py:295
+msgid "Завершен"
+msgstr ""
+
+#: bpms/meetings/models.py:107 bpms/meetings/models.py:402
+#: bpms/tasks/models.py:216 bpms/workload/models.py:239
+msgid "Участники"
+msgstr ""
+
+#: bpms/meetings/models.py:114 bpms/okr/models.py:108 bpms/okr/models.py:152
+#: bpms/okr/models.py:1113 bpms/personal_planes/models.py:43
+#: bpms/personal_planes/models.py:127 bpms/tasks/models.py:777
+#: bpms/workgroups/models.py:197 bpms/workgroups/models.py:797
+#: common/models.py:954 common/models.py:989 consolidation/models.py:227
+#: consolidation/models.py:311 consolidation/models.py:370
+#: consolidation/models.py:854 gallery/models.py:71 help_desk/models.py:136
+#: help_desk/models.py:1559 reports/models.py:53 reports/models.py:151
+#: sla/models.py:189
+msgid "Описание"
+msgstr ""
+
+#: bpms/meetings/models.py:142
+msgid "attendeer_PW"
+msgstr ""
+
+#: bpms/meetings/models.py:145
+msgid "moderatorPW"
+msgstr ""
+
+#: bpms/meetings/models.py:149 bpms/workload/models.py:172
+msgid "Время начала"
+msgstr ""
+
+#: bpms/meetings/models.py:153
+msgid "Продолжительность (мин)"
+msgstr ""
+
+#: bpms/meetings/models.py:160
+msgid "Сервер"
+msgstr ""
+
+#: bpms/meetings/models.py:162
+msgid "Ссылка для приглашения"
+msgstr ""
+
+#: bpms/meetings/models.py:166
+msgid "Есть запись"
+msgstr ""
+
+#: bpms/meetings/models.py:178
+msgid "Запланированная конференция"
+msgstr ""
+
+#: bpms/meetings/models.py:179
+msgid "Запланированные конференции"
+msgstr ""
+
+#: bpms/meetings/models.py:237
+msgid "Новая"
+msgstr ""
+
+#: bpms/meetings/models.py:239
+msgid "Готова"
+msgstr ""
+
+#: bpms/meetings/models.py:343
+msgid "Модератор конференции"
+msgstr ""
+
+#: bpms/meetings/models.py:355
+msgid "Участник конференции"
+msgstr ""
+
+#: bpms/meetings/models.py:356
+msgid "Участники конференции"
+msgstr ""
+
+#: bpms/meetings/models.py:387 bpms/okr/models.py:387 bpms/okr/models.py:830
+#: bpms/okr/models.py:1127 bpms/processes/models.py:216
+#: bpms/tasks/models.py:172 help_desk/models.py:609 help_desk/models.py:791
+#: invest_projects_info/models.py:393
+msgid "Дата начала"
+msgstr ""
+
+#: bpms/meetings/models.py:392 bpms/okr/models.py:392 bpms/okr/models.py:835
+#: bpms/okr/models.py:1132 help_desk/models.py:614 help_desk/models.py:796
+#: help_desk/models.py:2914
+msgid "Дата окончания"
+msgstr ""
+
+#: bpms/meetings/models.py:397 bpms/meetings/models.py:486
+#: bpms/tasks/models.py:198 bpms/workgroups/models.py:808
+msgid "Продолжительность"
+msgstr ""
+
+#: bpms/meetings/models.py:409 bpms/meetings/models.py:491
+msgid "Дата и время последней проверки состава участников"
+msgstr ""
+
+#: bpms/meetings/models.py:420
+msgid "Секция конференции"
+msgstr ""
+
+#: bpms/meetings/models.py:421
+msgid "Секции конференций"
+msgstr ""
+
+#: bpms/meetings/models.py:496
+msgid "Участник секции конференции"
+msgstr ""
+
+#: bpms/meetings/models.py:497
+msgid "Участники секций конференции"
+msgstr ""
+
+#: bpms/meetings/models.py:517
+msgid "Наблюдатель секции собрания"
+msgstr ""
+
+#: bpms/meetings/models.py:518
+msgid "Наблюдатели секций собрания"
+msgstr ""
+
+#: bpms/okr/models.py:30
+msgid "I"
+msgstr ""
+
+#: bpms/okr/models.py:31
+msgid "II"
+msgstr ""
+
+#: bpms/okr/models.py:32
+msgid "III"
+msgstr ""
+
+#: bpms/okr/models.py:33
+msgid "IV"
+msgstr ""
+
+#: bpms/okr/models.py:57 bpms/okr/models.py:58
+msgid "Матрица усилий и результатов"
+msgstr ""
+
+#: bpms/okr/models.py:87
+msgid "Цель закрыта"
+msgstr ""
+
+#: bpms/okr/models.py:91
+msgid "Статус цели"
+msgstr ""
+
+#: bpms/okr/models.py:92
+msgid "Статусы целей"
+msgstr ""
+
+#: bpms/okr/models.py:115
+msgid "Cron-выражение"
+msgstr ""
+
+#: bpms/okr/models.py:119
+msgid "Частота напоминания"
+msgstr ""
+
+#: bpms/okr/models.py:120 bpms/okr/models.py:431
+msgid "Частота напоминаний"
+msgstr ""
+
+#: bpms/okr/models.py:140
+msgid "Источник инициативы"
+msgstr ""
+
+#: bpms/okr/models.py:141
+msgid "Источники инициатив"
+msgstr ""
+
+#: bpms/okr/models.py:166
+msgid "Метрика ключевого результата"
+msgstr ""
+
+#: bpms/okr/models.py:167
+msgid "Метрики ключевых результатов"
+msgstr ""
+
+#: bpms/okr/models.py:250 bpms/okr/models.py:254
+msgid "Миссия компании"
+msgstr ""
+
+#: bpms/okr/models.py:255
+msgid "Миссии компаний"
+msgstr ""
+
+#: bpms/okr/models.py:343
+msgid "Родительская цель"
+msgstr ""
+
+#: bpms/okr/models.py:356
+msgid "Отдел"
+msgstr ""
+
+#: bpms/okr/models.py:366 bpms/tasks/models.py:680
+msgid "Постановщик"
+msgstr ""
+
+#: bpms/okr/models.py:374
+msgid "Ответственный за цель"
+msgstr ""
+
+#: bpms/okr/models.py:382
+msgid "Описание цели"
+msgstr ""
+
+#: bpms/okr/models.py:398 bpms/okr/models.py:842
+msgid "Квартал окончания"
+msgstr ""
+
+#: bpms/okr/models.py:415
+msgid "Усилия и результаты"
+msgstr ""
+
+#: bpms/okr/models.py:422 bpms/tasks/models.py:2225
+msgid "Status"
+msgstr ""
+
+#: bpms/okr/models.py:438
+msgid "Дата следующего напоминания"
+msgstr ""
+
+#: bpms/okr/models.py:445 bpms/okr/models.py:849 bpms/tasks/models.py:2037
+#: bpms/workgroups/models.py:314
+msgid "Прогресс"
+msgstr ""
+
+#: bpms/okr/models.py:457 bpms/okr/models.py:776
+msgid "Цель организации"
+msgstr ""
+
+#: bpms/okr/models.py:458
+msgid "Цели организаций"
+msgstr ""
+
+#: bpms/okr/models.py:785
+msgid "Описание КР"
+msgstr ""
+
+#: bpms/okr/models.py:792
+msgid "Ответственный за КР"
+msgstr ""
+
+#: bpms/okr/models.py:799
+msgid "Метрика КР"
+msgstr ""
+
+#: bpms/okr/models.py:809
+msgid "Базовое значение"
+msgstr ""
+
+#: bpms/okr/models.py:817
+msgid "Планируемое значение"
+msgstr ""
+
+#: bpms/okr/models.py:825
+msgid "Фактическое значение"
+msgstr ""
+
+#: bpms/okr/models.py:856 bpms/tasks/models.py:881 bpms/workload/models.py:268
+#: help_desk/models.py:1857 notifications/models.py:218
+msgid "Задачи"
+msgstr ""
+
+#: bpms/okr/models.py:863 bpms/okr/models.py:1081
+msgid "Ключевой результат"
+msgstr ""
+
+#: bpms/okr/models.py:864
+msgid "Ключевые результаты"
+msgstr ""
+
+#: bpms/okr/models.py:1092 bpms/tasks/models.py:629 bpms/tasks/models.py:1971
+#: customer_contracts/models.py:65
+msgid "Источник"
+msgstr ""
+
+#: bpms/okr/models.py:1097 bpms/retrospective/models.py:30
+msgid "Ссылка на объект"
+msgstr ""
+
+#: bpms/okr/models.py:1120 bpms/tasks/models.py:688 bpms/tasks/models.py:2270
+#: help_desk/models.py:1517
+msgid "Ответственный"
+msgstr ""
+
+#: bpms/okr/models.py:1137 bpms/processes/models.py:273
+msgid "Завершена"
+msgstr ""
+
+#: bpms/okr/models.py:1141
+msgid "Инициатива"
+msgstr ""
+
+#: bpms/okr/models.py:1142
+msgid "Инициативы"
+msgstr ""
+
+#: bpms/okr/models.py:1312
+msgid "Наблюдатель цели"
+msgstr ""
+
+#: bpms/okr/models.py:1313
+msgid "Наблюдатели целей"
+msgstr ""
+
+#: bpms/okr/models.py:1349
+msgid "Задача ключевого результата"
+msgstr ""
+
+#: bpms/okr/models.py:1350
+msgid "Задачи ключевых результатов"
+msgstr ""
+
+#: bpms/personal_planes/models.py:17 bpms/processes/models.py:73
+#: sports_facilities_info/models.py:712
+msgid "Статусы"
+msgstr ""
+
+#: bpms/personal_planes/models.py:36
+msgid "Дата плана"
+msgstr ""
+
+#: bpms/personal_planes/models.py:50 bpms/personal_planes/models.py:112
+msgid "Персональный план"
+msgstr ""
+
+#: bpms/personal_planes/models.py:51
+msgid "Персональные планы"
+msgstr ""
+
+#: bpms/personal_planes/models.py:106
+msgid "Автор записи в план дня"
+msgstr ""
+
+#: bpms/personal_planes/models.py:120 bpms/tasks/models.py:381
+#: bpms/tasks/models.py:420 bpms/tasks/models.py:880 bpms/tasks/models.py:2385
+#: bpms/tasks/models.py:2709 bpms/tasks/models.py:2754
+#: bpms/tasks/models.py:2791 bpms/tasks/models.py:2808
+#: bpms/tasks/models.py:2981 bpms/tasks/models.py:3033
+#: bpms/tasks/models.py:3136 bpms/workgroups/models.py:811
+#: bpms/workload/models.py:311
+msgid "Задача"
+msgstr ""
+
+#: bpms/personal_planes/models.py:136
+msgid "Тип работы"
+msgstr ""
+
+#: bpms/personal_planes/models.py:145
+msgid "Планируемое время"
+msgstr ""
+
+#: bpms/personal_planes/models.py:154
+msgid "Фактическое время"
+msgstr ""
+
+#: bpms/personal_planes/models.py:160 bpms/tasks/models.py:623
+#: bpms/workgroups/models.py:792
+msgid "Результат"
+msgstr ""
+
+#: bpms/personal_planes/models.py:164
+msgid "Пункт персонального плана"
+msgstr ""
+
+#: bpms/personal_planes/models.py:165
+msgid "Пункты персонального плана"
+msgstr ""
+
+#: bpms/personal_planes/models.py:208
+msgid "Доступ организации к дейлику"
+msgstr ""
+
+#: bpms/personal_planes/models.py:209
+msgid "Доступы организаций к дейлику"
+msgstr ""
+
+#: bpms/personal_planes/models.py:233
+msgid "Доступ профиля к дейлику"
+msgstr ""
+
+#: bpms/personal_planes/models.py:234
+msgid "Доступы профилей к дейлику"
+msgstr ""
+
+#: bpms/processes/apiviews.py:487 bpms/processes/apiviews.py:495
+msgid "Создано"
+msgstr ""
+
+#: bpms/processes/apiviews.py:518 bpms/processes/apiviews.py:526
+#: bpms/processes/apiviews.py:534
+msgid "Казначей"
+msgstr ""
+
+#: bpms/processes/apiviews.py:544 bpms/processes/apiviews.py:552
+#: bpms/processes/apiviews.py:560 consolidation/models.py:486
+#: consolidation/models.py:718
+msgid "Отчет"
+msgstr ""
+
+#: bpms/processes/apiviews.py:569 bpms/processes/apiviews.py:578
+#: bpms/processes/apiviews.py:586
+msgid "Закрыта"
+msgstr ""
+
+#: bpms/processes/models.py:34
+msgid "Статус завершения"
+msgstr ""
+
+#: bpms/processes/models.py:53 bpms/processes/models.py:170
+#: bpms/processes/models.py:791
+msgid "Тип заявки"
+msgstr ""
+
+#: bpms/processes/models.py:54
+msgid "Типы заявки"
+msgstr ""
+
+#: bpms/processes/models.py:86 bpms/tasks/models.py:89 help_desk/models.py:2647
+msgid "Организация для нумерации"
+msgstr ""
+
+#: bpms/processes/models.py:91 bpms/tasks/models.py:92 help_desk/models.py:2650
+msgid "Числовой инкрементальный номер"
+msgstr ""
+
+#: bpms/processes/models.py:95 bpms/tasks/models.py:94 help_desk/models.py:2652
+msgid "Строковый номер с префиксом"
+msgstr ""
+
+#: bpms/processes/models.py:141 bpms/tasks/fields.py:56
+#: bpms/tasks/models.py:599 customer_contracts/models.py:79
+#: help_desk/models.py:1453 risk_assessment/models.py:220
+msgid "Номер"
+msgstr ""
+
+#: bpms/processes/models.py:148
+msgid "Текст обоснования"
+msgstr ""
+
+#: bpms/processes/models.py:155 bpms/tasks/models.py:729
+#: bpms/tasks/models.py:1577 bpms/tasks/models.py:1602
+#: bpms/tasks/models.py:1995 bpms/tasks/models.py:2010
+msgid "Причина отказа"
+msgstr ""
+
+#: bpms/processes/models.py:161 help_desk/models.py:1459
+msgid "Номер (число)"
+msgstr ""
+
+#: bpms/processes/models.py:201
+msgid "Деньги под отчет"
+msgstr ""
+
+#: bpms/processes/models.py:205
+msgid "Ранняя оплата визы"
+msgstr ""
+
+#: bpms/processes/models.py:211 bpms/tasks/models.py:154
+#: bpms/tasks/models.py:753 bpms/workgroups/models.py:286
+#: help_desk/models.py:1571
+msgid "Крайний срок"
+msgstr ""
+
+#: bpms/processes/models.py:221 bpms/tasks/models.py:177
+#: help_desk/models.py:1581
+msgid "Дата завершения"
+msgstr ""
+
+#: bpms/processes/models.py:227
+msgid "Дата начала события"
+msgstr ""
+
+#: bpms/processes/models.py:233
+msgid "Дата завершения события"
+msgstr ""
+
+#: bpms/processes/models.py:242
+msgid "Запрашиваемая сумма"
+msgstr ""
+
+#: bpms/processes/models.py:251
+msgid "Выданная сумма"
+msgstr ""
+
+#: bpms/processes/models.py:259
+msgid "Сумма отчет"
+msgstr ""
+
+#: bpms/processes/models.py:267
+msgid "Баланс"
+msgstr ""
+
+#: bpms/processes/models.py:278
+msgid "Авансовый отчет одобрен"
+msgstr ""
+
+#: bpms/processes/models.py:283
+msgid "Можно уведомить финслужбу"
+msgstr ""
+
+#: bpms/processes/models.py:287 bpms/processes/models.py:834
+msgid "Заявка"
+msgstr ""
+
+#: bpms/processes/models.py:288
+msgid "Заявки"
+msgstr ""
+
+#: bpms/processes/models.py:640
+msgid "Статус должности"
+msgstr ""
+
+#: bpms/processes/models.py:644 bpms/processes/models.py:711
+#: help_desk/models.py:951
+msgid "Должность"
+msgstr ""
+
+#: bpms/processes/models.py:645
+msgid "Должности"
+msgstr ""
+
+#: bpms/processes/models.py:657 bpms/processes/models.py:669
+#: bpms/processes/models.py:802
+msgid "Должность организации"
+msgstr ""
+
+#: bpms/processes/models.py:665 wiki/models.py:88
+msgid "Сотрудник организации"
+msgstr ""
+
+#: bpms/processes/models.py:670
+msgid "Должности организации"
+msgstr ""
+
+#: bpms/processes/models.py:683
+msgid "Статус согласования"
+msgstr ""
+
+#: bpms/processes/models.py:684
+msgid "Статусы согласования"
+msgstr ""
+
+#: bpms/processes/models.py:729 bpms/workgroups/models.py:771
+msgid "Шаблон"
+msgstr ""
+
+#: bpms/processes/models.py:744
+msgid "Маршрут согласования"
+msgstr ""
+
+#: bpms/processes/models.py:745
+msgid "Маршруты согласования"
+msgstr ""
+
+#: bpms/processes/models.py:755
+msgid "Маршрут"
+msgstr ""
+
+#: bpms/processes/models.py:777
+msgid "Пользователь маршрута"
+msgstr ""
+
+#: bpms/processes/models.py:778
+msgid "Пользователи маршрута"
+msgstr ""
+
+#: bpms/processes/models.py:819
+msgid "Шаблон маршрута согласования"
+msgstr ""
+
+#: bpms/processes/models.py:820
+msgid "Шаблоны маршрута согласования"
+msgstr ""
+
+#: bpms/processes/models.py:849 bpms/tasks/models.py:2815
+#: bpms/tasks/models.py:2949 common/catalogs/models.py:2292
+msgid "Статья затрат"
+msgstr ""
+
+#: bpms/processes/models.py:857 bpms/tasks/models.py:2843
+#: bpp/front_routes.py:33 bpp/front_routes.py:34 help_desk/models.py:3192
+msgid "Сумма"
+msgstr ""
+
+#: bpms/processes/models.py:868
+msgid "Авансовый отчет"
+msgstr ""
+
+#: bpms/processes/models.py:869
+msgid "Авансовые отчеты"
+msgstr ""
+
+#: bpms/processes/serializers.py:294 bpms/processes/serializers.py:302
+msgid "Выдача денежных средств"
+msgstr ""
+
+#: bpms/processes/serializers.py:296 bpms/processes/serializers.py:304
+msgid "Выдано"
+msgstr ""
+
+#: bpms/reactions/models.py:16 common/models.py:1150
+msgid "Иконка"
+msgstr ""
+
+#: bpms/reactions/models.py:20 bpms/reactions/models.py:59
+msgid "Реакция"
+msgstr ""
+
+#: bpms/reactions/models.py:21
+msgid "Реакции"
+msgstr ""
+
+#: bpms/reactions/models.py:63
+#, fuzzy
+#| msgid "Все объекты"
+msgid "Реакция на объект"
+msgstr "Барлық нысандар"
+
+#: bpms/reactions/models.py:64
+#, fuzzy
+#| msgid "Все объекты"
+msgid "Реакции на объект"
+msgstr "Барлық нысандар"
+
+#: bpms/retrospective/models.py:13
+msgid "Тип ретроспективы"
+msgstr ""
+
+#: bpms/retrospective/models.py:14
+msgid "Типы ретроспективы"
+msgstr ""
+
+#: bpms/retrospective/models.py:25 bpms/workgroups/models.py:204
+#: help_desk/models.py:1446
+msgid "Тип"
+msgstr ""
+
+#: bpms/retrospective/models.py:40
+msgid "Содержание"
+msgstr ""
+
+#: bpms/retrospective/models.py:44
+msgid "Ретроспектива"
+msgstr ""
+
+#: bpms/retrospective/models.py:45
+msgid "Ретроспективы"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:583
+msgid "отклонение"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:586
+msgid "Результативность"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:589
+msgid "Достижение цели"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:590 bpms/tasks/apiviews.py:632
+#: bpms/tasks/apiviews.py:636
+msgid "Да"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:590 bpms/tasks/apiviews.py:632
+#: bpms/tasks/apiviews.py:636
+msgid "Нет"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:593
+msgid "Завершено задач в спринте"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:597
+msgid "Перешло в другой спринт"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:601
+msgid "Принято ценностей"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:607
+msgid "Процесс"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:610
+msgid "Заблокировано задач"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:614
+msgid "Задачи со статусом \"На проверке\" и \"На приемке\""
+msgstr ""
+
+#: bpms/tasks/apiviews.py:618
+msgid "Количество незапланированных задач"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:622
+msgid "Трудозатраты (план/факт)"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:628
+msgid "Команда и нагрузка"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:631
+msgid "Отсутствие блокеров после завершения спринта"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:635
+msgid "Отсутствует участник с 0 завершенными задачами"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:641
+msgid "Улучшения и ретроспектива"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:644
+msgid "Оставили ретро-заметки в спринте"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:666
+msgid "Спринт не запущен"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:683
+msgid "Спринт сорван, цели не достигнуты"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:685
+msgid "Низкий результат, много проблем"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:687
+msgid "Удовлетворительно, часть целей выполнена"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:689
+msgid "Хороший результат, цели в целом достигнуты"
+msgstr ""
+
+#: bpms/tasks/apiviews.py:691
+msgid "Отличный результат, цели выполнены полностью"
+msgstr ""
+
+#: bpms/tasks/fields.py:18
+msgid "Сегодняшние"
+msgstr ""
+
+#: bpms/tasks/fields.py:92
+msgid "Без заказов"
+msgstr ""
+
+#: bpms/tasks/fields.py:117 help_desk/fields.py:17
+msgid "Просроченные"
+msgstr ""
+
+#: bpms/tasks/fields.py:162 help_desk/fields.py:64
+msgid "Наблюдатель"
+msgstr ""
+
+#: bpms/tasks/fields.py:188
+msgid "Соисполнитель"
+msgstr ""
+
+#: bpms/tasks/fields.py:214
+msgid "Участник исполнения"
+msgstr ""
+
+#: bpms/tasks/fields.py:246
+msgid "Участник задачи"
+msgstr ""
+
+#: bpms/tasks/fields.py:310 bpms/tasks/models.py:2368
+#: contractor_permissions/models.py:339
+msgid "Сотрудник"
+msgstr ""
+
+#: bpms/tasks/fields.py:364 bpms/tasks/models.py:248
+#: customer_contracts/models.py:72 notifications/models.py:216
+msgid "Проекты"
+msgstr ""
+
+#: bpms/tasks/models.py:104
+msgid "Тип задачи для нумерации"
+msgstr ""
+
+#: bpms/tasks/models.py:144
+msgid "Автор спринта"
+msgstr ""
+
+#: bpms/tasks/models.py:145
+msgid "Статус спринта"
+msgstr ""
+
+#: bpms/tasks/models.py:190
+msgid "Временной промежуток"
+msgstr ""
+
+#: bpms/tasks/models.py:205
+msgid "Цель"
+msgstr ""
+
+#: bpms/tasks/models.py:211 bpms/tasks/models.py:395
+msgid "Ожидаемый результат"
+msgstr ""
+
+#: bpms/tasks/models.py:234 flowchart/models.py:30
+msgid "Project"
+msgstr ""
+
+#: bpms/tasks/models.py:362 bpms/tasks/models.py:373 bpms/tasks/models.py:428
+#: bpms/tasks/models.py:634 bpms/tasks/models.py:2463
+msgid "Спринт"
+msgstr ""
+
+#: bpms/tasks/models.py:363
+msgid "Спринты"
+msgstr ""
+
+#: bpms/tasks/models.py:391
+msgid "Принято"
+msgstr ""
+
+#: bpms/tasks/models.py:396
+msgid "Ожидаемые результаты"
+msgstr ""
+
+#: bpms/tasks/models.py:409
+msgid "бэклог"
+msgstr ""
+
+#: bpms/tasks/models.py:410
+msgid "спринт"
+msgstr ""
+
+#: bpms/tasks/models.py:436
+msgid "Перемещено в спринт"
+msgstr ""
+
+#: bpms/tasks/models.py:445
+msgid "Перемещено в"
+msgstr ""
+
+#: bpms/tasks/models.py:468
+msgid "Блокеры"
+msgstr ""
+
+#: bpms/tasks/models.py:494
+msgid "Спринт M2M"
+msgstr ""
+
+#: bpms/tasks/models.py:495
+msgid "Спринты M2M"
+msgstr ""
+
+#: bpms/tasks/models.py:502
+msgid "Участник спринта"
+msgstr ""
+
+#: bpms/tasks/models.py:503
+msgid "Участники спринта"
+msgstr ""
+
+#: bpms/tasks/models.py:520
+msgid "Сценарий задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:521
+msgid "Сценарии задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:533
+msgid "Показать шаг"
+msgstr ""
+
+#: bpms/tasks/models.py:537 bpms/tasks/models.py:830 bpms/tasks/models.py:2093
+#: bpms/tasks/models.py:2337 bpms/workgroups/models.py:820
+msgid "Тип задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:538
+msgid "Типы задач"
+msgstr ""
+
+#: bpms/tasks/models.py:557
+msgid "Автор задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:589
+msgid "Номер задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:641
+msgid "Дата добавления в спринт"
+msgstr ""
+
+#: bpms/tasks/models.py:644
+msgid "Очень низкий"
+msgstr ""
+
+#: bpms/tasks/models.py:644
+msgid "Низкий"
+msgstr ""
+
+#: bpms/tasks/models.py:644
+msgid "Обычный"
+msgstr ""
+
+#: bpms/tasks/models.py:644
+msgid "Высокий"
+msgstr ""
+
+#: bpms/tasks/models.py:644
+msgid "Очень высокий"
+msgstr ""
+
+#: bpms/tasks/models.py:705 bpms/workgroups/models.py:214
+#: help_desk/models.py:129
+msgid "Контрагент"
+msgstr ""
+
+#: bpms/tasks/models.py:713
+msgid "Лид"
+msgstr ""
+
+#: bpms/tasks/models.py:721
+msgid "Источник лида"
+msgstr ""
+
+#: bpms/tasks/models.py:742
+msgid "Соисполнители"
+msgstr ""
+
+#: bpms/tasks/models.py:748 bpms/tasks/models.py:2242
+msgid "Предшествующие задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:758 bpms/workgroups/models.py:281
+msgid "Планируемая дата начала"
+msgstr ""
+
+#: bpms/tasks/models.py:763
+msgid "Фактическая дата начала"
+msgstr ""
+
+#: bpms/tasks/models.py:768
+msgid "Фактическая дата завершения"
+msgstr ""
+
+#: bpms/tasks/models.py:771
+msgid "Отвергнутая"
+msgstr ""
+
+#: bpms/tasks/models.py:773
+msgid "Задача из УРВ"
+msgstr ""
+
+#: bpms/tasks/models.py:784 help_desk/models.py:1485
+msgid "Приоритет"
+msgstr ""
+
+#: bpms/tasks/models.py:792
+msgid "Стоимость задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:795 bpms/tasks/models.py:2846
+msgid "The value can only positive or 0"
+msgstr ""
+
+#: bpms/tasks/models.py:802
+msgid "Планируемые трудозатраты в часах"
+msgstr ""
+
+#: bpms/tasks/models.py:803 bpms/tasks/models.py:2423 bpms/tasks/models.py:2438
+#: customer_contracts/models.py:97 customer_contracts/models.py:104
+#: help_desk/models.py:2934
+msgid "The value can only be positive or 0"
+msgstr ""
+
+#: bpms/tasks/models.py:805
+msgid "Просрочена"
+msgstr ""
+
+#: bpms/tasks/models.py:806
+msgid "Без срока"
+msgstr ""
+
+#: bpms/tasks/models.py:808
+msgid "Наблюдатели могут создавать подзадачи"
+msgstr ""
+
+#: bpms/tasks/models.py:810
+msgid "Аукцион"
+msgstr ""
+
+#: bpms/tasks/models.py:811
+msgid "Задача с чатом"
+msgstr ""
+
+#: bpms/tasks/models.py:814
+msgid "Связанный чат"
+msgstr ""
+
+#: bpms/tasks/models.py:821
+msgid "История спринтов"
+msgstr ""
+
+#: bpms/tasks/models.py:837
+msgid "Сценарий"
+msgstr ""
+
+#: bpms/tasks/models.py:839 common/catalogs/models.py:133
+msgid "Phone"
+msgstr ""
+
+#: bpms/tasks/models.py:848
+msgid "Создавать событие"
+msgstr ""
+
+#: bpms/tasks/models.py:852
+msgid "Для знакомства с системой"
+msgstr ""
+
+#: bpms/tasks/models.py:859
+msgid "Задача на подпись"
+msgstr ""
+
+#: bpms/tasks/models.py:862
+msgid "Создана автоматически"
+msgstr ""
+
+#: bpms/tasks/models.py:863
+msgid "Трудозатраты с видеовстречи"
+msgstr ""
+
+#: bpms/tasks/models.py:1288
+msgid "Нельзя добавить задачу в завершённый проект"
+msgstr ""
+
+#: bpms/tasks/models.py:1566 bpms/tasks/models.py:1591
+#: bpms/tasks/models.py:1986
+msgid "Источник обращения"
+msgstr ""
+
+#: bpms/tasks/models.py:1642 bpms/tasks/models.py:2908 crm/models.py:562
+msgid "Водитель"
+msgstr ""
+
+#: bpms/tasks/models.py:1644
+msgid "Логист"
+msgstr ""
+
+#: bpms/tasks/models.py:1646
+msgid "Экипаж"
+msgstr ""
+
+#: bpms/tasks/models.py:1792
+msgid "Ссылка на задачу"
+msgstr ""
+
+#: bpms/tasks/models.py:1798 help_desk/models.py:1619 help_desk/models.py:2876
+#: help_desk/models.py:3137 risk_assessment/models.py:165
+#: risk_assessment/models.py:253 risk_assessment/models.py:378
+msgid "Обращение"
+msgstr ""
+
+#: bpms/tasks/models.py:1987
+msgid "Источники обращения"
+msgstr ""
+
+#: bpms/tasks/models.py:2011
+msgid "Причины отказа"
+msgstr ""
+
+#: bpms/tasks/models.py:2031 invest_projects_info/models.py:715
+#: sports_facilities_info/models.py:702
+msgid "Название кнопки"
+msgstr ""
+
+#: bpms/tasks/models.py:2042 bpms/tasks/models.py:2171
+msgid "Статус задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2043
+msgid "Статусы задач"
+msgstr ""
+
+#: bpms/tasks/models.py:2108
+msgid "Завершает"
+msgstr ""
+
+#: bpms/tasks/models.py:2113
+msgid "Открывает"
+msgstr ""
+
+#: bpms/tasks/models.py:2118
+msgid "Показывать кнопку"
+msgstr ""
+
+#: bpms/tasks/models.py:2123
+msgid "Возможность отгрузки заказа"
+msgstr ""
+
+#: bpms/tasks/models.py:2142
+msgid "Статус типа задач"
+msgstr ""
+
+#: bpms/tasks/models.py:2143
+msgid "Статусы типов задач"
+msgstr ""
+
+#: bpms/tasks/models.py:2162
+msgid "Статус-тип задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2175 invest_projects_info/models.py:790
+msgid "Зависимость статуса"
+msgstr ""
+
+#: bpms/tasks/models.py:2176 invest_projects_info/models.py:791
+msgid "Зависимости статусов"
+msgstr ""
+
+#: bpms/tasks/models.py:2183
+msgid "Наблюдатель задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2184
+msgid "Наблюдатели задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2209
+msgid "Соисполнитель задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2210
+msgid "Соисполнители задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2241
+msgid "Предшествующая задача"
+msgstr ""
+
+#: bpms/tasks/models.py:2265 bpms/tasks/models.py:2283
+msgid "Просроченная задача"
+msgstr ""
+
+#: bpms/tasks/models.py:2273
+msgid "Причина"
+msgstr ""
+
+#: bpms/tasks/models.py:2276
+msgid "Дата просрочки"
+msgstr ""
+
+#: bpms/tasks/models.py:2284
+msgid "Просроченные задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2322
+msgid "Type of work in the task"
+msgstr ""
+
+#: bpms/tasks/models.py:2323
+msgid "Types of work in the task"
+msgstr ""
+
+#: bpms/tasks/models.py:2346 common/estimates/models.py:111
+#: common/estimates/models.py:120
+msgid "Вид работ"
+msgstr ""
+
+#: bpms/tasks/models.py:2351
+msgid "Вид работ от типа задач"
+msgstr ""
+
+#: bpms/tasks/models.py:2352
+msgid "Виды работ типа задач"
+msgstr ""
+
+#: bpms/tasks/models.py:2367
+msgid "Автор трудозатрат"
+msgstr ""
+
+#: bpms/tasks/models.py:2402 bpms/tasks/models.py:2825
+#: common/estimates/models.py:142 help_desk/models.py:3199
+#: invest_projects_info/models.py:131 invest_projects_info/models.py:357
+msgid "Единица измерения"
+msgstr ""
+
+#: bpms/tasks/models.py:2416
+msgid "Тип работ"
+msgstr ""
+
+#: bpms/tasks/models.py:2422 help_desk/models.py:2933
+msgid "Затраченные часы"
+msgstr ""
+
+#: bpms/tasks/models.py:2429 help_desk/models.py:1593 help_desk/models.py:2926
+msgid "Продолжительность, сек"
+msgstr ""
+
+#: bpms/tasks/models.py:2437
+msgid "Часы в зачёт"
+msgstr ""
+
+#: bpms/tasks/models.py:2445 help_desk/models.py:2909
+msgid "Описание работы"
+msgstr ""
+
+#: bpms/tasks/models.py:2450
+msgid "Confirmed"
+msgstr ""
+
+#: bpms/tasks/models.py:2455
+msgid "Не брать в зачёт"
+msgstr ""
+
+#: bpms/tasks/models.py:2475
+msgid "Событие календаря"
+msgstr ""
+
+#: bpms/tasks/models.py:2483
+msgid "Сессия собрания"
+msgstr ""
+
+#: bpms/tasks/models.py:2490 bpms/tasks/models.py:2491
+msgid "Время на выполнение задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2532 help_desk/models.py:292 help_desk/models.py:1838
+#: help_desk/models.py:2945 help_desk/models.py:2946 help_desk/models.py:3027
+msgid "Трудозатраты"
+msgstr ""
+
+#: bpms/tasks/models.py:2537
+msgid "Дата последнего внесения трудозатрат"
+msgstr ""
+
+#: bpms/tasks/models.py:2673
+msgid "Нельзя добавлять трудозатраты в задачи завершённого проекта"
+msgstr ""
+
+#: bpms/tasks/models.py:2702 users/models.py:814 users/models.py:885
+msgid "Active"
+msgstr ""
+
+#: bpms/tasks/models.py:2714 bpms/tasks/models.py:2721
+msgid "Оценка выполнения задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2722
+msgid "Оценки выполнения задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2740 risk_assessment/models.py:559
+msgid "Критерий"
+msgstr ""
+
+#: bpms/tasks/models.py:2746 help_desk/fields.py:219
+msgid "Оценка"
+msgstr ""
+
+#: bpms/tasks/models.py:2770
+msgid "Сложность задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2771
+msgid "Сложность задач"
+msgstr ""
+
+#: bpms/tasks/models.py:2780
+msgid "Критерий сложности задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2781
+msgid "Критерии сложности задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2795
+msgid "сортировка"
+msgstr ""
+
+#: bpms/tasks/models.py:2799
+msgid "Пользовательская сортировка задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:2800
+msgid "Пользовательские сортировки задач"
+msgstr ""
+
+#: bpms/tasks/models.py:2835 bpms/tasks/models.py:2917 common/models.py:2037
+#: help_desk/models.py:3185
+msgid "Количество"
+msgstr ""
+
+#: bpms/tasks/models.py:2836
+msgid "The value can only be positive or 1"
+msgstr ""
+
+#: bpms/tasks/models.py:2868 bpms/tasks/models.py:2869
+msgid "Затраты"
+msgstr ""
+
+#: bpms/tasks/models.py:2884
+msgid "Рейс"
+msgstr ""
+
+#: bpms/tasks/models.py:2892 help_desk/models.py:3146
+msgid "Товар"
+msgstr ""
+
+#: bpms/tasks/models.py:2900
+msgid "Склад"
+msgstr ""
+
+#: bpms/tasks/models.py:2925
+msgid "Оплачено поставщику сумма"
+msgstr ""
+
+#: bpms/tasks/models.py:2939
+msgid "Погрузка товара со склада"
+msgstr ""
+
+#: bpms/tasks/models.py:2940
+msgid "Погрузки товаров со склада"
+msgstr ""
+
+#: bpms/tasks/models.py:2950 common/catalogs/models.py:2293
+msgid "Статьи затрат"
+msgstr ""
+
+#: bpms/tasks/models.py:2988
+msgid "Точка доставки"
+msgstr ""
+
+#: bpms/tasks/models.py:2997
+msgid "Время доставки"
+msgstr ""
+
+#: bpms/tasks/models.py:3002
+msgid "Стартовая точка"
+msgstr ""
+
+#: bpms/tasks/models.py:3009
+msgid "Необходимо оплатить за закупку"
+msgstr ""
+
+#: bpms/tasks/models.py:3014
+msgid "Дата доставки"
+msgstr ""
+
+#: bpms/tasks/models.py:3019
+msgid "Точка доставки для задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:3020
+msgid "Точки доставки для задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:3027 consolidation/models.py:505
+msgid "Прикрепленные файлы"
+msgstr ""
+
+#: bpms/tasks/models.py:3045 sports_facilities_info/models.py:923
+msgid "Стоимость"
+msgstr ""
+
+#: bpms/tasks/models.py:3052
+msgid "Количество товаров"
+msgstr ""
+
+#: bpms/tasks/models.py:3059
+msgid "Количество принятых товаров"
+msgstr ""
+
+#: bpms/tasks/models.py:3065 bpms/tasks/models.py:3066
+msgid "Доставка товара"
+msgstr ""
+
+#: bpms/tasks/models.py:3116 common/catalogs/models.py:2572
+msgid "Широта"
+msgstr ""
+
+#: bpms/tasks/models.py:3123 common/catalogs/models.py:2579
+msgid "Долгота"
+msgstr ""
+
+#: bpms/tasks/models.py:3130 common/catalogs/models.py:2586
+msgid "Адрес"
+msgstr ""
+
+#: bpms/tasks/models.py:3141
+msgid "Точка задачи"
+msgstr ""
+
+#: bpms/tasks/models.py:3142
+msgid "Точки задач"
+msgstr ""
+
+#: bpms/workgroups/apps.py:8 bpms/workgroups/models.py:179
+msgid "Рабочие группы"
+msgstr ""
+
+#: bpms/workgroups/models.py:61
+msgid "Тип рабочей группы"
+msgstr ""
+
+#: bpms/workgroups/models.py:62
+msgid "Типы рабочей группы"
+msgstr ""
+
+#: bpms/workgroups/models.py:73
+msgid "Статус рабочей группы"
+msgstr ""
+
+#: bpms/workgroups/models.py:74
+msgid "Статусы рабочей группы"
+msgstr ""
+
+#: bpms/workgroups/models.py:85 bpms/workgroups/models.py:599
+msgid "Статус участника рабочей группы"
+msgstr ""
+
+#: bpms/workgroups/models.py:86
+msgid "Статусы участника рабочей группы"
+msgstr ""
+
+#: bpms/workgroups/models.py:98
+msgid "Роли участника рабочей группы"
+msgstr ""
+
+#: bpms/workgroups/models.py:112
+msgid "Мои команды"
+msgstr ""
+
+#: bpms/workgroups/models.py:178 bpms/workgroups/models.py:592
+#: bpms/workgroups/models.py:889
+msgid "Рабочая группа"
+msgstr ""
+
+#: bpms/workgroups/models.py:191
+msgid "Логотип"
+msgstr ""
+
+#: bpms/workgroups/models.py:209
+msgid "Программа"
+msgstr ""
+
+#: bpms/workgroups/models.py:219 common/estimates/models.py:26
+msgid "Объект калькуляции"
+msgstr ""
+
+#: bpms/workgroups/models.py:234 invest_projects_info/models.py:163
+#: sports_facilities_info/models.py:93
+msgid "Местоположение"
+msgstr ""
+
+#: bpms/workgroups/models.py:242 invest_projects_info/models.py:279
+msgid "Стоимость проекта, всего"
+msgstr ""
+
+#: bpms/workgroups/models.py:253
+msgid "Валюта"
+msgstr ""
+
+#: bpms/workgroups/models.py:258
+msgid "Ссылки на социальные сети"
+msgstr ""
+
+#: bpms/workgroups/models.py:262
+msgid "Закрытая"
+msgstr ""
+
+#: bpms/workgroups/models.py:267
+msgid "Файлы галереи"
+msgstr ""
+
+#: bpms/workgroups/models.py:276
+msgid "Вести контроль дат задач"
+msgstr ""
+
+#: bpms/workgroups/models.py:291
+msgid "Дата выполнения"
+msgstr ""
+
+#: bpms/workgroups/models.py:299
+msgid "Это группа техподдержки"
+msgstr ""
+
+#: bpms/workgroups/models.py:301
+msgid "Группа с чатом"
+msgstr ""
+
+#: bpms/workgroups/models.py:303
+msgid "Чат группы"
+msgstr ""
+
+#: bpms/workgroups/models.py:308
+msgid "Просрочен"
+msgstr ""
+
+#: bpms/workgroups/models.py:315
+msgid "Процент выполнения задач, от 0 до 100"
+msgstr ""
+
+#: bpms/workgroups/models.py:611
+msgid "Видимость участника рабочей группы"
+msgstr ""
+
+#: bpms/workgroups/models.py:623
+msgid "Наблюдатель по умолчанию"
+msgstr ""
+
+#: bpms/workgroups/models.py:627
+msgid "Состав рабочей группы"
+msgstr ""
+
+#: bpms/workgroups/models.py:628
+msgid "Составы рабочей группы"
+msgstr ""
+
+#: bpms/workgroups/models.py:803
+msgid "Порядковый номер"
+msgstr ""
+
+#: bpms/workgroups/models.py:812
+msgid "Этап"
+msgstr ""
+
+#: bpms/workgroups/models.py:813
+msgid "Веха"
+msgstr ""
+
+#: bpms/workgroups/models.py:828
+msgid "Шаблон задачи"
+msgstr ""
+
+#: bpms/workgroups/models.py:829
+msgid "Шаблоны задач"
+msgstr ""
+
+#: bpms/workgroups/models.py:879 bpms/workgroups/models.py:898
+msgid "Статус организации-участника проекта"
+msgstr ""
+
+#: bpms/workgroups/models.py:880
+msgid "Статусы организации-участника проекта"
+msgstr ""
+
+#: bpms/workgroups/models.py:915
+msgid "Роль организации в проекте"
+msgstr ""
+
+#: bpms/workgroups/models.py:920
+msgid "Участвующая организация"
+msgstr ""
+
+#: bpms/workgroups/models.py:921
+msgid "Участвующие организации"
+msgstr ""
+
+#: bpms/workgroups/viewsets.py:581 bpms/workgroups/viewsets.py:594
+msgid "Проект завершён"
+msgstr ""
+
+#: bpms/workload/apps.py:8 bpms/workload/models.py:323
+msgid "Загруженность"
+msgstr ""
+
+#: bpms/workload/models.py:24 bpms/workload/models.py:129 users/models.py:1352
+msgid "Профиль"
+msgstr ""
+
+#: bpms/workload/models.py:28
+msgid "Рабочие дни"
+msgstr ""
+
+#: bpms/workload/models.py:34
+msgid "Начало дня"
+msgstr ""
+
+#: bpms/workload/models.py:40
+msgid "Конец дня"
+msgstr ""
+
+#: bpms/workload/models.py:46
+msgid "Обед"
+msgstr ""
+
+#: bpms/workload/models.py:52
+msgid "Начало обеда"
+msgstr ""
+
+#: bpms/workload/models.py:58
+msgid "Конец обеда"
+msgstr ""
+
+#: bpms/workload/models.py:65
+msgid "Цвет в загруженности"
+msgstr ""
+
+#: bpms/workload/models.py:69
+msgid "рабочий график"
+msgstr ""
+
+#: bpms/workload/models.py:70
+msgid "Рабочие графики"
+msgstr ""
+
+#: bpms/workload/models.py:103
+msgid "Алиас"
+msgstr ""
+
+#: bpms/workload/models.py:107
+msgid "тип исключения"
+msgstr ""
+
+#: bpms/workload/models.py:108
+msgid "Исключения: типы"
+msgstr ""
+
+#: bpms/workload/models.py:139
+msgid "Тип исключения"
+msgstr ""
+
+#: bpms/workload/models.py:144 bpms/workload/models.py:204
+msgid "Начальная дата"
+msgstr ""
+
+#: bpms/workload/models.py:149 bpms/workload/models.py:209
+msgid "Конечная дата"
+msgstr ""
+
+#: bpms/workload/models.py:153
+msgid "Повторяемое"
+msgstr ""
+
+#: bpms/workload/models.py:161
+msgid "Частота повторения"
+msgstr ""
+
+#: bpms/workload/models.py:166
+msgid "Конец повторения"
+msgstr ""
+
+#: bpms/workload/models.py:178
+msgid "Время конца"
+msgstr ""
+
+#: bpms/workload/models.py:182
+msgid "событие"
+msgstr ""
+
+#: bpms/workload/models.py:183
+msgid "Исключения: события"
+msgstr ""
+
+#: bpms/workload/models.py:199
+msgid "Исключение"
+msgstr ""
+
+#: bpms/workload/models.py:213
+msgid "дата"
+msgstr ""
+
+#: bpms/workload/models.py:214
+msgid "Исключения: даты"
+msgstr ""
+
+#: bpms/workload/models.py:243
+msgid "список участников"
+msgstr ""
+
+#: bpms/workload/models.py:244
+msgid "Загруженность: списки участников"
+msgstr ""
+
+#: bpms/workload/models.py:274
+msgid "Кол-во задач"
+msgstr ""
+
+#: bpms/workload/models.py:280
+msgid "Общая загруженность"
+msgstr ""
+
+#: bpms/workload/models.py:286
+msgid "Процент загруженности"
+msgstr ""
+
+#: bpms/workload/models.py:290
+msgid "Загруженность дня"
+msgstr ""
+
+#: bpms/workload/models.py:291
+msgid "Загруженность дней"
+msgstr ""
+
+#: bpms/workload/models.py:317
+msgid "Распределение"
+msgstr ""
+
+#: bpms/workload/models.py:327
+msgid "дневная загруженность задачи"
+msgstr ""
+
+#: bpms/workload/models.py:328
+msgid "Дневные загруженности задач"
+msgstr ""
+
+#: bpp/front_routes.py:9
+msgid "Accounting of editions"
+msgstr ""
+
+#: bpp/models.py:24
+msgid "Periodic edition"
+msgstr ""
+
+#: bpp/models.py:28
+msgid "ISBN"
+msgstr ""
+
+#: bpp/models.py:67 bpp/models.py:143 bpp/models.py:459 bpp/models.py:678
+#: bpp/models.py:809
+msgid "Edition"
+msgstr ""
+
+#: bpp/models.py:68
+msgid "Editions"
+msgstr ""
+
+#: bpp/models.py:96
+msgid "Publisher"
+msgstr ""
+
+#: bpp/models.py:97
+msgid "Publishers"
+msgstr ""
+
+#: bpp/models.py:129 common/models.py:50 common/serializers.py:66
+#: crm/models.py:454 users/models.py:786 users/models.py:857
+msgid "Author"
+msgstr ""
+
+#: bpp/models.py:130
+msgid "Authors"
+msgstr ""
+
+#: bpp/models.py:170 bpp/models.py:188
+msgid "Volume / number / issue of the edition"
+msgstr ""
+
+#: bpp/models.py:171
+msgid "Volumes / numbers / issues of the edition"
+msgstr ""
+
+#: bpp/models.py:183
+msgid "Invoice"
+msgstr ""
+
+#: bpp/models.py:195 bpp/models.py:461 common/catalogs/models.py:1892
+#: crm/models.py:942
+msgid "Price"
+msgstr ""
+
+#: bpp/models.py:196
+msgid "Inventory number"
+msgstr ""
+
+#: bpp/models.py:310 bpp/models.py:681 bpp/models.py:813
+msgid "Instance of edition"
+msgstr ""
+
+#: bpp/models.py:311
+msgid "Instances of edition"
+msgstr ""
+
+#: bpp/models.py:319
+msgid "Source of receipt"
+msgstr ""
+
+#: bpp/models.py:323
+msgid "Default warehouse"
+msgstr ""
+
+#: bpp/models.py:375 bpp/models.py:463 common/models.py:2041 crm/models.py:928
+#: crm/models.py:1032 staff/front_routes.py:419 staff/models.py:168
+#: staff/models.py:484 staff/models.py:575
+msgid "Amount"
+msgstr ""
+
+#: bpp/models.py:394
+msgid "Income invoice"
+msgstr ""
+
+#: bpp/models.py:395
+msgid "Income invoices"
+msgstr ""
+
+#: bpp/models.py:399
+msgid "Экземпляр"
+msgstr ""
+
+#: bpp/models.py:400
+msgid "Экземпляры"
+msgstr ""
+
+#: bpp/models.py:458 bpp/models.py:677 bpp/models.py:808 staff/models.py:57
+#: staff/models.py:93 staff/models.py:138 staff/models.py:241
+#: staff/models.py:571
+msgid "Document"
+msgstr ""
+
+#: bpp/models.py:465 bpp/models.py:817 common/catalogs/models.py:178
+#: common/catalogs/models.py:1687 common/catalogs/models.py:1800
+#: common/models.py:2189 crm/models.py:448
+msgid "Warehouse"
+msgstr ""
+
+#: bpp/models.py:578
+msgid ""
+"You cannot delete a copy of the publication: the document has been held."
+msgstr ""
+
+#: bpp/models.py:600 bpp/models.py:742 common/catalogs/models.py:1808
+#: crm/models.py:79 crm/models.py:900
+msgid "Quantity"
+msgstr ""
+
+#: bpp/models.py:604
+msgid "Tabular part of the incoming invoice of editions"
+msgstr ""
+
+#: bpp/models.py:605
+msgid "Tabular parts of an incoming invoice of editions"
+msgstr ""
+
+#: bpp/models.py:667
+msgid "Act for writing off publications"
+msgstr ""
+
+#: bpp/models.py:668
+msgid "Acts for writing off publications"
+msgstr ""
+
+#: bpp/models.py:746
+msgid "Tabular part of the act for writing off publications"
+msgstr ""
+
+#: bpp/models.py:747
+msgid "Tabular parts of the act for writing off publications"
+msgstr ""
+
+#: bpp/models.py:801
+msgid "Moving copies of a publication"
+msgstr ""
+
+#: bpp/models.py:802
+msgid "Moving copies of the edition"
+msgstr ""
+
+#: bpp/models.py:875
+msgid "Tabular part of movement of copies of the edition"
+msgstr ""
+
+#: bpp/models.py:876
+msgid "Tabular portions of movement of edition instances"
+msgstr ""
+
+#: catalog_info/models.py:16 catalog_info/models.py:27
+#: common/estimates/models.py:66 common/estimates/models.py:366
+#: contractor_permissions/models.py:475
+msgid "Раздел"
+msgstr ""
+
+#: catalog_info/models.py:17 common/estimates/models.py:367
+msgid "Разделы"
+msgstr ""
+
+#: catalog_info/models.py:35
+msgid "Модель"
+msgstr ""
+
+#: catalog_info/models.py:61
+msgid "Справочник"
+msgstr ""
+
+#: catalog_info/models.py:62
+msgid "Справочники"
+msgstr ""
+
+#: catalog_info/models.py:82
+msgid "Роль раздела для справочника"
+msgstr ""
+
+#: catalog_info/models.py:83
+msgid "Роли раздела для справочника"
+msgstr ""
+
+#: common/catalogs/models.py:72 common/catalogs/models.py:94
+msgid "Currency"
+msgstr ""
+
+#: common/catalogs/models.py:73
+msgid "Currencies"
+msgstr ""
+
+#: common/catalogs/models.py:97
+msgid "Default"
+msgstr ""
+
+#: common/catalogs/models.py:108 common/catalogs/models.py:589
+#: common/catalogs/models.py:1884
+msgid "Price type"
+msgstr ""
+
+#: common/catalogs/models.py:109
+msgid "Price types"
+msgstr ""
+
+#: common/catalogs/models.py:119
+msgid "Warehouseman"
+msgstr ""
+
+#: common/catalogs/models.py:126 common/catalogs/models.py:1720
+#: staff/front_routes.py:37 staff/front_routes.py:52
+msgid "Address"
+msgstr ""
+
+#: common/catalogs/models.py:140
+msgid "Delivery point"
+msgstr ""
+
+#: common/catalogs/models.py:179
+msgid "Warehouses"
+msgstr ""
+
+#: common/catalogs/models.py:276 common/catalogs/models.py:1699
+#: common/models.py:778 common/serializers.py:36 common/serializers.py:135
+#: notifications/models.py:102
+msgid "search code"
+msgstr ""
+
+#: common/catalogs/models.py:342
+msgid "Article number"
+msgstr ""
+
+#: common/catalogs/models.py:349 common/catalogs/models.py:2657
+#: common/catalogs/models.py:2669 common/catalogs/models.py:2686
+#: common/models.py:1790 staff/front_routes.py:231 staff/models.py:173
+#: staff/models.py:489
+msgid "Description"
+msgstr ""
+
+#: common/catalogs/models.py:356
+msgid "Price by catalog"
+msgstr ""
+
+#: common/catalogs/models.py:359
+msgid "popularity"
+msgstr ""
+
+#: common/catalogs/models.py:475 common/catalogs/models.py:527 crm/models.py:55
+msgctxt "singular"
+msgid "Goods"
+msgstr ""
+
+#: common/catalogs/models.py:476 common/front_routes.py:373
+#: common/front_routes.py:663 common/front_routes.py:882
+msgctxt "plural"
+msgid "Goods"
+msgstr ""
+
+#: common/catalogs/models.py:491 common/catalogs/models.py:492
+msgid "Номенклатура"
+msgstr ""
+
+#: common/catalogs/models.py:540
+msgid "Barcode"
+msgstr ""
+
+#: common/catalogs/models.py:541
+msgid "Barcodes"
+msgstr ""
+
+#: common/catalogs/models.py:601 common/catalogs/models.py:647
+#: common/catalogs/models.py:660
+msgid "Type order payment"
+msgstr ""
+
+#: common/catalogs/models.py:640 common/catalogs/models.py:1972
+msgid "Payment form"
+msgstr ""
+
+#: common/catalogs/models.py:648
+msgid "Types order payment"
+msgstr ""
+
+#: common/catalogs/models.py:670 common/catalogs/models.py:1982
+msgid "Payment option"
+msgstr ""
+
+#: common/catalogs/models.py:678
+msgid "Payment percent"
+msgstr ""
+
+#: common/catalogs/models.py:684
+msgid "Days duration"
+msgstr ""
+
+#: common/catalogs/models.py:689
+msgid "Payment stage"
+msgstr ""
+
+#: common/catalogs/models.py:690
+msgid "Payment stages"
+msgstr ""
+
+#: common/catalogs/models.py:705
+msgid "Individuals"
+msgstr ""
+
+#: common/catalogs/models.py:711 contractor_permissions/models.py:242
+#: contractor_permissions/models.py:391
+msgid "Тарифы"
+msgstr ""
+
+#: common/catalogs/models.py:718
+msgid "Ответственный сотрудник"
+msgstr ""
+
+#: common/catalogs/models.py:726 help_desk/models.py:1016
+#: help_desk/models.py:1075 help_desk/models.py:1526
+msgid "Контактное лицо"
+msgstr ""
+
+#: common/catalogs/models.py:734
+msgid "Администратор бюджетных программ"
+msgstr ""
+
+#: common/catalogs/models.py:742
+msgid "Код ГУ"
+msgstr ""
+
+#: common/catalogs/models.py:749 help_desk/models.py:73
+msgid "Полное наименование"
+msgstr ""
+
+#: common/catalogs/models.py:753
+msgid "Компания перевозчик"
+msgstr ""
+
+#: common/catalogs/models.py:760
+msgid "Склады"
+msgstr ""
+
+#: common/catalogs/models.py:767
+msgid "Точки доставки"
+msgstr ""
+
+#: common/catalogs/models.py:1406 common/catalogs/models.py:1521
+#: common/catalogs/models.py:1559 common/catalogs/models.py:1679
+#: common/catalogs/models.py:1712 crm/models.py:480
+msgid "Contractor"
+msgstr ""
+
+#: common/catalogs/models.py:1407
+msgid "Contractors"
+msgstr ""
+
+#: common/catalogs/models.py:1453
+msgid "Potential Contractor"
+msgstr ""
+
+#: common/catalogs/models.py:1454
+msgid "Potential Contractors"
+msgstr ""
+
+#: common/catalogs/models.py:1552 staff/models.py:60 staff/models.py:95
+#: staff/models.py:141 staff/models.py:244 staff/serializers.py:25
+#: staff/serializers.py:49 staff/serializers.py:72 staff/serializers.py:123
+msgid "Individual"
+msgstr ""
+
+#: common/catalogs/models.py:1612
+msgid "Хэш токена"
+msgstr ""
+
+#: common/catalogs/models.py:1615
+msgid "Срок действия до"
+msgstr ""
+
+#: common/catalogs/models.py:1620
+msgid "Дата последнего использования"
+msgstr ""
+
+#: common/catalogs/models.py:1627
+msgid "Токен доступа для 1С"
+msgstr ""
+
+#: common/catalogs/models.py:1628
+msgid "Токены доступа для 1С"
+msgstr ""
+
+#: common/catalogs/models.py:1724 crm/models.py:531
+msgid "Delivery address"
+msgstr ""
+
+#: common/catalogs/models.py:1725
+msgid "Delivery addresses"
+msgstr ""
+
+#: common/catalogs/models.py:1792 common/catalogs/models.py:1874
+msgid "Goods"
+msgstr ""
+
+#: common/catalogs/models.py:1816
+msgid "Goods remnant"
+msgstr ""
+
+#: common/catalogs/models.py:1817
+msgid "Goods remnants"
+msgstr ""
+
+#: common/catalogs/models.py:1896
+msgid "Goods price"
+msgstr ""
+
+#: common/catalogs/models.py:1897
+msgid "Goods prices"
+msgstr ""
+
+#: common/catalogs/models.py:1973
+msgid "Payment forms"
+msgstr ""
+
+#: common/catalogs/models.py:1983
+msgid "Payment options"
+msgstr ""
+
+#: common/catalogs/models.py:2560 help_desk/models.py:62
+#: sports_facilities_info/models.py:616 sports_facilities_info/models.py:1046
+#: tags/models.py:19
+msgid "Наименование"
+msgstr ""
+
+#: common/catalogs/models.py:2592 gallery/models.py:60
+msgid "Related object"
+msgstr ""
+
+#: common/catalogs/models.py:2601
+msgid "Административная единица"
+msgstr ""
+
+#: common/catalogs/models.py:2719
+msgid "List order"
+msgstr ""
+
+#: common/catalogs/models.py:2761
+msgid "Область"
+msgstr ""
+
+#: common/catalogs/models.py:2762
+msgid "Области"
+msgstr ""
+
+#: common/catalogs/models.py:2803 customer_contracts/models.py:18
+#: customer_contracts/models.py:86
+msgid "Внешний ID"
+msgstr ""
+
+#: common/catalogs/models.py:2807 customer_contracts/models.py:57
+msgid "Юридическое лицо"
+msgstr ""
+
+#: common/catalogs/models.py:2808
+msgid "Юридические лица"
+msgstr ""
+
+#: common/current_profile/db/models/fields.py:14
+msgid "as default value sets the current logged in user profile if available"
+msgstr ""
+
+#: common/estimates/models.py:35
+msgid "Документ факта"
+msgstr ""
+
+#: common/estimates/models.py:43
+msgid "Регистратор"
+msgstr ""
+
+#: common/estimates/models.py:75
+msgid "Материал"
+msgstr ""
+
+#: common/estimates/models.py:90 help_desk/models.py:3161
+msgid "Краткое наименование"
+msgstr ""
+
+#: common/estimates/models.py:97 help_desk/models.py:3168
+msgid "Артикул"
+msgstr ""
+
+#: common/estimates/models.py:103 help_desk/models.py:3174
+msgid "Базовая ед. изм."
+msgstr ""
+
+#: common/estimates/models.py:128
+msgid "Количество факт"
+msgstr ""
+
+#: common/estimates/models.py:135
+msgid "Сумма факт"
+msgstr ""
+
+#: common/estimates/models.py:158 help_desk/models.py:3215
+msgid "Период"
+msgstr ""
+
+#: common/estimates/models.py:162
+msgid "Строковый идентификатор строки регистратора"
+msgstr ""
+
+#: common/estimates/models.py:175
+msgid "Сотрудник, выполнивший работы и понёсший трудозатраты"
+msgstr ""
+
+#: common/estimates/models.py:282
+msgid "Количество факт, чч:мм:сс"
+msgstr ""
+
+#: common/estimates/models.py:287
+msgid "Тип документа факта"
+msgstr ""
+
+#: common/estimates/models.py:296
+msgid "Ссылка на документ факта"
+msgstr ""
+
+#: common/estimates/models.py:352
+msgid "Регистр накопления"
+msgstr ""
+
+#: common/estimates/models.py:353
+msgid "Регистры накопления"
+msgstr ""
+
+#: common/estimates/models.py:360
+msgid "Источники данных"
+msgstr ""
+
+#: common/front_routes.py:34
+msgid "Files"
+msgstr ""
+
+#: common/front_routes.py:55
+msgid "Desktop"
+msgstr ""
+
+#: common/front_routes.py:98
+msgid "Communication"
+msgstr ""
+
+#: common/front_routes.py:102 common/front_routes.py:567
+msgid "Groups"
+msgstr ""
+
+#: common/front_routes.py:123 common/front_routes.py:515
+#: common/front_routes.py:844
+msgid "Meetings"
+msgstr ""
+
+#: common/front_routes.py:132 common/front_routes.py:524
+#: common/front_routes.py:832
+msgid "Chat"
+msgstr ""
+
+#: common/front_routes.py:145 common/front_routes.py:537
+#: common/front_routes.py:739
+msgid "Tasks"
+msgstr ""
+
+#: common/front_routes.py:186 common/front_routes.py:577
+#: common/front_routes.py:869
+msgid "Projects"
+msgstr ""
+
+#: common/front_routes.py:205 common/front_routes.py:335
+#: common/front_routes.py:591
+msgid "Business processes"
+msgstr ""
+
+#: common/front_routes.py:228 common/front_routes.py:601 common/utils.py:980
+msgid "My files"
+msgstr ""
+
+#: common/front_routes.py:238 common/front_routes.py:611
+msgid "Helpdesk"
+msgstr ""
+
+#: common/front_routes.py:249 common/front_routes.py:622
+msgid "Add ticket"
+msgstr ""
+
+#: common/front_routes.py:321
+msgid "Common"
+msgstr ""
+
+#: common/front_routes.py:342
+msgid "CRM"
+msgstr ""
+
+#: common/front_routes.py:383 common/front_routes.py:673
+#: common/front_routes.py:895
+msgid "Orders"
+msgstr ""
+
+#: common/handlers.py:19
+msgid "Страница не найдена или удалена"
+msgstr ""
+
+#: common/humanize.py:7 common/humanize.py:8
+msgid "по времени г. Астана"
+msgstr ""
+
+#: common/humanize.py:9
+msgid "по московскому времени"
+msgstr ""
+
+#: common/humanize.py:18
+msgid "январь"
+msgstr ""
+
+#: common/humanize.py:19
+msgid "февраль"
+msgstr ""
+
+#: common/humanize.py:20
+msgid "март"
+msgstr ""
+
+#: common/humanize.py:21
+msgid "апрель"
+msgstr ""
+
+#: common/humanize.py:22
+msgid "май"
+msgstr ""
+
+#: common/humanize.py:23
+msgid "июнь"
+msgstr ""
+
+#: common/humanize.py:24
+msgid "июль"
+msgstr ""
+
+#: common/humanize.py:25
+msgid "август"
+msgstr ""
+
+#: common/humanize.py:26
+msgid "сентябрь"
+msgstr ""
+
+#: common/humanize.py:27
+msgid "октябрь"
+msgstr ""
+
+#: common/humanize.py:28
+msgid "ноябрь"
+msgstr ""
+
+#: common/humanize.py:29
+msgid "декабрь"
+msgstr ""
+
+#: common/models.py:53
+msgid "Активный"
+msgstr ""
+
+#: common/models.py:69
+msgid "Дата удаления"
+msgstr ""
+
+#: common/models.py:72
+msgid "Сортировка"
+msgstr ""
+
+#: common/models.py:525 common/models.py:971 common/models.py:1016
+#: common/models.py:2231 consolidation/models.py:324
+#: consolidation/models.py:408 consolidation/models.py:492
+#: notifications/models.py:223
+msgid "Файл"
+msgstr ""
+
+#: common/models.py:580
+msgid "Дата обновления"
+msgstr ""
+
+#: common/models.py:620
+msgid "Упоминаемые пользователи"
+msgstr ""
+
+#: common/models.py:772
+msgid "Базовая запись"
+msgstr ""
+
+#: common/models.py:773
+msgid "Базовые записи"
+msgstr ""
+
+#: common/models.py:800
+msgid "Предопределенное значение"
+msgstr ""
+
+#: common/models.py:876
+msgid "Запись справочника"
+msgstr ""
+
+#: common/models.py:877
+msgid "Записи справочника"
+msgstr ""
+
+#: common/models.py:900 common/models.py:1154 common/models.py:1177
+msgid "Тип файла"
+msgstr ""
+
+#: common/models.py:948
+msgid "Удалён"
+msgstr ""
+
+#: common/models.py:973
+msgid "Расширение файла"
+msgstr ""
+
+#: common/models.py:975
+msgid "MIME-тип"
+msgstr ""
+
+#: common/models.py:976
+msgid "Размер файла"
+msgstr ""
+
+#: common/models.py:977
+msgid "Картинка"
+msgstr ""
+
+#: common/models.py:978
+msgid "Видео"
+msgstr ""
+
+#: common/models.py:979
+msgid "Аудио"
+msgstr ""
+
+#: common/models.py:983
+msgid "Удален"
+msgstr ""
+
+#: common/models.py:997
+msgid "Каталог"
+msgstr ""
+
+#: common/models.py:1017 help_desk/models.py:1108
+msgid "Файлы"
+msgstr ""
+
+#: common/models.py:1155
+msgid "Типы файла"
+msgstr ""
+
+#: common/models.py:1181
+msgid "MIME тип файла"
+msgstr ""
+
+#: common/models.py:1182
+msgid "MIME типы файла"
+msgstr ""
+
+#: common/models.py:1225 consolidation/models.py:799
+msgid "Организации"
+msgstr ""
+
+#: common/models.py:1243
+msgid "Номер документа"
+msgstr ""
+
+#: common/models.py:1245 common/serializers.py:426 staff/front_routes.py:552
+msgid "Document date"
+msgstr ""
+
+#: common/models.py:1246
+msgid "Документ проведен"
+msgstr ""
+
+#: common/models.py:1249
+msgid "Черновик"
+msgstr ""
+
+#: common/models.py:1259
+msgid "Документ"
+msgstr ""
+
+#: common/models.py:1260
+msgid "Документы"
+msgstr ""
+
+#: common/models.py:1368
+msgid "Документ заблокирован пользователем"
+msgstr ""
+
+#: common/models.py:1461
+msgid "ИИН"
+msgstr ""
+
+#: common/models.py:1486
+msgid "Физическое лицо"
+msgstr ""
+
+#: common/models.py:1487
+msgid "Физические лица"
+msgstr ""
+
+#: common/models.py:1615
+msgid "Строка"
+msgstr ""
+
+#: common/models.py:1616 help_desk/models.py:1822
+msgid "Ссылка"
+msgstr ""
+
+#: common/models.py:1617
+msgid "Число"
+msgstr ""
+
+#: common/models.py:1618
+msgid "Булеан"
+msgstr ""
+
+#: common/models.py:1620
+msgid "Дата, время"
+msgstr ""
+
+#: common/models.py:1681
+msgid "REPEATS"
+msgstr ""
+
+#: common/models.py:1682
+msgid "NOT REPEATS"
+msgstr ""
+
+#: common/models.py:1686 common/models.py:1767
+msgid "REQUIRED"
+msgstr ""
+
+#: common/models.py:1688
+msgid "OPTIONAL"
+msgstr ""
+
+#: common/models.py:1695
+msgid "IDENTIFICATION BLOCK"
+msgstr ""
+
+#: common/models.py:1696
+msgid "CODED INFORMATION BLOCK"
+msgstr ""
+
+#: common/models.py:1697
+msgid "DESCRIPTION BLOCK"
+msgstr ""
+
+#: common/models.py:1698
+msgid "NOTES BLOCK"
+msgstr ""
+
+#: common/models.py:1699
+msgid "RELATED RECORD BLOCK"
+msgstr ""
+
+#: common/models.py:1700
+msgid "RELATED TITLES BLOCK"
+msgstr ""
+
+#: common/models.py:1701
+msgid "ANALYSIS AND BIBLIOGRAPHIC HISTORY BLOCK"
+msgstr ""
+
+#: common/models.py:1702
+msgid "RESPONSIBILITY BLOCK"
+msgstr ""
+
+#: common/models.py:1703
+msgid "INTERNATIONAL USE BLOCK"
+msgstr ""
+
+#: common/models.py:1704
+msgid "LOCAL USE BLOCK"
+msgstr ""
+
+#: common/models.py:1707
+msgid "INDEPENDENT FIELD"
+msgstr ""
+
+#: common/models.py:1708
+msgid "FIELD"
+msgstr ""
+
+#: common/models.py:1709
+msgid "SUBFIELD"
+msgstr ""
+
+#: common/models.py:1728
+msgid "Block"
+msgstr ""
+
+#: common/models.py:1733
+msgid "Characteristic type"
+msgstr ""
+
+#: common/models.py:1736
+msgid "Field appointment"
+msgstr ""
+
+#: common/models.py:1746
+msgid "Field code"
+msgstr ""
+
+#: common/models.py:1751
+msgid "Subfield code"
+msgstr ""
+
+#: common/models.py:1753 staff/front_routes.py:206 staff/models.py:172
+#: staff/models.py:488
+msgid "Name"
+msgstr ""
+
+#: common/models.py:1756
+msgid "Predefined value"
+msgstr ""
+
+#: common/models.py:1761
+msgid "Repetitive"
+msgstr ""
+
+#: common/models.py:1775
+msgid "Field linked model"
+msgstr ""
+
+#: common/models.py:1777
+msgid "Duplicate with main model"
+msgstr ""
+
+#: common/models.py:1781
+msgid "Field name in main model"
+msgstr ""
+
+#: common/models.py:1786
+msgid "Delimiter"
+msgstr ""
+
+#: common/models.py:1799 common/models.py:1909
+msgid "Field data type"
+msgstr ""
+
+#: common/models.py:1870
+msgid "Plan Of Characteristic"
+msgstr ""
+
+#: common/models.py:1871
+msgid "Plans Of Characteristic"
+msgstr ""
+
+#: common/models.py:1905
+msgid "Property"
+msgstr ""
+
+#: common/models.py:1915
+msgid "Owner record"
+msgstr ""
+
+#: common/models.py:1922
+msgid "The record referenced by the field"
+msgstr ""
+
+#: common/models.py:1926
+msgid "Value field Date"
+msgstr ""
+
+#: common/models.py:1929
+msgid "Value field DateTime"
+msgstr ""
+
+#: common/models.py:1934
+msgid "Value field Number"
+msgstr ""
+
+#: common/models.py:1938
+msgid "Value field String"
+msgstr ""
+
+#: common/models.py:1941
+msgid "Value field Boolean"
+msgstr ""
+
+#: common/models.py:1945
+msgid "The ordinal number of the value, when repeated"
+msgstr ""
+
+#: common/models.py:1950
+msgid "The ordinal number of the value, when repeated subfield"
+msgstr ""
+
+#: common/models.py:2010
+msgid "Plan Of Characteristic Value"
+msgstr ""
+
+#: common/models.py:2011
+msgid "Plan Of Characteristic Values"
+msgstr ""
+
+#: common/models.py:2048
+msgid "Phantom Quantity"
+msgstr ""
+
+#: common/models.py:2053
+msgid "Phantom Amount"
+msgstr ""
+
+#: common/models.py:2209
+msgid "The list contains an already written-off record"
+msgstr ""
+
+#: common/models.py:2222
+msgid "Register record asset in warehouse"
+msgstr ""
+
+#: common/models.py:2223
+msgid "Assets in warehouse"
+msgstr ""
+
+#: common/models.py:2247
+msgid "Имя поля"
+msgstr ""
+
+#: common/models.py:2251
+msgid "Файл для CKEditor"
+msgstr ""
+
+#: common/models.py:2252
+msgid "Файлы для CKEditor"
+msgstr ""
+
+#: common/models.py:2337
+msgid "Упоминание"
+msgstr ""
+
+#: common/models.py:2338
+msgid "Упоминания"
+msgstr ""
+
+#: common/page_config/base_document/button_sets.py:14
+msgid "Post and close"
+msgstr ""
+
+#: common/page_config/base_document/button_sets.py:18
+#: common/page_config/base_model/buttons.py:19
+msgid "Save"
+msgstr ""
+
+#: common/page_config/base_document/button_sets.py:23
+#: common/page_config/base_document/buttons.py:8
+msgid "Post"
+msgstr ""
+
+#: common/page_config/base_document/button_sets.py:25
+msgid "More"
+msgstr ""
+
+#: common/page_config/base_document/buttons.py:13
+msgid "Unpost"
+msgstr ""
+
+#: common/page_config/base_model/buttons.py:8
+msgid "Mark for deletion"
+msgstr ""
+
+#: common/page_config/base_model/buttons.py:8
+msgid "Unmark"
+msgstr ""
+
+#: common/page_config/base_model/buttons.py:13
+#: common/page_config/base_model/buttons.py:40
+msgid "Copy"
+msgstr ""
+
+#: common/page_config/base_model/buttons.py:25
+msgid "Save and close"
+msgstr ""
+
+#: common/page_config/base_model/buttons.py:29 staff/models.py:216
+msgid "Print"
+msgstr ""
+
+#: common/page_config/base_model/buttons.py:34
+msgid "Add"
+msgstr ""
+
+#: common/page_config/base_model/buttons.py:45
+#: common/page_config/base_model/forms.py:48
+msgid "Edit"
+msgstr ""
+
+#: common/page_config/base_model/buttons.py:50
+msgid "Delete"
+msgstr ""
+
+#: common/page_config/base_model/buttons.py:55
+msgid "Select all"
+msgstr ""
+
+#: common/page_config/base_model/forms.py:47
+msgid "Create"
+msgstr ""
+
+#: common/page_config/form_fields.py:32 staff/front_routes.py:145
+#: staff/front_routes.py:170 staff/front_routes.py:219
+#: staff/front_routes.py:244 staff/front_routes.py:264
+#: staff/front_routes.py:308 staff/front_routes.py:376
+msgid "Required to fill"
+msgstr ""
+
+#: common/page_config/form_fields.py:54
+#, python-brace-format
+msgid ""
+"Minimum {self.min_length} characters, maximum {self.max_length} characters"
+msgstr ""
+
+#: common/page_config/table_columns.py:36
+msgid "Yes"
+msgstr ""
+
+#: common/page_config/table_columns.py:37
+msgid "No"
+msgstr ""
+
+#: common/serializers.py:37 common/serializers.py:67
+msgid "String view"
+msgstr ""
+
+#: common/serializers.py:310
+msgid "This record is predefined"
+msgstr ""
+
+#: common/serializers.py:319 common/serializers.py:370
+msgid "File type"
+msgstr ""
+
+#: common/serializers.py:388 common/serializers.py:406
+msgid "Locked"
+msgstr ""
+
+#: common/serializers.py:425 staff/front_routes.py:530
+msgid "Document number"
+msgstr ""
+
+#: common/serializers.py:427 common/serializers.py:537 crm/models.py:608
+#: staff/front_routes.py:363
+msgid "Comment"
+msgstr ""
+
+#: common/utils.py:1281
+msgid "Пульс дня"
+msgstr ""
+
+#: common/validators.py:10
+msgid "Enter a valid iin."
+msgstr ""
+
+#: common/validators.py:19
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: common/validators.py:26
+msgid "Дата постройки не может быть больше текущего года."
+msgstr ""
+
+#: common/views.py:861
+msgid "Document locked by user"
+msgstr ""
+
+#: consolidation/models.py:237 consolidation/models.py:807
+#: consolidation/models.py:1360 consolidation/models.py:1390
+msgid "Форма отчета"
+msgstr ""
+
+#: consolidation/models.py:238
+msgid "Форма отчетов"
+msgstr ""
+
+#: consolidation/models.py:251
+msgid "Статус консолидации"
+msgstr ""
+
+#: consolidation/models.py:252
+msgid "Статусы консолидации"
+msgstr ""
+
+#: consolidation/models.py:279
+msgid "Статус отчета"
+msgstr ""
+
+#: consolidation/models.py:280
+msgid "Статусы отчетов"
+msgstr ""
+
+#: consolidation/models.py:307 consolidation/models.py:338
+msgid "Тип консолидированного файла"
+msgstr ""
+
+#: consolidation/models.py:308
+msgid "Типы консолидированных файлов"
+msgstr ""
+
+#: consolidation/models.py:332 consolidation/models.py:416
+msgid "PDF-файл для просмотра"
+msgstr ""
+
+#: consolidation/models.py:348
+msgid "Консолидированный отчет"
+msgstr ""
+
+#: consolidation/models.py:349
+msgid "Консолидированные отчеты"
+msgstr ""
+
+#: consolidation/models.py:366 consolidation/models.py:422
+msgid "Тип загружаемого файла"
+msgstr ""
+
+#: consolidation/models.py:367
+msgid "Типы загружаемых файлов"
+msgstr ""
+
+#: consolidation/models.py:378
+msgid "Виджет"
+msgstr ""
+
+#: consolidation/models.py:388 consolidation/models.py:547
+msgid "Тип отчета"
+msgstr ""
+
+#: consolidation/models.py:389
+msgid "Типы отчетов"
+msgstr ""
+
+#: consolidation/models.py:401
+msgid "Файл отчета"
+msgstr ""
+
+#: consolidation/models.py:402
+msgid "Файлы отчетов"
+msgstr ""
+
+#: consolidation/models.py:433
+msgid "Дата и время загрузки файла"
+msgstr ""
+
+#: consolidation/models.py:438
+msgid "Файл загрузил"
+msgstr ""
+
+#: consolidation/models.py:445
+msgid "Сгенерирован"
+msgstr ""
+
+#: consolidation/models.py:511
+msgid "Консолидатор"
+msgstr ""
+
+#: consolidation/models.py:522
+msgid "Консолидация, целевой отчет"
+msgstr ""
+
+#: consolidation/models.py:543
+msgid "Нет обращений"
+msgstr ""
+
+#: consolidation/models.py:561
+msgid "Отчет без прикрепленных объектов"
+msgstr ""
+
+#: consolidation/models.py:719
+msgid "Отчеты"
+msgstr ""
+
+#: consolidation/models.py:736 consolidation/models.py:1342
+msgid "Консолидация"
+msgstr ""
+
+#: consolidation/models.py:747 consolidation/models.py:748
+msgid "Организация консолидации"
+msgstr ""
+
+#: consolidation/models.py:781
+msgid "Итоговые отчеты"
+msgstr ""
+
+#: consolidation/models.py:786
+msgid "Дата и время создания консолидированного отчета"
+msgstr ""
+
+#: consolidation/models.py:793
+msgid "Организация администратор"
+msgstr ""
+
+#: consolidation/models.py:821
+msgid "Крайний срок подачи отчетов"
+msgstr ""
+
+#: consolidation/models.py:826 consolidation/models.py:1365
+msgid "Начало периода"
+msgstr ""
+
+#: consolidation/models.py:831 consolidation/models.py:1370
+msgid "Конец периода"
+msgstr ""
+
+#: consolidation/models.py:836
+msgid "Ответственный за консолидацию"
+msgstr ""
+
+#: consolidation/models.py:843
+msgid "Автоматическое утверждение"
+msgstr ""
+
+#: consolidation/models.py:848
+msgid "Добавить организацию-администратора"
+msgstr ""
+
+#: consolidation/models.py:858
+msgid "Периодическая задача"
+msgstr ""
+
+#: consolidation/models.py:863
+msgid "Состояние шаблона"
+msgstr ""
+
+#: consolidation/models.py:867
+msgid "Дата и время следующего создания"
+msgstr ""
+
+#: consolidation/models.py:874
+msgid "Периодичность"
+msgstr ""
+
+#: consolidation/models.py:882
+msgid "Повторять до"
+msgstr ""
+
+#: consolidation/models.py:888
+msgid "Следующий крайний срок подачи отчетов"
+msgstr ""
+
+#: consolidation/models.py:894
+msgid "Следующее начало периода"
+msgstr ""
+
+#: consolidation/models.py:900
+msgid "Следующий конец периода"
+msgstr ""
+
+#: consolidation/models.py:906
+msgid "Созданный шаблон"
+msgstr ""
+
+#: consolidation/models.py:915
+msgid "Генерировать файлы отчетов из базы данных"
+msgstr ""
+
+#: consolidation/models.py:1343
+msgid "Консолидации"
+msgstr ""
+
+#: consolidation/models.py:1380
+msgid "Отчет Ф2ГО"
+msgstr ""
+
+#: consolidation/models.py:1381
+msgid "Отчеты Ф2ГО"
+msgstr ""
+
+#: consolidation/models.py:1397
+msgid "Данные для создания отчета"
+msgstr ""
+
+#: consolidation/models.py:1401
+msgid "Аналитический отчет"
+msgstr ""
+
+#: consolidation/models.py:1402
+msgid "Аналитические отчеты"
+msgstr ""
+
+#: consolidation/models.py:1438
+msgid "Год"
+msgstr ""
+
+#: consolidation/models.py:1444
+msgid "Остаток обращений на начало года"
+msgstr ""
+
+#: consolidation/models.py:1448 consolidation/models.py:1449
+msgid "Остатки обращений"
+msgstr ""
+
+#: consolidation/models.py:1464
+msgid "Отозвано без маршрутизации"
+msgstr ""
+
+#: consolidation/models.py:1470
+msgid "Перенос в другую систему"
+msgstr ""
+
+#: consolidation/models.py:1474
+msgid "Дезинтеграция"
+msgstr ""
+
+#: consolidation/models.py:1475
+msgid "Дезинтеграции"
+msgstr ""
+
+#: consolidation/models.py:1489
+msgid "Количество приемов за период"
+msgstr ""
+
+#: consolidation/models.py:1493
+msgid "Личный приём не проводился"
+msgstr ""
+
+#: consolidation/models.py:1498 help_desk/models.py:1620
+#: risk_assessment/models.py:254
+msgid "Обращения"
+msgstr ""
+
+#: consolidation/models.py:1502
+msgid "Личный прием граждан"
+msgstr ""
+
+#: consolidation/models.py:1503
+msgid "Личные приемы граждан"
+msgstr ""
+
+#: contractor_permissions/models.py:252 contractor_permissions/models.py:430
+msgid "Разделы приложения"
+msgstr ""
+
+#: contractor_permissions/models.py:259
+msgid "Сотрудники"
+msgstr ""
+
+#: contractor_permissions/models.py:263 contractor_permissions/models.py:331
+#: contractor_permissions/models.py:362 contractor_permissions/models.py:467
+msgid "Группа доступа"
+msgstr ""
+
+#: contractor_permissions/models.py:264
+msgid "Группы доступа"
+msgstr ""
+
+#: contractor_permissions/models.py:343
+msgid "Сотрудник группы доступа"
+msgstr ""
+
+#: contractor_permissions/models.py:344
+msgid "Сотрудники группы доступа"
+msgstr ""
+
+#: contractor_permissions/models.py:354 contractor_permissions/models.py:441
+#: users/fields.py:117
+msgid "Тариф"
+msgstr ""
+
+#: contractor_permissions/models.py:366
+msgid "Группа доступа тарифа"
+msgstr ""
+
+#: contractor_permissions/models.py:367
+msgid "Группы доступа тарифов"
+msgstr ""
+
+#: contractor_permissions/models.py:384
+msgid "Роли"
+msgstr ""
+
+#: contractor_permissions/models.py:429 contractor_permissions/models.py:449
+msgid "Раздел приложения"
+msgstr ""
+
+#: contractor_permissions/models.py:453
+msgid "Раздел приложения тарифа"
+msgstr ""
+
+#: contractor_permissions/models.py:454
+msgid "Разделы приложения тарифа"
+msgstr ""
+
+#: contractor_permissions/models.py:479
+msgid "Роль раздела группы доступа"
+msgstr ""
+
+#: contractor_permissions/models.py:480
+msgid "Роли раздела группы доступа"
+msgstr ""
+
+#: contractor_permissions/models.py:498 contractor_permissions/models.py:556
+msgid "Роль раздела"
+msgstr ""
+
+#: contractor_permissions/models.py:499 contractor_permissions/models.py:557
+msgid "Роли раздела"
+msgstr ""
+
+#: contractor_permissions/models.py:529
+msgid "Секция приложения"
+msgstr ""
+
+#: contractor_permissions/models.py:539
+msgid "Роль"
+msgstr ""
+
+#: crm/models.py:29 crm/models.py:41
+msgid "Cart type"
+msgstr ""
+
+#: crm/models.py:30
+msgid "Cart types"
+msgstr ""
+
+#: crm/models.py:48 users/models.py:289
+msgid "User"
+msgstr ""
+
+#: crm/models.py:71
+msgid "warehouse"
+msgstr ""
+
+#: crm/models.py:94 crm/models.py:921
+msgid "Coefficient"
+msgstr ""
+
+#: crm/models.py:411
+msgid "Basis"
+msgstr ""
+
+#: crm/models.py:434 crm/models.py:439
+msgid "Order number"
+msgstr ""
+
+#: crm/models.py:463
+msgid "Last editor"
+msgstr ""
+
+#: crm/models.py:493
+msgid "Contract"
+msgstr ""
+
+#: crm/models.py:571
+msgid "Автомобиль"
+msgstr ""
+
+#: crm/models.py:852
+msgid "Заказ товаров"
+msgstr ""
+
+#: crm/models.py:853
+msgid "Заказы товаров"
+msgstr ""
+
+#: crm/models.py:863 crm/models.py:1018
+msgid "Order"
+msgstr ""
+
+#: crm/models.py:878
+msgid "goods"
+msgstr ""
+
+#: crm/models.py:907
+msgid "Quantity base"
+msgstr ""
+
+#: crm/models.py:1006
+msgid "Goods for order"
+msgstr ""
+
+#: crm/models.py:1007
+msgid "Goods for orders"
+msgstr ""
+
+#: crm/views.py:744 crm/views.py:824
+msgid "Editing this order is forbidden"
+msgstr ""
+
+#: crm/views.py:752 crm/views.py:756 crm/views.py:913
+msgid "invalid contract"
+msgstr ""
+
+#: customer_contracts/models.py:22
+msgid "Статус контракта"
+msgstr ""
+
+#: customer_contracts/models.py:23
+msgid "Статусы контракта"
+msgstr ""
+
+#: customer_contracts/models.py:49 help_desk/models.py:150
+#: help_desk/models.py:588 help_desk/models.py:927
+msgid "Карточка клиента"
+msgstr ""
+
+#: customer_contracts/models.py:90
+msgid "Дата контракта"
+msgstr ""
+
+#: customer_contracts/models.py:96
+msgid "Плановые часы"
+msgstr ""
+
+#: customer_contracts/models.py:103
+msgid "Фактические часы"
+msgstr ""
+
+#: customer_contracts/models.py:108
+msgid "Документ подписан"
+msgstr ""
+
+#: customer_contracts/models.py:112
+msgid "В наличии"
+msgstr ""
+
+#: customer_contracts/models.py:116 customer_contracts/models.py:154
+msgid "Контракт"
+msgstr ""
+
+#: customer_contracts/models.py:117
+msgid "Контракты"
+msgstr ""
+
+#: customer_contracts/models.py:167
+msgid "Проект контракта"
+msgstr ""
+
+#: customer_contracts/models.py:168
+msgid "Проекты контракта"
+msgstr ""
+
+#: gallery/models.py:19
+msgid "File cannot be null."
+msgstr ""
+
+#: gallery/models.py:23
+msgid "File not found"
+msgstr ""
+
+#: gallery/models.py:26
+msgid "File is not media."
+msgstr ""
+
+#: gallery/models.py:37
+msgid "Related object cannot be null."
+msgstr ""
+
+#: gallery/models.py:41
+msgid "Related object not found"
+msgstr ""
+
+#: gallery/models.py:44
+msgid "invalid related object"
+msgstr ""
+
+#: gallery/models.py:51
+msgid "File"
+msgstr ""
+
+#: gallery/models.py:65
+msgid "Main image"
+msgstr ""
+
+#: gallery/models.py:75
+msgid "Image"
+msgstr ""
+
+#: gallery/models.py:76
+msgid "Gallery"
+msgstr ""
+
+#: help_desk/fields.py:101 help_desk/fields.py:128 help_desk/models.py:114
+#: help_desk/models.py:486
+msgid "Организация техподдержки"
+msgstr ""
+
+#: help_desk/fields.py:155 help_desk/models.py:596
+msgid "Специалист"
+msgstr ""
+
+#: help_desk/fields.py:189 help_desk/models.py:750 help_desk/models.py:1844
+msgid "Основной специалист"
+msgstr ""
+
+#: help_desk/fields.py:200
+msgid "Заменяющий специалист"
+msgstr ""
+
+#: help_desk/fields.py:211
+msgid "Очень плохо"
+msgstr ""
+
+#: help_desk/fields.py:212
+msgid "Плохо"
+msgstr ""
+
+#: help_desk/fields.py:213
+msgid "Средне"
+msgstr ""
+
+#: help_desk/fields.py:214
+msgid "Хорошо"
+msgstr ""
+
+#: help_desk/fields.py:215
+msgid "Очень хорошо"
+msgstr ""
+
+#: help_desk/fields.py:243
+msgid "Профиль активен"
+msgstr ""
+
+#: help_desk/fields.py:267 sla/models.py:52 sla/models.py:53 sla/models.py:102
+msgid "SLA"
+msgstr ""
+
+#: help_desk/models.py:80 help_desk/models.py:495
+msgid "БИН"
+msgstr ""
+
+#: help_desk/models.py:88
+msgid "Юридический адрес"
+msgstr ""
+
+#: help_desk/models.py:97
+msgid "id из 1C"
+msgstr ""
+
+#: help_desk/models.py:121
+msgid "Организация-администратор"
+msgstr ""
+
+#: help_desk/models.py:151
+msgid "Карточки клиентов"
+msgstr ""
+
+#: help_desk/models.py:162
+msgid "Наименование организации"
+msgstr ""
+
+#: help_desk/models.py:297 help_desk/models.py:1017
+msgid "Контактные лица"
+msgstr ""
+
+#: help_desk/models.py:302
+msgid "Теги"
+msgstr ""
+
+#: help_desk/models.py:500
+msgid "Администратор"
+msgstr ""
+
+#: help_desk/models.py:501
+msgid "Администраторы"
+msgstr ""
+
+#: help_desk/models.py:558
+msgid "Администратор карточки клиента"
+msgstr ""
+
+#: help_desk/models.py:559
+msgid "Администраторы карточки клиента"
+msgstr ""
+
+#: help_desk/models.py:575
+msgid "Статус клиента"
+msgstr ""
+
+#: help_desk/models.py:576
+msgid "Статусы клиента"
+msgstr ""
+
+#: help_desk/models.py:620
+msgid "План часов"
+msgstr ""
+
+#: help_desk/models.py:624
+msgid "Замена"
+msgstr ""
+
+#: help_desk/models.py:735
+msgid "Основные специалисты контрагента"
+msgstr ""
+
+#: help_desk/models.py:740
+msgid "Период замещения"
+msgstr ""
+
+#: help_desk/models.py:774
+msgid "Специалист поддержки"
+msgstr ""
+
+#: help_desk/models.py:775
+msgid "Специалисты поддержки"
+msgstr ""
+
+#: help_desk/models.py:786
+msgid "Специалист карточки клиента"
+msgstr ""
+
+#: help_desk/models.py:800
+msgid "Дата отпуска"
+msgstr ""
+
+#: help_desk/models.py:801
+msgid "Даты отпуска"
+msgstr ""
+
+#: help_desk/models.py:818
+msgid "Должность контактного лица"
+msgstr ""
+
+#: help_desk/models.py:819
+msgid "Должности контактного лица"
+msgstr ""
+
+#: help_desk/models.py:919
+msgid "Имя"
+msgstr ""
+
+#: help_desk/models.py:960
+msgid "Телефон"
+msgstr ""
+
+#: help_desk/models.py:967
+msgid "Телеграм"
+msgstr ""
+
+#: help_desk/models.py:972
+msgid "telegram id"
+msgstr ""
+
+#: help_desk/models.py:979
+msgid "email"
+msgstr ""
+
+#: help_desk/models.py:998
+msgid "Неизвестный контакт"
+msgstr ""
+
+#: help_desk/models.py:1002
+msgid "Спам"
+msgstr ""
+
+#: help_desk/models.py:1060
+msgid "Путь до иконки"
+msgstr ""
+
+#: help_desk/models.py:1064 help_desk/models.py:1092 help_desk/models.py:1468
+msgid "Канал связи"
+msgstr ""
+
+#: help_desk/models.py:1065
+msgid "Каналы связи"
+msgstr ""
+
+#: help_desk/models.py:1098
+msgid "Текст сообщения"
+msgstr ""
+
+#: help_desk/models.py:1103
+msgid "Исходник"
+msgstr ""
+
+#: help_desk/models.py:1114
+msgid "Дата сообщения"
+msgstr ""
+
+#: help_desk/models.py:1121
+msgid "id сообщения"
+msgstr ""
+
+#: help_desk/models.py:1125
+msgid "Специалист тех. поддержки"
+msgstr ""
+
+#: help_desk/models.py:1131
+msgid "Тема письма"
+msgstr ""
+
+#: help_desk/models.py:1150
+msgid "Сообщение"
+msgstr ""
+
+#: help_desk/models.py:1151 help_desk/models.py:1546
+msgid "Сообщения"
+msgstr ""
+
+#: help_desk/models.py:1331
+msgid "префикс тикетов"
+msgstr ""
+
+#: help_desk/models.py:1338
+msgid "Токен telegram"
+msgstr ""
+
+#: help_desk/models.py:1345
+msgid "Имя пользователя telegram"
+msgstr ""
+
+#: help_desk/models.py:1352
+msgid "Пароль email"
+msgstr ""
+
+#: help_desk/models.py:1359
+msgid "IMAP-сервер"
+msgstr ""
+
+#: help_desk/models.py:1383
+msgid "Имя пользователя эл. почты"
+msgstr ""
+
+#: help_desk/models.py:1390
+msgid "UID последнего email-сообщения"
+msgstr ""
+
+#: help_desk/models.py:1396
+msgid "Подпись email сообщения"
+msgstr ""
+
+#: help_desk/models.py:1400
+msgid "Конфигурация техподдержки"
+msgstr ""
+
+#: help_desk/models.py:1401
+msgid "Конфигурации техподдержки"
+msgstr ""
+
+#: help_desk/models.py:1408
+msgid "Тип тикета"
+msgstr ""
+
+#: help_desk/models.py:1409
+msgid "Типы тикета"
+msgstr ""
+
+#: help_desk/models.py:1415
+msgid "Создатель обращения"
+msgstr ""
+
+#: help_desk/models.py:1418
+msgid "Основной"
+msgstr ""
+
+#: help_desk/models.py:1419
+msgid "Заменяющий"
+msgstr ""
+
+#: help_desk/models.py:1501
+msgid "Статус от клиента"
+msgstr ""
+
+#: help_desk/models.py:1509
+msgid "Клиент"
+msgstr ""
+
+#: help_desk/models.py:1539
+msgid "Создано из сообщений"
+msgstr ""
+
+#: help_desk/models.py:1566
+msgid "Результат выполнения"
+msgstr ""
+
+#: help_desk/models.py:1576
+msgid "Дата начала работы"
+msgstr ""
+
+#: help_desk/models.py:1586
+msgid "Дата поступления"
+msgstr ""
+
+#: help_desk/models.py:1599
+msgid "Завершено не основным специалистом"
+msgstr ""
+
+#: help_desk/models.py:1608
+msgid "Какой специалист завершил (основной/заменяющий)"
+msgstr ""
+
+#: help_desk/models.py:1828
+msgid "Время от создания до закрытия"
+msgstr ""
+
+#: help_desk/models.py:1833
+msgid "Время до взятия в работу"
+msgstr ""
+
+#: help_desk/models.py:1851
+msgid "Чат (источник обращения)"
+msgstr ""
+
+#: help_desk/models.py:2683
+msgid "Номер тикета"
+msgstr ""
+
+#: help_desk/models.py:2684
+msgid "Номеры тикета"
+msgstr ""
+
+#: help_desk/models.py:2700
+msgid "Категория тикета"
+msgstr ""
+
+#: help_desk/models.py:2701
+msgid "Категории тикета"
+msgstr ""
+
+#: help_desk/models.py:2810
+msgid "Статус тикета"
+msgstr ""
+
+#: help_desk/models.py:2811
+msgid "Статусы тикета"
+msgstr ""
+
+#: help_desk/models.py:2823
+msgid "Приоритет тикета"
+msgstr ""
+
+#: help_desk/models.py:2824
+msgid "Приоритеты тикета"
+msgstr ""
+
+#: help_desk/models.py:2844
+msgid "Наблюдатель тикета"
+msgstr ""
+
+#: help_desk/models.py:2845
+msgid "Наблюдатели тикета"
+msgstr ""
+
+#: help_desk/models.py:2855 help_desk/models.py:2902
+msgid "Тикет"
+msgstr ""
+
+#: help_desk/models.py:2863
+msgid "сообщение"
+msgstr ""
+
+#: help_desk/models.py:2868
+msgid "Сообщение тикета"
+msgstr ""
+
+#: help_desk/models.py:2869
+msgid "Сообщения тикета"
+msgstr ""
+
+#: help_desk/models.py:2941
+msgid "Отредактировано"
+msgstr ""
+
+#: help_desk/models.py:3219 help_desk/models.py:3220
+msgid "Материальные затраты"
+msgstr ""
+
+#: help_desk/serializers.py:343 users/serializers.py:1376
+#: users/serializers.py:1422 users/serializers.py:1430
+#: users/serializers.py:1440 users/serializers.py:1464
+msgid "Скрыто"
+msgstr ""
+
+#: invest_projects_info/models.py:20 invest_projects_info/models.py:208
+msgid "Стадия проекта"
+msgstr ""
+
+#: invest_projects_info/models.py:21
+msgid "Стадии проекта"
+msgstr ""
+
+#: invest_projects_info/models.py:28
+msgid "Категории"
+msgstr ""
+
+#: invest_projects_info/models.py:45
+msgid "Дательный падеж"
+msgstr ""
+
+#: invest_projects_info/models.py:50 invest_projects_info/models.py:224
+msgid "Подкатегория"
+msgstr ""
+
+#: invest_projects_info/models.py:51
+msgid "Подкатегории"
+msgstr ""
+
+#: invest_projects_info/models.py:57
+msgid "Сокращенное наименование"
+msgstr ""
+
+#: invest_projects_info/models.py:65 invest_projects_info/models.py:90
+msgid "Источник финансирования"
+msgstr ""
+
+#: invest_projects_info/models.py:66
+msgid "Источники финансирования"
+msgstr ""
+
+#: invest_projects_info/models.py:82
+msgid "Инвест. проект"
+msgstr ""
+
+#: invest_projects_info/models.py:97
+msgid "Объем финансирования"
+msgstr ""
+
+#: invest_projects_info/models.py:109
+msgid "Источник и объем финансирования"
+msgstr ""
+
+#: invest_projects_info/models.py:110
+msgid "Источники и объем финансирования"
+msgstr ""
+
+#: invest_projects_info/models.py:119
+msgid "Краткое название"
+msgstr ""
+
+#: invest_projects_info/models.py:126
+msgid "Множественное число"
+msgstr ""
+
+#: invest_projects_info/models.py:132
+msgid "Единицы измерения"
+msgstr ""
+
+#: invest_projects_info/models.py:173
+msgid "Наименование предприятия"
+msgstr ""
+
+#: invest_projects_info/models.py:179
+msgid "ФИО руководителя предприятия"
+msgstr ""
+
+#: invest_projects_info/models.py:186
+msgid "Контактный номер телефона предприятия"
+msgstr ""
+
+#: invest_projects_info/models.py:193
+msgid "БИН предприятия"
+msgstr ""
+
+#: invest_projects_info/models.py:201
+msgid "Наименование проекта"
+msgstr ""
+
+#: invest_projects_info/models.py:237
+msgid "Земельный участок выделен"
+msgstr ""
+
+#: invest_projects_info/models.py:244
+msgid "Виды продукции"
+msgstr ""
+
+#: invest_projects_info/models.py:258
+msgid "Иностранный инвестор"
+msgstr ""
+
+#: invest_projects_info/models.py:265
+msgid "Финансовый институт"
+msgstr ""
+
+#: invest_projects_info/models.py:272
+msgid "Опыт работы"
+msgstr ""
+
+#: invest_projects_info/models.py:287
+msgid "Собственные средства"
+msgstr ""
+
+#: invest_projects_info/models.py:295
+msgid "Заемные средства"
+msgstr ""
+
+#: invest_projects_info/models.py:303
+msgid "Средства банков второго уровня"
+msgstr ""
+
+#: invest_projects_info/models.py:308
+msgid "ПСД разработана"
+msgstr ""
+
+#: invest_projects_info/models.py:314
+msgid "Стадия СМР"
+msgstr ""
+
+#: invest_projects_info/models.py:323
+msgid "Проведенные инфраструктуры"
+msgstr ""
+
+#: invest_projects_info/models.py:330
+msgid "Кадастровый номер ЗУ"
+msgstr ""
+
+#: invest_projects_info/models.py:336
+msgid "Постоянные рабочие места"
+msgstr ""
+
+#: invest_projects_info/models.py:342
+msgid "Временные рабочие места"
+msgstr ""
+
+#: invest_projects_info/models.py:349
+msgid "Мощность проекта"
+msgstr ""
+
+#: invest_projects_info/models.py:365
+msgid "Пашни"
+msgstr ""
+
+#: invest_projects_info/models.py:373
+msgid "Пастбища"
+msgstr ""
+
+#: invest_projects_info/models.py:381
+msgid "Земельный участок (гектар)"
+msgstr ""
+
+#: invest_projects_info/models.py:388
+msgid "Проблемные вопросы"
+msgstr ""
+
+#: invest_projects_info/models.py:398
+msgid "Планируемый срок ввода в эксплуатацию"
+msgstr ""
+
+#: invest_projects_info/models.py:412
+msgid "Информация по инвест. проекту"
+msgstr ""
+
+#: invest_projects_info/models.py:413
+msgid "Информация по инвест. проектам"
+msgstr ""
+
+#: invest_projects_info/models.py:698
+msgid "Тип разрешения в инвест-проектах"
+msgstr ""
+
+#: invest_projects_info/models.py:699
+msgid "Типы разрешений в инвест-проектах"
+msgstr ""
+
+#: invest_projects_info/models.py:719 invest_projects_info/models.py:777
+#: invest_projects_info/models.py:785
+msgid "Статус инвестпроекта"
+msgstr ""
+
+#: invest_projects_info/models.py:720
+msgid "Статусы инвестпроектов"
+msgstr ""
+
+#: invest_projects_info/views.py:24
+msgid "НФ"
+msgstr ""
+
+#: invest_projects_info/views.py:25
+msgid "РБ"
+msgstr ""
+
+#: invest_projects_info/views.py:26
+msgid "МБ"
+msgstr ""
+
+#: invest_projects_info/views.py:27
+msgid "Другие"
+msgstr ""
+
+#: notes/models.py:37
+msgid "Заголовок"
+msgstr ""
+
+#: notes/models.py:43
+msgid "Содержимое"
+msgstr ""
+
+#: notes/models.py:47
+msgid "Заметка"
+msgstr ""
+
+#: notes/models.py:48
+msgid "Заметки"
+msgstr ""
+
+#: notes/models.py:132
+msgid "Цвета"
+msgstr ""
+
+#: notifications/models.py:209
+msgid "Категория уведомлений"
+msgstr ""
+
+#: notifications/models.py:210
+msgid "Категории уведомлений"
+msgstr ""
+
+#: notifications/models.py:215 notifications/models.py:229
+msgid "Информация"
+msgstr ""
+
+#: notifications/models.py:217
+msgid "Группы"
+msgstr ""
+
+#: notifications/models.py:220
+msgid "Собрания"
+msgstr ""
+
+#: notifications/models.py:221
+msgid "Бизнес процессы"
+msgstr ""
+
+#: notifications/models.py:222
+msgid "Логистика"
+msgstr ""
+
+#: notifications/models.py:224
+msgid "Напоминание"
+msgstr ""
+
+#: notifications/models.py:228
+msgid "Обычное"
+msgstr ""
+
+#: notifications/models.py:230
+msgid "Успех"
+msgstr ""
+
+#: notifications/models.py:231
+msgid "Предупреждение"
+msgstr ""
+
+#: notifications/models.py:250
+msgid "Вид уведомления"
+msgstr ""
+
+#: notifications/models.py:267
+msgid "Показывать в настройках"
+msgstr ""
+
+#: notifications/models.py:271
+msgid "Включено по умолчанию"
+msgstr ""
+
+#: notifications/models.py:278
+msgid "Событие уведомлений"
+msgstr ""
+
+#: notifications/models.py:279
+msgid "События уведомлений"
+msgstr ""
+
+#: notifications/models.py:368
+msgid "Адресаты"
+msgstr ""
+
+#: notifications/models.py:373
+msgid "Дата отправки"
+msgstr ""
+
+#: notifications/models.py:378 notifications/models.py:607
+msgid "Тип события"
+msgstr ""
+
+#: notifications/models.py:564
+msgid "Уведомление в приложении"
+msgstr ""
+
+#: notifications/models.py:565
+msgid "Уведомления в приложении"
+msgstr ""
+
+#: notifications/models.py:572
+msgid "Адресат"
+msgstr ""
+
+#: notifications/models.py:578
+msgid "Уведомление"
+msgstr ""
+
+#: notifications/models.py:580
+msgid "Дата прочтения"
+msgstr ""
+
+#: notifications/models.py:581
+msgid "Прочитано"
+msgstr ""
+
+#: notifications/models.py:584
+msgid "Адресат уведомления"
+msgstr ""
+
+#: notifications/models.py:585
+msgid "Адресаты уведомлений"
+msgstr ""
+
+#: notifications/models.py:612
+msgid "Включено"
+msgstr ""
+
+#: notifications/models.py:616
+msgid "Настройка уведомления"
+msgstr ""
+
+#: notifications/models.py:617
+msgid "Настройки уведомлений"
+msgstr ""
+
+#: reports/models.py:17
+msgid "Категория отчета"
+msgstr ""
+
+#: reports/models.py:18
+msgid "Категории отчетов"
+msgstr ""
+
+#: reports/models.py:59
+msgid "Путь к шаблону в report_templates"
+msgstr ""
+
+#: reports/models.py:60
+msgid "Заполняется при загрузке файла в админке (относительно MEDIA_ROOT)."
+msgstr ""
+
+#: reports/models.py:156
+msgid "Исходный отчёт"
+msgstr ""
+
+#: reports/utils.py:844
+msgid "Равно"
+msgstr ""
+
+#: reports/utils.py:845
+msgid "Не равно"
+msgstr ""
+
+#: reports/utils.py:846
+msgid "Больше"
+msgstr ""
+
+#: reports/utils.py:847
+msgid "Больше или равно"
+msgstr ""
+
+#: reports/utils.py:848
+msgid "Меньше"
+msgstr ""
+
+#: reports/utils.py:849
+msgid "Меньше или равно"
+msgstr ""
+
+#: reports/utils.py:850
+msgid "Содержит"
+msgstr ""
+
+#: reports/utils.py:851
+msgid "Не содержит"
+msgstr ""
+
+#: reports/utils.py:852
+msgid "Заполнено"
+msgstr ""
+
+#: reports/utils.py:853
+msgid "Не заполнено"
+msgstr ""
+
+#: reports/utils.py:854
+msgid "В списке"
+msgstr ""
+
+#: reports/utils.py:855
+msgid "Не в списке"
+msgstr ""
+
+#: risk_assessment/models.py:37 risk_assessment/models.py:59
+msgid "Критерий оценки"
+msgstr ""
+
+#: risk_assessment/models.py:38
+msgid "Критерии оценки"
+msgstr ""
+
+#: risk_assessment/models.py:68 risk_assessment/models.py:86
+#: risk_assessment/models.py:369
+msgid "Тип оценки"
+msgstr ""
+
+#: risk_assessment/models.py:74
+msgid "Максимальное значение"
+msgstr ""
+
+#: risk_assessment/models.py:78
+msgid "Критерий типа оценки"
+msgstr ""
+
+#: risk_assessment/models.py:79
+msgid "Критерии типа оценки"
+msgstr ""
+
+#: risk_assessment/models.py:87
+msgid "Типы оценок"
+msgstr ""
+
+#: risk_assessment/models.py:94 risk_assessment/models.py:212
+msgid "Категория обращения"
+msgstr ""
+
+#: risk_assessment/models.py:95
+msgid "Категории обращений"
+msgstr ""
+
+#: risk_assessment/models.py:133 risk_assessment/models.py:204
+msgid "Вид обращения"
+msgstr ""
+
+#: risk_assessment/models.py:134
+msgid "Виды обращений"
+msgstr ""
+
+#: risk_assessment/models.py:141
+msgid "Социальный статус гражданина"
+msgstr ""
+
+#: risk_assessment/models.py:142
+msgid "Социальные статусы граждан"
+msgstr ""
+
+#: risk_assessment/models.py:155
+msgid "Статус обращения при личном приеме"
+msgstr ""
+
+#: risk_assessment/models.py:156
+msgid "Статусы обращений при личном приеме"
+msgstr ""
+
+#: risk_assessment/models.py:174
+msgid "Социальный статус"
+msgstr ""
+
+#: risk_assessment/models.py:183
+msgid "Статус обращения"
+msgstr ""
+
+#: risk_assessment/models.py:189
+msgid "Количество дней в очереди"
+msgstr ""
+
+#: risk_assessment/models.py:193
+msgid "Личный прием"
+msgstr ""
+
+#: risk_assessment/models.py:194
+msgid "Личные приемы"
+msgstr ""
+
+#: risk_assessment/models.py:228
+msgid "Характер вопроса"
+msgstr ""
+
+#: risk_assessment/models.py:234
+msgid "Текст обращения"
+msgstr ""
+
+#: risk_assessment/models.py:239
+msgid "Дата обращения"
+msgstr ""
+
+#: risk_assessment/models.py:342
+msgid "Статус оценки риска"
+msgstr ""
+
+#: risk_assessment/models.py:343
+msgid "Статусы оценки риска"
+msgstr ""
+
+#: risk_assessment/models.py:386
+msgid "Итоговое значение"
+msgstr ""
+
+#: risk_assessment/models.py:392
+msgid "Направлено для рассмотрения"
+msgstr ""
+
+#: risk_assessment/models.py:406 risk_assessment/models.py:551
+msgid "Оценка риска"
+msgstr ""
+
+#: risk_assessment/models.py:407
+msgid "Оценки риска"
+msgstr ""
+
+#: risk_assessment/models.py:566
+msgid "Значение"
+msgstr ""
+
+#: risk_assessment/models.py:586
+msgid "Критерий оценки риска"
+msgstr ""
+
+#: risk_assessment/models.py:587
+msgid "Критерии оценки риска"
+msgstr ""
+
+#: sla/models.py:17
+msgid "Уровень"
+msgstr ""
+
+#: sla/models.py:40 sla/models.py:146 sla/models.py:194
+msgid "Время реагирования"
+msgstr ""
+
+#: sla/models.py:45 sla/models.py:151 sla/models.py:199
+msgid "Время решения"
+msgstr ""
+
+#: sla/models.py:114
+#, fuzzy
+#| msgid "Все объекты"
+msgid "SLA объекта"
+msgstr "Барлық нысандар"
+
+#: sla/models.py:115
+#, fuzzy
+#| msgid "Все объекты"
+msgid "SLA объектов"
+msgstr "Барлық нысандар"
+
+#: sla/models.py:155 sla/models.py:166
+msgid "Значение SLA"
+msgstr ""
+
+#: sla/models.py:156
+msgid "Значения SLA"
+msgstr ""
+
+#: sla/models.py:203
+msgid "Источник значения SLA"
+msgstr ""
+
+#: sla/models.py:204
+msgid "Источники значения SLA"
+msgstr ""
+
+#: sports_facilities_info/models.py:80
+msgid "Тип объекта"
+msgstr ""
+
+#: sports_facilities_info/models.py:85
+msgid "Сельская местность"
+msgstr ""
+
+#: sports_facilities_info/models.py:110
+msgid "Наименование организации собственника"
+msgstr ""
+
+#: sports_facilities_info/models.py:118
+msgid "БИН организации собственника"
+msgstr ""
+
+#: sports_facilities_info/models.py:129 sports_facilities_info/models.py:1120
+msgid "Назначение"
+msgstr ""
+
+#: sports_facilities_info/models.py:139 sports_facilities_info/models.py:777
+msgid "Форма собственности"
+msgstr ""
+
+#: sports_facilities_info/models.py:146
+msgid "Минимальный год постройки 1800"
+msgstr ""
+
+#: sports_facilities_info/models.py:149
+msgid "Год постройки"
+msgstr ""
+
+#: sports_facilities_info/models.py:159
+msgid "Система отопления"
+msgstr ""
+
+#: sports_facilities_info/models.py:165
+msgid "Численность обслуживающего персонала"
+msgstr ""
+
+#: sports_facilities_info/models.py:171
+msgid "Наличие пандуса"
+msgstr ""
+
+#: sports_facilities_info/models.py:175
+msgid "Наличие доступности на все этажи сооружения"
+msgstr ""
+
+#: sports_facilities_info/models.py:179
+msgid "Доступность лифтов"
+msgstr ""
+
+#: sports_facilities_info/models.py:183
+msgid "Наличие оборудованных санузлов"
+msgstr ""
+
+#: sports_facilities_info/models.py:191
+msgid "Площадь"
+msgstr ""
+
+#: sports_facilities_info/models.py:192
+msgid "Площадь не может быть ниже или равна нулю"
+msgstr ""
+
+#: sports_facilities_info/models.py:198
+msgid "Пропускная способность"
+msgstr ""
+
+#: sports_facilities_info/models.py:204
+msgid "Этажность"
+msgstr ""
+
+#: sports_facilities_info/models.py:206
+msgid "Этажность не может быть ниже единицы"
+msgstr ""
+
+#: sports_facilities_info/models.py:213
+msgid "Запрошено изменение"
+msgstr ""
+
+#: sports_facilities_info/models.py:220 sports_facilities_info/models.py:677
+msgid "Культивируемые виды спорта"
+msgstr ""
+
+#: sports_facilities_info/models.py:228 sports_facilities_info/models.py:601
+#: sports_facilities_info/models.py:894 sports_facilities_info/models.py:1157
+msgid "Спортивный объект"
+msgstr ""
+
+#: sports_facilities_info/models.py:229
+msgid "Спортивные объекты"
+msgstr ""
+
+#: sports_facilities_info/models.py:607
+msgid "Назначение тип"
+msgstr ""
+
+#: sports_facilities_info/models.py:620
+msgid "Строение/помещение"
+msgstr ""
+
+#: sports_facilities_info/models.py:621
+msgid "Строения/помещения"
+msgstr ""
+
+#: sports_facilities_info/models.py:647
+msgid "Техническое состояние помещения"
+msgstr ""
+
+#: sports_facilities_info/models.py:648
+msgid "Технические состояния помещения"
+msgstr ""
+
+#: sports_facilities_info/models.py:676
+msgid "Культивируемый вид спорта"
+msgstr ""
+
+#: sports_facilities_info/models.py:723
+msgid "Родительский тип"
+msgstr ""
+
+#: sports_facilities_info/models.py:743
+msgid "Тип спортивного объекта"
+msgstr ""
+
+#: sports_facilities_info/models.py:744
+msgid "Типы спортивного объекта"
+msgstr ""
+
+#: sports_facilities_info/models.py:755
+msgid "Родительское назначение"
+msgstr ""
+
+#: sports_facilities_info/models.py:766
+msgid "Назначение спортивного объекта"
+msgstr ""
+
+#: sports_facilities_info/models.py:767
+msgid "Назначения спортивного объекта"
+msgstr ""
+
+#: sports_facilities_info/models.py:778
+msgid "Формы собственности"
+msgstr ""
+
+#: sports_facilities_info/models.py:787
+msgid "Тип отопления"
+msgstr ""
+
+#: sports_facilities_info/models.py:788
+msgid "Типы отопления"
+msgstr ""
+
+#: sports_facilities_info/models.py:819
+msgid "Категория видов спорта"
+msgstr ""
+
+#: sports_facilities_info/models.py:820
+msgid "Категории видов спорта"
+msgstr ""
+
+#: sports_facilities_info/models.py:861
+msgid "Вид спорта"
+msgstr ""
+
+#: sports_facilities_info/models.py:862
+msgid "Виды спорта"
+msgstr ""
+
+#: sports_facilities_info/models.py:903 sports_facilities_info/models.py:985
+#: sports_facilities_info/models.py:1038
+msgid "Вид ремонта"
+msgstr ""
+
+#: sports_facilities_info/models.py:908
+msgid "Дата ремонта"
+msgstr ""
+
+#: sports_facilities_info/models.py:931 sports_facilities_info/models.py:986
+msgid "Виды ремонта"
+msgstr ""
+
+#: sports_facilities_info/models.py:935 sports_facilities_info/models.py:936
+#: sports_facilities_info/models.py:1005
+msgid "Информация о ремонте"
+msgstr ""
+
+#: sports_facilities_info/models.py:1014 sports_facilities_info/models.py:1050
+msgid "Вид работы"
+msgstr ""
+
+#: sports_facilities_info/models.py:1018
+msgid "Работа по ремонту"
+msgstr ""
+
+#: sports_facilities_info/models.py:1019
+msgid "Работы по ремонту"
+msgstr ""
+
+#: sports_facilities_info/models.py:1051
+msgid "Виды работ"
+msgstr ""
+
+#: sports_facilities_info/models.py:1087 sports_facilities_info/models.py:1099
+#: sports_facilities_info/models.py:1129
+msgid "Тип помещения"
+msgstr ""
+
+#: sports_facilities_info/models.py:1092
+msgid "Назначение помещения"
+msgstr ""
+
+#: sports_facilities_info/models.py:1093
+msgid "Назначения помещения"
+msgstr ""
+
+#: sports_facilities_info/models.py:1100
+msgid "Типы помещения"
+msgstr ""
+
+#: sports_facilities_info/models.py:1134
+msgid "Связь назначение и тип помещения"
+msgstr ""
+
+#: sports_facilities_info/models.py:1135
+msgid "Связи назначение и тип помещения"
+msgstr ""
+
+#: sports_facilities_info/models.py:1145
+msgid "Тип покрытия пола"
+msgstr ""
+
+#: sports_facilities_info/models.py:1146
+msgid "Типы покрытия пола"
+msgstr ""
+
+#: sports_facilities_info/models.py:1174 sports_facilities_info/models.py:1243
+msgid "Количество секций"
+msgstr ""
+
+#: sports_facilities_info/models.py:1180
+msgid "Количество занимающихся"
+msgstr ""
+
+#: sports_facilities_info/models.py:1186
+msgid "Количество тренеров"
+msgstr ""
+
+#: sports_facilities_info/models.py:1190
+msgid "Кружок/секция"
+msgstr ""
+
+#: sports_facilities_info/models.py:1191
+msgid "Кружки/секции"
+msgstr ""
+
+#: sports_facilities_info/models.py:1213 sports_facilities_info/models.py:1306
+msgid "Наименование во множественном числе"
+msgstr ""
+
+#: sports_facilities_info/models.py:1217 sports_facilities_info/models.py:1237
+msgid "Тип группы"
+msgstr ""
+
+#: sports_facilities_info/models.py:1218
+msgid "Типы групп"
+msgstr ""
+
+#: sports_facilities_info/models.py:1229 sports_facilities_info/models.py:1322
+msgid "Кружок/секция спортивного объекта"
+msgstr ""
+
+#: sports_facilities_info/models.py:1249
+msgid "Занимающихся переменного состава"
+msgstr ""
+
+#: sports_facilities_info/models.py:1255
+msgid "Занимающихся постоянного состава"
+msgstr ""
+
+#: sports_facilities_info/models.py:1261
+msgid "Лиц женского пола"
+msgstr ""
+
+#: sports_facilities_info/models.py:1267
+msgid "До 17 лет"
+msgstr ""
+
+#: sports_facilities_info/models.py:1273
+msgid "В возрасте 18-20"
+msgstr ""
+
+#: sports_facilities_info/models.py:1279
+msgid "Количество спортсменов первого спортивного разряда"
+msgstr ""
+
+#: sports_facilities_info/models.py:1285
+msgid "Количество кандидатов в мастера спорта"
+msgstr ""
+
+#: sports_facilities_info/models.py:1291
+msgid "Количество мастеров спорта"
+msgstr ""
+
+#: sports_facilities_info/models.py:1295
+msgid "Тип группы секции"
+msgstr ""
+
+#: sports_facilities_info/models.py:1296
+msgid "Типы групп секции"
+msgstr ""
+
+#: sports_facilities_info/models.py:1310 sports_facilities_info/models.py:1330
+msgid "Тип тренеров/преподавателей"
+msgstr ""
+
+#: sports_facilities_info/models.py:1311
+msgid "Типы тренеров/преподавателей"
+msgstr ""
+
+#: sports_facilities_info/models.py:1336
+msgid "Всего"
+msgstr ""
+
+#: sports_facilities_info/models.py:1342
+msgid "Женщин"
+msgstr ""
+
+#: sports_facilities_info/models.py:1348
+msgid "С высшим образованием"
+msgstr ""
+
+#: sports_facilities_info/models.py:1354
+msgid "Со средне-специальным образованием"
+msgstr ""
+
+#: sports_facilities_info/models.py:1358 sports_facilities_info/models.py:1359
+msgid "Тип тренеров/преподавателей секции"
+msgstr ""
+
+#: sports_facilities_info/serializers.py:462
+msgid "Все объекты"
+msgstr "Барлық нысандар"
+
+#: staff/front_routes.py:11
+msgid "Staff"
+msgstr ""
+
+#: staff/front_routes.py:41 staff/models.py:324 staff/models.py:325
+msgid "Month"
+msgstr ""
+
+#: staff/front_routes.py:75 staff/models.py:235 staff/models.py:236
+msgid "Show"
+msgstr ""
+
+#: staff/front_routes.py:102
+msgid "Edit document"
+msgstr ""
+
+#: staff/front_routes.py:104
+msgid "Create document"
+msgstr ""
+
+#: staff/front_routes.py:112 staff/models.py:271 staff/models.py:272
+msgid "Tabular"
+msgstr ""
+
+#: staff/front_routes.py:120
+msgid "Form in table"
+msgstr ""
+
+#: staff/front_routes.py:132
+msgid "Proba 1"
+msgstr ""
+
+#: staff/front_routes.py:140 staff/front_routes.py:165
+#: staff/front_routes.py:214 staff/front_routes.py:539
+msgid "Minimum 0 characters, maximum 36 characters"
+msgstr ""
+
+#: staff/front_routes.py:157
+msgid "Proba 2"
+msgstr ""
+
+#: staff/front_routes.py:191
+msgid "Information"
+msgstr ""
+
+#: staff/front_routes.py:239 staff/front_routes.py:371
+msgid "Minimum 0 characters, maximum 1000 characters"
+msgstr ""
+
+#: staff/front_routes.py:271
+msgid "New york"
+msgstr ""
+
+#: staff/front_routes.py:276
+msgid "San Francisco"
+msgstr ""
+
+#: staff/front_routes.py:281
+msgid "Petropavlovsk"
+msgstr ""
+
+#: staff/front_routes.py:286
+msgid "Karaganda"
+msgstr ""
+
+#: staff/front_routes.py:292 staff/front_routes.py:293 staff/models.py:175
+#: staff/models.py:365 staff/models.py:372 staff/models.py:435
+#: staff/models.py:503
+msgid "City"
+msgstr ""
+
+#: staff/front_routes.py:315
+msgid "Argentina"
+msgstr ""
+
+#: staff/front_routes.py:320
+msgid "Australia"
+msgstr ""
+
+#: staff/front_routes.py:325
+msgid "Angola"
+msgstr ""
+
+#: staff/front_routes.py:330
+msgid "Algeria"
+msgstr ""
+
+#: staff/front_routes.py:336 staff/front_routes.py:337 staff/models.py:176
+#: staff/models.py:335 staff/models.py:342 staff/models.py:433
+#: staff/models.py:501
+msgid "Country"
+msgstr ""
+
+#: staff/front_routes.py:350
+msgid "Extra"
+msgstr ""
+
+#: staff/front_routes.py:388 staff/models.py:170 staff/models.py:486
+msgid "Responsible"
+msgstr ""
+
+#: staff/front_routes.py:449 staff/models.py:178
+msgid "With gas"
+msgstr ""
+
+#: staff/front_routes.py:465 staff/models.py:180 staff/models.py:491
+msgid "With syrup"
+msgstr ""
+
+#: staff/front_routes.py:480
+msgid "Chocolate"
+msgstr ""
+
+#: staff/front_routes.py:486
+msgid "Nuts"
+msgstr ""
+
+#: staff/front_routes.py:492
+msgid "Coconut"
+msgstr ""
+
+#: staff/front_routes.py:498
+msgid "Jam"
+msgstr ""
+
+#: staff/front_routes.py:504
+msgid "Syrup"
+msgstr ""
+
+#: staff/front_routes.py:510
+msgid "Toppings"
+msgstr ""
+
+#: staff/front_routes.py:577 staff/models.py:222
+msgid "Order for an employee"
+msgstr ""
+
+#: staff/front_routes.py:581 staff/models.py:226
+msgid "Order for an employee (list)"
+msgstr ""
+
+#: staff/models.py:22 staff/models.py:64 staff/models.py:248
+#: staff/serializers.py:26 staff/serializers.py:124
+msgid "Type of employment"
+msgstr ""
+
+#: staff/models.py:23
+msgid "Types of employment"
+msgstr ""
+
+#: staff/models.py:51 staff/models.py:52 staff/models.py:403
+msgid "Recruitment"
+msgstr ""
+
+#: staff/models.py:87
+msgid "Worker"
+msgstr ""
+
+#: staff/models.py:88
+msgid "Workers"
+msgstr ""
+
+#: staff/models.py:96
+msgid "Size"
+msgstr ""
+
+#: staff/models.py:117
+msgid "Accrual"
+msgstr ""
+
+#: staff/models.py:118
+msgid "Accruals"
+msgstr ""
+
+#: staff/models.py:133
+msgid "Dismissal"
+msgstr ""
+
+#: staff/models.py:134
+msgid "Dismissals"
+msgstr ""
+
+#: staff/models.py:142 staff/serializers.py:73
+msgid "Date of dismissal"
+msgstr ""
+
+#: staff/models.py:163 staff/models.py:164
+msgid "Dismissal staff"
+msgstr ""
+
+#: staff/models.py:184
+msgid "proba 1"
+msgstr ""
+
+#: staff/models.py:186
+msgid "proba 2"
+msgstr ""
+
+#: staff/models.py:281 staff/models.py:297 staff/models.py:407
+msgid "Season"
+msgstr ""
+
+#: staff/models.py:282
+msgid "Seasons"
+msgstr ""
+
+#: staff/models.py:291
+msgid "Weather"
+msgstr ""
+
+#: staff/models.py:292
+msgid "Weathers"
+msgstr ""
+
+#: staff/models.py:336
+msgid "Countries"
+msgstr ""
+
+#: staff/models.py:366
+msgid "Cities"
+msgstr ""
+
+#: staff/models.py:395 staff/models.py:443 staff/models.py:511
+msgid "Street"
+msgstr ""
+
+#: staff/models.py:396
+msgid "Streets"
+msgstr ""
+
+#: staff/models.py:405
+msgid "chel"
+msgstr ""
+
+#: staff/models.py:415
+msgid "month"
+msgstr ""
+
+#: staff/models.py:479
+msgid "My catalog"
+msgstr ""
+
+#: staff/models.py:480
+msgid "My catalogs"
+msgstr ""
+
+#: staff/models.py:492
+msgid "Reason"
+msgstr ""
+
+#: staff/models.py:494
+msgid "Text"
+msgstr ""
+
+#: staff/models.py:565
+msgid "My Document"
+msgstr ""
+
+#: staff/models.py:566
+msgid "My Documents"
+msgstr ""
+
+#: staff/models.py:574 staff/models.py:607
+msgid "Catalog"
+msgstr ""
+
+#: staff/models.py:577
+msgid "ok"
+msgstr ""
+
+#: staff/models.py:580
+msgid "Some date"
+msgstr ""
+
+#: staff/models.py:584
+msgid "Some Datetime"
+msgstr ""
+
+#: staff/models.py:585
+msgid "Some Integer"
+msgstr ""
+
+#: staff/models.py:608
+msgid "Catalogs"
+msgstr ""
+
+#: tags/fields.py:13 tags/models.py:87
+msgid "Тэги"
+msgstr ""
+
+#: tags/models.py:86 tags/models.py:97 tags/models.py:121
+msgid "Тэг"
+msgstr ""
+
+#: tags/models.py:109
+msgid "Тэг организации"
+msgstr ""
+
+#: tags/models.py:110
+msgid "Тэги организации"
+msgstr ""
+
+#: tags/models.py:127
+msgid "Связанны объект"
+msgstr ""
+
+#: tags/models.py:140
+msgid "Тэг объекта"
+msgstr ""
+
+#: tags/models.py:141
+msgid "Тэги объекта"
+msgstr ""
+
+#: templates/admin/base_site.html:44
+msgid "Django site admin"
+msgstr ""
+
+#: templates/admin/base_site.html:47
+msgid "Django administration"
+msgstr ""
+
+#: users/admin.py:25
+msgid "Personal info"
+msgstr ""
+
+#: users/admin.py:26
+msgid "Permissions"
+msgstr ""
+
+#: users/admin.py:29
+msgid "Important dates"
+msgstr ""
+
+#: users/models.py:49
+msgid "The Email must be set"
+msgstr ""
+
+#: users/models.py:64
+msgid "Superuser must have is_staff=True."
+msgstr ""
+
+#: users/models.py:66
+msgid "Superuser must have is_superuser=True."
+msgstr ""
+
+#: users/models.py:87
+msgid "username"
+msgstr ""
+
+#: users/models.py:90
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+
+#: users/models.py:93
+msgid "A user with that username already exists."
+msgstr ""
+
+#: users/models.py:97
+msgid "email address"
+msgstr ""
+
+#: users/models.py:100
+msgid "first name"
+msgstr ""
+
+#: users/models.py:101
+msgid "last name"
+msgstr ""
+
+#: users/models.py:102
+msgid "patronymic"
+msgstr ""
+
+#: users/models.py:103
+msgid "registration id"
+msgstr ""
+
+#: users/models.py:105
+msgid "confirm date"
+msgstr ""
+
+#: users/models.py:110
+msgid "email is confirmed"
+msgstr ""
+
+#: users/models.py:111
+msgid "gos24.kz ID"
+msgstr ""
+
+#: users/models.py:284
+msgid "Организация по умолчанию"
+msgstr ""
+
+#: users/models.py:458
+msgid "User profile"
+msgstr ""
+
+#: users/models.py:459
+msgid "User profiles"
+msgstr ""
+
+#: users/models.py:804 users/models.py:875
+msgid "Date of creation"
+msgstr ""
+
+#: users/models.py:1369
+msgid "Информация о новом пользователе"
+msgstr ""
+
+#: users/models.py:1370
+msgid "Информация о новых пользователях"
+msgstr ""
+
+#: users/serializers.py:1384 users/serializers.py:1435
+msgid "Должность скрыта"
+msgstr ""
+
+#: users/views.py:1564
+msgid "Вы уже являетесь участником этого проекта"
+msgstr ""
+
+#: users/views.py:1566
+msgid "Вы уже являетесь участником этой команды"
+msgstr ""
+
+#: users/views.py:1587
+msgid "Вы уже являетесь участником этой организации и проекта"
+msgstr ""
+
+#: users/views.py:1589
+msgid "Вы уже являетесь участником этой организации и команды"
+msgstr ""
+
+#: wiki/models.py:35
+msgid "Общедоступный"
+msgstr ""
+
+#: wiki/models.py:97
+msgid "Раздел вики"
+msgstr ""
+
+#: wiki/models.py:101
+msgid "Персональный доступ к Вики"
+msgstr ""
+
+#: wiki/models.py:102
+msgid "Персональные доступы к Вики"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Все объекты"
+#~ msgid "Объект Вики"
+#~ msgstr "Барлық нысандар"
+
+#: bpms/event_calendar/serializers.py:392 bpms/event_calendar/serializers.py:516
+msgid "Set this flag to true when passing external meeting fields."
+msgstr "Set this flag to true when passing external meeting fields."
+
+#: bpms/event_calendar/serializers.py:397 bpms/event_calendar/serializers.py:399 bpms/event_calendar/serializers.py:521 bpms/event_calendar/serializers.py:523 bpms/event_calendar/utils.py:277
+msgid "This field is required."
+msgstr "This field is required."
+
+#: bpms/event_calendar/utils.py:279
+msgid "Invalid value."
+msgstr "Invalid value."

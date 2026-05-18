@@ -1,0 +1,2 @@
+{# Не используется: HelpDeskTicketIndex.prepare_text() переопределяет поле text. #}
+{{ object.number }} {{ object.counter }} {{ object.name }} {{ object.description }}
